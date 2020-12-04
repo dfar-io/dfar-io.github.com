@@ -60,6 +60,6 @@ _decimal at end is the price per oz._
 * Farnum Hill Extra Dry
 * Northern Natural Traditional (from Taproot) & Blueberry
 * 45 Fresh Coast (A?)
-* Blom Dry (A or S?)
+* Blom Dry (S?)
 * Farmhaus Daily Dry (A?)
 * ANXO Hereford Gold (.31)

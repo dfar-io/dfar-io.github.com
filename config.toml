@@ -1,0 +1,17 @@
+baseURL = "https://dfar.io/"
+languageCode = "en-us"
+title = "Dave Farinelli"
+theme = "etch"
+
+[params]
+  description = "Software/DevOps Engineer"
+  dark = "auto"
+  highlight = true
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "about"
+    title = "about"
+    url = "/about/"
+    weight = 10

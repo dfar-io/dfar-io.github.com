@@ -14,14 +14,15 @@ _decimal at end is the price per oz._
 
 ## A (Great)
 * BlackGrass Porter's Pick (.47)
+* ANXO Hereford Gold (.31)
 * ANXO District Dry (.23)
-* ANXO Happy Trees (.31)
 * Ace Joker
 
 ## B (Good)
 * Virtue Brut
 * VanderMill Brut
 * VanderMill Bluish Gold
+* ANXO Happy Trees (.31)
 
 ## C (Okay)
 * BlackGrass Northern Spy
@@ -62,4 +63,3 @@ _decimal at end is the price per oz._
 * 45 Fresh Coast (A?)
 * Blom Dry (S?)
 * Farmhaus Daily Dry (A?)
-* ANXO Hereford Gold (.31)

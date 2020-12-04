@@ -27,8 +27,7 @@ you can verify the site is up using the repo name above as the URL.
 
 Finally, I set up DNS records for my apex domain (dfar.io without a www) using
 (this guide)[https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain]
-and set up the domain in the repo settings. After 24 hours, I was able to also
-enforce HTTPS.
+and set up the domain in the repo settings.
 
 ## Copying Data from WordPress to Hugo
 

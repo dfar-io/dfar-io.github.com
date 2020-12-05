@@ -28,6 +28,7 @@ _decimal at end is the price per oz._
 * BlackGrass Northern Spy
 * Pulsar
 * Blom Ginger Pear
+* Arbor Brewing Company Cucumber Lime Gose
 * Pox Orchard Brut
 * Aspall Dry
 * Tandem Greenman

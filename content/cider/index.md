@@ -19,10 +19,10 @@ _decimal at end is the price per oz._
 * Ace Joker
 
 ## B (Good)
+* ANXO Happy Trees (.31)
 * Virtue Brut
 * VanderMill Brut
 * VanderMill Bluish Gold
-* ANXO Happy Trees (.31)
 
 ## C (Okay)
 * BlackGrass Northern Spy

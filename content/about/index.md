@@ -8,7 +8,8 @@ I'm a Software/DevOps Engineer based out of Michigan.
 
 * Technology I'm currently working/interested in includes .NET, Azure, Terraform,
 Arch Linux, and Java.
-* When I'm not working, I'm spending with my wife and two pups, lifting weights,
-drinking [dry hard cider](/cider) and eating sushi.
+* When I'm not working, I'm spending with my wife and two pups,
+[lifting weights](/wl-log), drinking [dry hard cider](/cider)
+and eating sushi.
 
 To get a hold of me, you can email me at <d@dfar.io>.

@@ -4,6 +4,11 @@ date: 2020-12-06T16:51:30-05:00
 draft: false
 ---
 
+## 2020.12.07
+* Press 80, 80, 2x3x60 _first rep rough, I need to make start consistent_
+* Pullups 5,4,4
+* JR 3 x 120 _no misses_
+
 ## 2020.12.06
 * Squat 164, 165
 * Back Ext 3 x 12 x 2.5kg
@@ -18,7 +23,7 @@ _Felt good today, think it was getting plenty of sleep_
 
 ## 2020.12.04
 * Press 82, 82 _better but still slow, going to set 80 as minimum, and add a set of volume starting around 2 x 3 x 60_
-* Pullups 4,4,
+* Pullups 4,4,4
 
 ## 2020.12.03
 * Squat 161, 163

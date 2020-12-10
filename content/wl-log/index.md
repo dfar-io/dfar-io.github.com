@@ -4,6 +4,11 @@ date: 2020-12-06T16:51:30-05:00
 draft: false
 ---
 
+## 2020.12.09
+* Squat 165, 165
+
+_lifted late and buzzed, but this felt good_
+
 ## 2020.12.07
 * Press 80, 80, 2x3x60 _first rep rough, I need to make start consistent_
 * Pullups 5,4,4

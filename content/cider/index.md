@@ -8,13 +8,15 @@ _decimal at end is the price per oz._
 
 ## S (Best)
 * [Suttons Bay Power Island](https://vinoshipper.com/shop/suttons_bay_ciders/power_island_33112?list=) (.57)
-* TwoK Old World (.21)
 * BlackGrass Yo Homes (.47)
+* ANXO Hereford Gold (.31)
 * Blom Tart
 
+
+
 ## A (Great)
+* TwoK Old World (.21)
 * BlackGrass Porter's Pick (.47)
-* ANXO Hereford Gold (.31)
 * ANXO District Dry (.23)
 * Ace Joker
 

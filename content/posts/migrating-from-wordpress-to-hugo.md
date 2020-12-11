@@ -1,5 +1,5 @@
 ---
-title: "Migrating From Wordpress to Hugo"
+title: "Migrating From WordPress to Hugo"
 date: 2020-12-03T19:10:30-05:00
 draft: false
 ---
@@ -31,4 +31,4 @@ and set up the domain in the repo settings.
 
 ## Copying Data from WordPress to Hugo
 
-To be continued...
+To migrate my content, I installed the [WordPress to Hugo Exporter](https://github.com/SchumacherFM/wordpress-to-hugo-exporter), exported out the data, and added it to my `content/` folder. I had to go through and fix a decent amount of the posts, but overall was pretty quick to get years of blog posts converted over.

@@ -4,6 +4,12 @@ date: 2020-12-06T16:51:30-05:00
 draft: false
 ---
 
+## 2020.12.13
+* Press 80, 80, 2x3x61 _suprisingly difficult, use wider grip_
+* Pullups 5
+
+_Took a few days off, no excuse, need to be better on consistency_
+
 ## 2020.12.09
 * Squat 165, 165
 

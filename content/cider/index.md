@@ -10,9 +10,7 @@ _decimal at end is the price per oz._
 * [Suttons Bay Power Island](https://vinoshipper.com/shop/suttons_bay_ciders/power_island_33112?list=) (.57)
 * BlackGrass Yo Homes (.47)
 * ANXO Hereford Gold (.31)
-* Blom Tart
-
-
+* Blom Tart ($12/4 - .25)
 
 ## A (Great)
 * TwoK Old World (.21)
@@ -60,6 +58,8 @@ _decimal at end is the price per oz._
 
 ## To Try
 
+* ANXO Transcontinental ($16/4 - .33)
+* Uncle Johns Apple ($12/4(16) - .19)
 * Tandem Crabster
 * Farnum Hill Extra Dry
 * Northern Natural Traditional (from Taproot) & Blueberry

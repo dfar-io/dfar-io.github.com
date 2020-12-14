@@ -14,6 +14,7 @@ _decimal at end is the price per oz._
 
 ## A (Great)
 * BlackGrass Porter's Pick (.47)
+* ANXO Transcontinental ($16/4 - .33)
 * TwoK Old World (.21)
 * ANXO District Dry (.23)
 * Ace Joker
@@ -58,7 +59,6 @@ _decimal at end is the price per oz._
 
 ## To Try
 
-* ANXO Transcontinental ($16/4 - .33)
 * Uncle Johns Apple ($12/4(16) - .19)
 * Tandem Crabster
 * Farnum Hill Extra Dry

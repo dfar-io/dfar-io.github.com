@@ -4,6 +4,11 @@ date: 2020-12-06T16:51:30-05:00
 draft: false
 ---
 
+## 2020.12.14
+* Clean 125,126
+* Bench 6x70, 8x70 _rest longer next time_
+* JR 2 x 120
+
 ## 2020.12.13
 * Press 80, 80, 2x3x61 _suprisingly difficult, use wider grip_
 * Pullups 5

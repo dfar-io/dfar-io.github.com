@@ -6,26 +6,28 @@ draft: false
 
 _decimal at end is the price per oz._
 
-## S (Best)
+## S
 * [Suttons Bay Power Island](https://vinoshipper.com/shop/suttons_bay_ciders/power_island_33112?list=) (.57)
 * BlackGrass Yo Homes (.47)
+
+## A
 * ANXO Hereford Gold (.31)
 * Blom Tart ($12/4 - .25)
-
-## A (Great)
 * BlackGrass Porter's Pick (.47)
 * ANXO Transcontinental ($16/4 - .33)
+
+## B
 * TwoK Old World (.21)
 * ANXO District Dry (.23)
 * Ace Joker
 
-## B (Good)
+## C
 * ANXO Happy Trees (.31)
 * Virtue Brut
 * VanderMill Brut
 * VanderMill Bluish Gold
 
-## C (Okay)
+## D
 * BlackGrass Northern Spy
 * Pulsar
 * Blom Ginger Pear
@@ -40,12 +42,10 @@ _decimal at end is the price per oz._
 * Suttons Bay Korzon
 * Urbanrest Natty 004
 * SB SidraLapeno
-
-## D (barely)
-* Fourth Coast Rooted Insanity
 * Beard Bender
 
 ## F (Nope)
+* Fourth Coast Rooted Insanity
 * Rightful Apple Ale, Cider
 * TwoK HoppD
 * Shacksbury Vermonter

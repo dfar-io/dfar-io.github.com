@@ -56,10 +56,9 @@ _decimal at end is the price per oz._
 * Virtue Rose
 * CiderBoys British Dry
 * Blakes Fido
+* Uncle John's Apple ($12/4(16) - .19)
 
 ## To Try
-
-* Uncle Johns Apple ($12/4(16) - .19)
 * Tandem Crabster
 * Farnum Hill Extra Dry
 * Northern Natural Traditional (from Taproot) & Blueberry

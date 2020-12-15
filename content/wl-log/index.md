@@ -4,6 +4,9 @@ date: 2020-12-06T16:51:30-05:00
 draft: false
 ---
 
+## 2020.12.15
+* Squat 165,166,166
+
 ## 2020.12.14
 * Clean 125,126
 * Bench 6x70, 8x70 _rest longer next time_

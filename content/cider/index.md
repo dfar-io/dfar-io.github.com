@@ -14,7 +14,6 @@ _decimal at end is the price per oz._
 * ANXO Hereford Gold (.31)
 * Blom Tart ($12/4 - .25)
 * BlackGrass Porter's Pick (.47)
-* ANXO Transcontinental ($16/4 - .33)
 
 ## B
 * TwoK Old World (.21)
@@ -22,6 +21,7 @@ _decimal at end is the price per oz._
 * Ace Joker
 
 ## C
+* ANXO Transcontinental ($16/4 - .33)
 * ANXO Happy Trees (.31)
 * Virtue Brut
 * VanderMill Brut

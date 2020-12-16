@@ -4,6 +4,12 @@ date: 2020-12-06T16:51:30-05:00
 draft: false
 ---
 
+## 2020.12.16
+* Press 80 _tried jumping 70 to 80, need to do 75 first_
+* Press 3 x 3 x 62
+* Pullups 6,4,4
+* JR 6 x 50j _way more enjoyable than long rounds_
+
 ## 2020.12.15
 * Squat 165,166,166 _next time, I wanna use 70,100,120,140,160 as warmup scheme_
 
@@ -19,6 +25,7 @@ draft: false
 _Took a few days off, no excuse, need to be better on consistency_
 
 ## 2020.12.09
+
 * Squat 165, 165
 
 _lifted late and buzzed, but this felt good_

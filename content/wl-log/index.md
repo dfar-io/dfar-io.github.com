@@ -5,7 +5,7 @@ draft: false
 ---
 
 ## 2020.12.15
-* Squat 165,166,166
+* Squat 165,166,166 _next time, I wanna use 70,100,120,140,160 as warmup scheme_
 
 ## 2020.12.14
 * Clean 125,126

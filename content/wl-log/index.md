@@ -4,6 +4,12 @@ date: 2020-12-06T16:51:30-05:00
 draft: false
 ---
 
+## 2020.12.17
+* Clean 125, 127
+* Bench 1 x 8 x 70lb
+
+_short on time, I need to be better about lifting right at 330_
+
 ## 2020.12.16
 * Press 80 _tried jumping 70 to 80, need to do 75 first_
 * Press 3 x 3 x 62

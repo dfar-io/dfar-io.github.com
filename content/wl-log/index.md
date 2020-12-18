@@ -4,6 +4,11 @@ date: 2020-12-06T16:51:30-05:00
 draft: false
 ---
 
+## 2020.12.18
+* Squat 160,167 _new warmup works well_
+* Back Ext 3 x 12
+* JR 3 x 25j/15du
+
 ## 2020.12.17
 * Clean 125, 127
 * Bench 1 x 8 x 70lb

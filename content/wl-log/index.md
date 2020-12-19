@@ -4,6 +4,11 @@ date: 2020-12-06T16:51:30-05:00
 draft: false
 ---
 
+## 2020.12.19
+* Press 80,80,80, 5x3x63 _finally, these felt decent. Use more triceps_
+* Pullups 6,5,4,4,4
+* Abs 3 x 3
+
 ## 2020.12.18
 * Squat 160,167 _new warmup works well_
 * Back Ext 3 x 12

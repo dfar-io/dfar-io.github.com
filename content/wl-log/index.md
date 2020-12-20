@@ -4,6 +4,12 @@ date: 2020-12-06T16:51:30-05:00
 draft: false
 ---
 
+## 2020.12.20
+* Clean 125, 128
+* Bench 3 x 8 x 70lb
+
+_cut short due to dinner plans, but overall good day_
+
 ## 2020.12.19
 * Press 80,80,80, 5x3x63 _finally, these felt decent. Use more triceps_
 * Pullups 6,5,4,4,4

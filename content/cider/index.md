@@ -7,20 +7,20 @@ draft: false
 _decimal at end is the price per oz._
 
 ## S
-* [Suttons Bay Power Island](https://vinoshipper.com/shop/suttons_bay_ciders/power_island_33112?list=) (.57)
 * BlackGrass Yo Homes (.47)
 
 ## A
 * ANXO Hereford Gold (.31)
 * Blom Tart ($12/4 - .25)
 * BlackGrass Porter's Pick (.47)
+* [Suttons Bay Power Island](https://vinoshipper.com/shop/suttons_bay_ciders/power_island_33112?list=) (.57)
 
 ## B
-* TwoK Old World (.21)
 * ANXO District Dry (.23)
-* Ace Joker
+* TwoK Old World (.21)
 
 ## C
+* Ace Joker
 * ANXO Transcontinental ($16/4 - .33)
 * ANXO Happy Trees (.31)
 * Virtue Brut

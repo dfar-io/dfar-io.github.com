@@ -4,6 +4,11 @@ date: 2020-12-06T16:51:30-05:00
 draft: false
 ---
 
+## 2020.12.21
+* Squat 160, 168
+* Hypers 3 x 12 x 2.5kg
+* JR 6 x 30j _quick rest, maybe do this tabata style in the future?_
+
 ## 2020.12.20
 * Clean 125, 128
 * Bench 3 x 8 x 70lb

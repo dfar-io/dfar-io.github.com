@@ -63,5 +63,8 @@ _decimal at end is the price per oz._
 * Farnum Hill Extra Dry
 * Northern Natural Traditional (from Taproot) & Blueberry
 * 45 Fresh Coast (A?)
-* Blom Dry (S?)
+* Blom 2020 Dry (S, $16/4 - .33)
 * Farmhaus Daily Dry (A?)
+* ANXO Nevertheless ($17/4 - .35)
+* ANXO Time and Place Sunrise (.35)
+* ANXO Time and Place Adam's (.35)

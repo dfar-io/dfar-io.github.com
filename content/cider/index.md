@@ -7,6 +7,7 @@ draft: false
 _decimal at end is the price per oz._
 
 ## S
+* Blom 2020 Dry ($16/4 - .33)
 * BlackGrass Yo Homes (.47)
 
 ## A
@@ -64,7 +65,6 @@ _decimal at end is the price per oz._
 * Farnum Hill Extra Dry
 * Northern Natural Traditional (from Taproot) & Blueberry
 * 45 Fresh Coast (A?)
-* Blom 2020 Dry (S, $16/4 - .33)
 * Farmhaus Daily Dry (A?)
 * ANXO Time and Place Sunrise (.35)
 * ANXO Time and Place Adam's (.35)

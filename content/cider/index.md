@@ -15,6 +15,7 @@ _decimal at end is the price per oz._
 * Blom Tart ($12/4 - .25)
 * BlackGrass Porter's Pick (.47)
 * ANXO Nevertheless ($17/4 - .35)
+* ANXO Time and Place Adam's (.35)
 * [Suttons Bay Power Island](https://vinoshipper.com/shop/suttons_bay_ciders/power_island_33112?list=) (.57)
 
 ## B
@@ -67,4 +68,3 @@ _decimal at end is the price per oz._
 * 45 Fresh Coast (A?)
 * Farmhaus Daily Dry (A?)
 * ANXO Time and Place Sunrise (.35)
-* ANXO Time and Place Adam's (.35)

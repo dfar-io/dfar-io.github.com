@@ -4,6 +4,12 @@ date: 2020-12-06T16:51:30-05:00
 draft: false
 ---
 
+## 2020.12.26
+* Clean 125, 130, 2x1x110 _130 sloppy, should be doubles for dropset_
+* Bench 9,8,8 x 70lb
+* Rows 3 x 10 x 50lb
+* Holds 45sec x 70lb
+
 ## 2020.12.25
 * Press 80, 82, 5x60
 

@@ -4,6 +4,12 @@ date: 2020-12-06T16:51:30-05:00
 draft: false
 ---
 
+## 2020.12.27
+* Squat 160, 170, 2 x 3 x 140 _definitely do volume again in the future_
+* Hypers 3 x 12 x 2.5kg
+* Curls 2 x 12 x 45lb (BB) _used curl thing for the first time, it works well but probably better with DBs)
+* Holds 1min x 70lb
+
 ## 2020.12.26
 * Clean 125, 130, 2x1x110 _130 sloppy, should be doubles for dropset_
 * Bench 9,8,8 x 70lb

@@ -12,7 +12,7 @@ draft: false
 ## 2020.12.27
 * Squat 160, 170, 2 x 3 x 140 _definitely do volume again in the future_
 * Hypers 3 x 12 x 2.5kg
-* Curls 2 x 12 x 45lb (BB) _used curl thing for the first time, it works well but probably better with DBs)
+* Curls 2 x 12 x 45lb (BB) _used curl thing for the first time, it works well but probably better with DBs_
 * Holds 1min x 70lb
 
 ## 2020.12.26

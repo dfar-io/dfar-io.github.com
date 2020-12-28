@@ -4,6 +4,11 @@ date: 2020-12-06T16:51:30-05:00
 draft: false
 ---
 
+## 2020.12.28
+* Press 80, 83, 2x5x60
+* Pullups 7, 6, 5
+* Abs 3 x 5
+
 ## 2020.12.27
 * Squat 160, 170, 2 x 3 x 140 _definitely do volume again in the future_
 * Hypers 3 x 12 x 2.5kg

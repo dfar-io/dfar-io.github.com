@@ -9,7 +9,7 @@ I'm a Software/DevOps Engineer based out of Michigan.
 * Technology I'm currently working/interested in includes .NET (including [nopCommerce](https://www.nopcommerce.com/en)), Azure, Terraform,
 Arch Linux, and Java.
 * When I'm not working, I'm spending time with my wife and two pups,
-[lifting weights](/wl-log), drinking [dry hard cider](/cider)
+[lifting weights](/wl), drinking [dry hard cider](/cider)
 and eating sushi.
 
 To get a hold of me, you can email me at <d@dfar.io>.

@@ -4,6 +4,9 @@ date: 2020-12-06T16:51:30-05:00
 draft: false
 ---
 
+## 2020.12.29
+* Cleans 130, 131 _better than last session, drive through the legs_
+
 ## 2020.12.28
 * Press 80, 83, 2x5x60
 * Pullups 7, 6, 5

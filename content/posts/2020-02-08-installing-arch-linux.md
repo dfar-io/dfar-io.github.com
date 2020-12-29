@@ -13,7 +13,8 @@ categories:
 
 ## Setting up USB Boot Media
 
-Windows &#8211; use [Rufus][1] (you may need to use GPT && DD image mode)
+* [Arch Linux](https://wiki.archlinux.org/index.php/USB_flash_installation_medium#Using_basic_command_line_utilities)
+* Windows &#8211; use [Rufus][1] (you may need to use GPT && DD image mode)
 
 ## Installation
 

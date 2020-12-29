@@ -75,8 +75,7 @@ Once the files are uploaded, you have the option to change to the Archive access
 Configure Internet Set up networkmanager and if wireless, connect to an internet source:
 Confirm access using ping.
 Set up Desktop Environment Set up xorg by install the following packages:
-xorg xterm xorg-xinit xorg-xclock xorg-twm Test by starting startx.</description></item><item><title>Installing Arch Linux</title><link>https://dfar.io/installing-arch-linux/</link><pubDate>Sat, 08 Feb 2020 17:19:44 +0000</pubDate><guid>https://dfar.io/installing-arch-linux/</guid><description>Setting up USB Boot Media Windows – use Rufus (you may need to use GPT &amp;amp;&amp;amp; DD image mode)
-Installation First, boot the Arch Linux USB stick onto the computer of choice. After finished loading, you should see a command terminal.
+xorg xterm xorg-xinit xorg-xclock xorg-twm Test by starting startx.</description></item><item><title>Installing Arch Linux</title><link>https://dfar.io/installing-arch-linux/</link><pubDate>Sat, 08 Feb 2020 17:19:44 +0000</pubDate><guid>https://dfar.io/installing-arch-linux/</guid><description>Setting up USB Boot Media Arch Linux Windows – use Rufus (you may need to use GPT &amp;amp;&amp;amp; DD image mode) Installation First, boot the Arch Linux USB stick onto the computer of choice. After finished loading, you should see a command terminal.
 To increase font size during install, use:
 Connect To Internet Wired, use ping to confirm access.
 Wireless – run: wifi-menu -o, select a network, then verify access using ping.</description></item><item><title>Test Disk I/O Benchmarks in Linux</title><link>https://dfar.io/test-disk-i-o-benchmarks-in-linux/</link><pubDate>Fri, 07 Feb 2020 22:16:45 +0000</pubDate><guid>https://dfar.io/test-disk-i-o-benchmarks-in-linux/</guid><description>To test read/write speeds of a drive in Linux, you can run dd to check write speed:

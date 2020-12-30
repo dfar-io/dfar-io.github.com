@@ -1,45 +1,35 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Software/DevOps Engineer"><link rel="shortcut icon" href=https://dfar.io/favicon.ico><link rel=stylesheet href=/css/style.min.css><title>Installing Arch Linux</title></head><body><header id=banner><h2><a href=https://dfar.io/>Dave Farinelli</a></h2><nav><ul><li><a href=/about/ title=about>about</a></li></ul></nav></header><main id=content><article><header id=post-header><h1>Installing Arch Linux</h1><time>February 8, 2020</time></header><h2 id=setting-up-usb-boot-media>Setting up USB Boot Media</h2><ul><li><a href=https://wiki.archlinux.org/index.php/USB_flash_installation_medium#Using_basic_command_line_utilities>Arch Linux</a></li><li><a href=https://superuser.com/a/1387874>Windows (using Arch Linux)</a></li><li>Windows – use <a href=https://wiki.archlinux.org/index.php/USB_flash_installation_media#Using_Rufus>Rufus</a> (you may need to use GPT && DD image mode)</li></ul><h2 id=installation>Installation</h2><p>First, boot the Arch Linux USB stick onto the computer of choice. After finished loading, you should see a command terminal.</p><p>To increase font size during install, use:</p><h3 id=connect-to-internet>Connect To Internet</h3><p>Wired, use <code>ping</code> to confirm access.</p><p>Wireless – run: <code>wifi-menu -o</code>, select a network, then verify access using <code>ping</code>.</p><h3 id=synchronize-clock>Synchronize Clock</h3><p>To set the clock, run:</p><h3 id=set-up-partitions>Set up Partitions</h3><p>If needed, set up partitions for the overall system. First, use <strong>parted -l</strong> to determine both:</p><ul><li>Which disk you want to use</li><li>Whether partition table is GPT</li></ul><p>If needed, convert to GPT using <strong>fdisk <em>disk</em></strong>.</p><p>Use <strong>cfdisk</strong> to create the following partitions (remember when sizing, you can use +512M for ease):</p><pre><code>&lt;td&gt;
-  Partition
-&lt;/td&gt;
+<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Software/DevOps Engineer"><link rel="shortcut icon" href=https://dfar.io/favicon.ico><link rel=stylesheet href=/css/style.min.css><title>Installing Arch Linux</title></head><body><header id=banner><h2><a href=https://dfar.io/>Dave Farinelli</a></h2><nav><ul><li><a href=/about/ title=about>about</a></li></ul></nav></header><main id=content><article><header id=post-header><h1>Installing Arch Linux</h1><time>December 30, 2020</time></header><h2 id=setting-up-usb-boot-media>Setting up USB Boot Media</h2><ul><li><a href=https://wiki.archlinux.org/index.php/USB_flash_installation_medium#Using_basic_command_line_utilities>Arch Linux</a></li><li><a href=https://superuser.com/a/1387874>Windows (using Arch Linux)</a></li><li>Windows – use <a href=https://wiki.archlinux.org/index.php/USB_flash_installation_media#Using_Rufus>Rufus</a> (you may need to use GPT && DD image mode)</li></ul><h2 id=installation>Installation</h2><p>If planning to dual boot, install Windows first, using a smaller partition.</p><p>First, boot the Arch Linux USB stick onto the computer of choice. After finished loading, you should see a command terminal.</p><p>To increase font size during install, use:</p><h3 id=connect-to-internet>Connect To Internet</h3><p>Wired, use <code>ping</code> to confirm access.</p><h4 id=wireless>Wireless</h4><p>Run the following commands:</p><pre><code>iwctl
+device list
+station wlan0 get-networks
+station wlan0 connect SSID
+exit
+</code></pre><p>Verify access with <code>ping google.com</code></p><h3 id=synchronize-clock>Synchronize Clock</h3><p>To set the clock, run:</p><pre><code>timedatectl set-ntp true
+timedatectl status
+</code></pre><h3 id=set-up-partitions>Set up Partitions</h3><p>If needed, set up partitions for the overall system. First, use <strong>parted -l</strong> to determine both:</p><ul><li>Which disk you want to use</li><li>Whether partition table is GPT</li></ul><p>If needed, convert to GPT using <strong>fdisk <em>disk</em></strong>.</p><p>Use <strong>cfdisk</strong> to create the following partitions (remember when sizing, you can use +512M for ease):</p><ul><li>Linux Swap (8GB)</li><li>Linux root (x86-84) - remaining</li></ul><h3 id=format--mount-partitions>Format & Mount Partitions</h3><p>Now format the partitions (using <strong>parted -l</strong> to list disks):</p><pre><code>mkfs.ext4 &amp;lt;PRIMARY_DISK&gt;
+mkswap &amp;lt;SWAP_DISK&gt;
+swapon &amp;lt;SWAP_DISK&gt;
+</code></pre><p>Mount the newly formatted partitions:</p><pre><code>mount &amp;lt;PRIMARY_DISK&gt; /mnt
+mkdir /mnt/boot
+mount &amp;lt;EFI_DISK&gt; /mnt/boot
+</code></pre><h3 id=perform-arch-installation>Perform Arch Installation</h3><p>Edit the <code>/etc/pacman.d/mirrorlist</code> file and set it to have just 12 United States entries.</p><p>Install base Arch Linux:</p><pre><code>pacstrap /mnt base linux linux-firmware nano grub efibootmgr networkmanager git firefox sudo
+</code></pre><p>Generate an <code>fstab</code> file:</p><pre><code>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+</code></pre><p>Change root into the new system to set time zone and localization:</p><pre><code>arch-chroot /mnt
+</code></pre><pre><code>ln -sf /usr/share/zoneinfo/America/Detroit /etc/localtime
+hwclock --systohc
+</code></pre><p>Change the default console font size at <strong>/etc/vconsole.conf</strong>:</p><p><code>FONT=latarcyrheb-sun32</code></p><p>Generate locales and set locale:</p><pre><code># comment out needed locales
+nano /etc/locale.gen
+locale-gen
+</code></pre><pre><code>nano /etc/locale.conf
+# set content to LANG=en_US.UTF-8
+</code></pre><p>Set up network configuration (computer name):</p><pre><code># set computer name
+nano /etc/hostname
+</code></pre><pre><code># configure hosts file, add contents below
+nano /etc/hosts
 
-&lt;td&gt;
-  Partition Type
-&lt;/td&gt;
-
-&lt;td&gt;
-  Size
-&lt;/td&gt;
-</code></pre><pre><code>&lt;td&gt;
-  /dev/sda1
-&lt;/td&gt;
-
-&lt;td&gt;
-  EFI System
-&lt;/td&gt;
-
-&lt;td&gt;
-  512MB
-&lt;/td&gt;
-</code></pre><pre><code>&lt;td&gt;
-  /dev/sda2
-&lt;/td&gt;
-
-&lt;td&gt;
-  Linux root (x86-64)
-&lt;/td&gt;
-
-&lt;td&gt;
-  remaining
-&lt;/td&gt;
-</code></pre><pre><code>&lt;td&gt;
-  /dev/sda3
-&lt;/td&gt;
-
-&lt;td&gt;
-  Linux swap
-&lt;/td&gt;
-
-&lt;td&gt;
-  8GB
-&lt;/td&gt;
-</code></pre><h3 id=format--mount-partitions>Format & Mount Partitions</h3><p>Now format the partitions (using <strong>parted -l</strong> to list disks):</p><p>Mount the newly formatted partitions:</p><h3 id=perform-arch-installation>Perform Arch Installation</h3><p>Edit the <code>/etc/pacman.d/mirrorlist</code> file and set it to have just 12 United States entries.</p><p>Install base Arch Linux:</p><p>Generate an <code>fstab</code> file:</p><p>Change root into the new system to set time zone and localization:</p><p>Change the default console font size at <strong>/etc/vconsole.conf</strong>:</p><p>Generate locales and set locale:</p><p>Set up network configuration (computer name):</p><p>Create a root password with <code>passwd</code>.</p><p>Configure GRUB boot loader:</p><h3 id=optional-create-non-root-user>(Optional) Create Non-Root User</h3><p>You’ll want to perform your daily activities without using the root user.</p><p>Edit the <strong>/etc/sudoers</strong> file and allow users of <code>wheel</code> group to execute any command.</p><h2 id=conclusion>Conclusion</h2><p>Finally, reboot the system:</p><p>To verify, remove the USB stick used for installation, and turn on the computer.</p><p>You should be able to log in as either the root user or the newly created user specified earlier. If you end up at the terminal, you’ve successfully installed Arch Linux!</p><p>Next step involves <a href=https://dfar.io/configuring-installed-arch-linux/>configuring the base system</a>.</p></article></main><footer id=footer></footer></body></html>
+127.0.0.1	localhost
+::1		localhost
+127.0.1.1	YOUR_HOSTNAME.localdomain	YOUR_HOSTNAME
+</code></pre><p>Create a root password with <code>passwd</code>.</p><p>Configure GRUB boot loader:</p><p><code>grub-install /dev/sda --efi-directory=/boot</code></p><p><code>grub-mkconfig -o /boot/grub/grub.cfg</code></p><h3 id=optional-create-non-root-user>(Optional) Create Non-Root User</h3><p>You’ll want to perform your daily activities without using the root user.</p><pre><code>useradd -m dfar
+passwd dfar
+usermod -aG wheel,audio,video,optical,storage dfar
+</code></pre><p>Edit the <strong>/etc/sudoers</strong> file and allow users of <code>wheel</code> group to execute any command.</p><h2 id=conclusion>Conclusion</h2><p>Finally, reboot the system:</p><p>To verify, remove the USB stick used for installation, and turn on the computer.</p><p>You should be able to log in as either the root user or the newly created user specified earlier. If you end up at the terminal, you’ve successfully installed Arch Linux!</p><p>Next step involves <a href=https://dfar.io/configuring-installed-arch-linux/>configuring the base system</a>.</p></article></main><footer id=footer></footer></body></html>

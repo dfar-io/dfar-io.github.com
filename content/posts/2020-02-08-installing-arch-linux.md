@@ -2,7 +2,7 @@
 title: Installing Arch Linux
 author: dfar
 
-date: 2020-02-08T17:19:44+00:00
+date: 2020-12-30T17:19:44+00:00
 url: /installing-arch-linux/
 categories:
   - Technology
@@ -19,6 +19,8 @@ categories:
 
 ## Installation
 
+If planning to dual boot, install Windows first, using a smaller partition.
+
 First, boot the Arch Linux USB stick onto the computer of choice. After finished loading, you should see a command terminal.
 
 To increase font size during install, use:
@@ -29,14 +31,28 @@ To increase font size during install, use:
 
 Wired, use `ping` to confirm access.
 
-Wireless &#8211; run: `wifi-menu -o`, select a network, then verify access using `ping`.
+#### Wireless
+
+Run the following commands:
+
+````
+iwctl
+device list
+station wlan0 get-networks
+station wlan0 connect SSID
+exit
+````
+
+Verify access with `ping google.com`
 
 ### Synchronize Clock
 
 To set the clock, run:
 
-<pre class="wp-block-code"><code>timedatectl set-ntp true
-timedatectl status</code></pre>
+````
+timedatectl set-ntp true
+timedatectl status
+````
 
 ### Set up Partitions
 
@@ -47,96 +63,28 @@ If needed, set up partitions for the overall system. First, use **parted -l** to
 
 If needed, convert to GPT using **fdisk _disk_**.
 
-Use **cfdisk** to create the following partitions (remember when sizing, you can use +512M for ease):<figure class="wp-block-table is-style-stripes">
+Use **cfdisk** to create the following partitions (remember when sizing, you can use +512M for ease):
 
-<table class="">
-  <tr>
-    <td>
-      Mount Point
-    </td>
-    
-    <td>
-      Partition
-    </td>
-    
-    <td>
-      Partition Type
-    </td>
-    
-    <td>
-      Size
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      /mnt/boot
-    </td>
-    
-    <td>
-      /dev/sda1
-    </td>
-    
-    <td>
-      EFI System
-    </td>
-    
-    <td>
-      512MB
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      /mnt
-    </td>
-    
-    <td>
-      /dev/sda2
-    </td>
-    
-    <td>
-      Linux root (x86-64)
-    </td>
-    
-    <td>
-      remaining
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      SWAP
-    </td>
-    
-    <td>
-      /dev/sda3
-    </td>
-    
-    <td>
-      Linux swap
-    </td>
-    
-    <td>
-      8GB
-    </td>
-  </tr>
-</table></figure> 
+* Linux Swap (8GB)
+* Linux root (x86-84) - remaining
 
 ### Format & Mount Partitions
 
 Now format the partitions (using **parted -l** to list disks):
 
-<pre class="wp-block-code"><code>mkfs.fat &lt;EFI_DISK>
+````
 mkfs.ext4 &lt;PRIMARY_DISK>
 mkswap &lt;SWAP_DISK>
-swapon &lt;SWAP_DISK></code></pre>
+swapon &lt;SWAP_DISK>
+````
 
 Mount the newly formatted partitions:
 
-<pre class="wp-block-code"><code>mount &lt;PRIMARY_DISK> /mnt
+````
+mount &lt;PRIMARY_DISK> /mnt
 mkdir /mnt/boot
-mount &lt;EFI_DISK> /mnt/boot</code></pre>
+mount &lt;EFI_DISK> /mnt/boot
+````
 
 ### Perform Arch Installation
 
@@ -144,60 +92,77 @@ Edit the `/etc/pacman.d/mirrorlist` file and set it to have just 12 United State
 
 Install base Arch Linux:
 
-<pre class="wp-block-code"><code>pacstrap /mnt base linux linux-firmware nano grub efibootmgr networkmanager git firefox sudo</code></pre>
+````
+pacstrap /mnt base linux linux-firmware nano grub efibootmgr networkmanager git firefox sudo
+````
 
 Generate an `fstab` file:
 
-<pre class="wp-block-code"><code>genfstab -U /mnt >> /mnt/etc/fstab</code></pre>
+````
+genfstab -U /mnt >> /mnt/etc/fstab
+````
 
 Change root into the new system to set time zone and localization:
 
-<pre class="wp-block-code"><code>arch-chroot /mnt
+````
+arch-chroot /mnt
+````
 
+````
 ln -sf /usr/share/zoneinfo/America/Detroit /etc/localtime
-hwclock --systohc</code></pre>
+hwclock --systohc
+````
 
 Change the default console font size at **/etc/vconsole.conf**:
 
-<pre class="wp-block-code"><code>FONT=latarcyrheb-sun32</code></pre>
+`FONT=latarcyrheb-sun32`
 
 Generate locales and set locale:
 
-<pre class="wp-block-code"><code># comment out needed locales
+````
+# comment out needed locales
 nano /etc/locale.gen
 locale-gen
+````
 
+````
 nano /etc/locale.conf
-
-# set content to LANG=en_US.UTF-8</code></pre>
+# set content to LANG=en_US.UTF-8
+````
 
 Set up network configuration (computer name):
 
-<pre class="wp-block-code"><code># set computer name
-nano /etc/hostname 
+````
+# set computer name
+nano /etc/hostname
+````
 
+````
 # configure hosts file, add contents below
 nano /etc/hosts
 
 127.0.0.1	localhost
 ::1		localhost
-127.0.1.1	YOUR_HOSTNAME.localdomain	YOUR_HOSTNAME</code></pre>
+127.0.1.1	YOUR_HOSTNAME.localdomain	YOUR_HOSTNAME
+````
 
 Create a root password with `passwd`.
 
 Configure GRUB boot loader:
 
-<pre class="wp-block-code"><code>grub-install /dev/sda --efi-directory=/boot
+`grub-install /dev/sda --efi-directory=/boot`
 
-grub-mkconfig -o /boot/grub/grub.cfg</code></pre>
+`grub-mkconfig -o /boot/grub/grub.cfg`
 
 ### (Optional) Create Non-Root User
 
 You&#8217;ll want to perform your daily activities without using the root user.
 
-<pre class="wp-block-code"><code>useradd -m dfar
+```
+useradd -m dfar
 passwd dfar
-usermod -aG wheel,audio,video,optical,storage dfar</code></pre>
+usermod -aG wheel,audio,video,optical,storage dfar
+```
 
 Edit the **/etc/sudoers** file and allow users of `wheel` group to execute any command.
 

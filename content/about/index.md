@@ -13,3 +13,11 @@ Arch Linux, and Java.
 and eating sushi.
 
 To get a hold of me, you can email me at <d@dfar.io>.
+
+## Social
+
+I am on the following social media, although I don't post much:
+
+* [GitHub](https://github.com/dfar-io)
+* [Instagram](https://www.instagram.com/dfar.io/)
+* [Facebook](https://www.facebook.com/profile.php?id=53801719)

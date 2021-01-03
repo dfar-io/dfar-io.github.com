@@ -27,12 +27,12 @@ _decimal at end is the price per oz._
 * ANXO Transcontinental ($16/4 - .33)
 * ANXO Happy Trees (.31)
 * ANXO Time and Place Sunrise (.35)
+* BlackGrass Northern Spy
 * Virtue Brut
 * VanderMill Brut
 * VanderMill Bluish Gold
 
 ## D
-* BlackGrass Northern Spy
 * Pulsar
 * Blom Ginger Pear
 * Arbor Brewing Company Cucumber Lime Gose

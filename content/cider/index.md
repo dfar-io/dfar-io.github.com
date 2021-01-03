@@ -26,6 +26,7 @@ _decimal at end is the price per oz._
 * Ace Joker
 * ANXO Transcontinental ($16/4 - .33)
 * ANXO Happy Trees (.31)
+* ANXO Time and Place Sunrise (.35)
 * Virtue Brut
 * VanderMill Brut
 * VanderMill Bluish Gold
@@ -67,4 +68,3 @@ _decimal at end is the price per oz._
 * Northern Natural Traditional (from Taproot) & Blueberry
 * 45 Fresh Coast (A?)
 * Farmhaus Daily Dry (A?)
-* ANXO Time and Place Sunrise (.35)

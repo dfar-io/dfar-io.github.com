@@ -1,8 +1,11 @@
 ---
-title: "Weightlifting - Cycle 1"
+title: "Lifting - Cycle 1"
 date: 2021-01-02T16:51:30-05:00
 draft: false
 ---
+
+## 2020.01.04
+
 
 ## Structure
 

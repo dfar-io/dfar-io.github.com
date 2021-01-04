@@ -16,6 +16,7 @@ _decimal at end is the price per oz._
 * BlackGrass Porter's Pick (.47)
 * ANXO Nevertheless ($17/4 - .35)
 * ANXO Time and Place Adam's (.35)
+* [Deer Snacks IV](https://www.shacksbury.com/shop/deer-snack-iv-return-of-the-snack)
 * [Suttons Bay Power Island](https://vinoshipper.com/shop/suttons_bay_ciders/power_island_33112?list=) (.57)
 
 ## B
@@ -45,7 +46,7 @@ _decimal at end is the price per oz._
 * Tandem Earnest
 * Suttons Bay Korzon
 * Urbanrest Natty 004
-* SB SidraLapeno
+* Suttons Bay SidraLapeno
 * Beard Bender
 
 ## F (Nope)
@@ -54,7 +55,8 @@ _decimal at end is the price per oz._
 * TwoK HoppD
 * Shacksbury Vermonter
 * Virtue Hard Apple
-* BlackGrass Hippity Hop Hops, Blah Blah Blurst
+* BlackGrass Hippity Hop Hops
+* BlackGrass Blah Blah Blurst
 * Shacksbury LoBall
 * VanderMill Totally Roasted
 * Virtue Rose

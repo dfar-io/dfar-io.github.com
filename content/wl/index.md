@@ -5,24 +5,27 @@ draft: false
 ---
 
 ## 2020.01.04
-
+* Clean 130 _decent_
+* Bench 3 x 8 x 70lb
+* Rows 3 x 8 x 50lb
+* JR 6 x 40j _a few misses, but better at the end. With some warmup I should do 50-60 jumps_
 
 ## Structure
 
 ### Day 1
-* Clean (130, 5x1x110)
-* Incline DB Bench (70lb)
-* Rows (50lb)
-* JumpRope 10/20 (or Holds)
+* Clean (130)
+* Incline DB Bench (3x8x70lb)
+* Rows (3x8x50lb)
+* JumpRope 6x40j (or Holds)
 
 ### Day 2
-* Squat (170, 2x3x140)
+* Squat (170)
 * Hypers (2.5kg)
 * Curls (BB)
-* JumpRope 10/20 (or Holds)
+* JumpRope (or Holds)
 
 ### Day 3
-* Press (80, 2x5x60)
+* Press (80)
 * Pullups (3 sets)
 * Planks (3 sets)
-* JumpRope 10/20 (or Holds)
+* JumpRope (or Holds)

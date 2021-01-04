@@ -8,18 +8,18 @@ draft: false
 
 ### Day 1
 * Clean (130, 5x1x110)
-* Incline DB Bench
-* Rows
-* JumpRope (or Holds)
+* Incline DB Bench (70lb)
+* Rows (50lb)
+* JumpRope 10/20 (or Holds)
 
 ### Day 2
 * Squat (170, 2x3x140)
-* Hyper
-* Curls
-* JumpRope (or Holds)
+* Hypers (2.5kg)
+* Curls (BB)
+* JumpRope 10/20 (or Holds)
 
 ### Day 3
 * Press (80, 2x5x60)
-* Pullups
-* Ab Rolls
-* JumpRope (or Holds)
+* Pullups (3 sets)
+* Planks (3 sets)
+* JumpRope 10/20 (or Holds)

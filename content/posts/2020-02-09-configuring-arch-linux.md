@@ -2,7 +2,7 @@
 title: Configuring Arch Linux
 author: dfar
 
-date: 2020-02-09T02:25:02+00:00
+date: 2021-01-04T02:25:02+00:00
 url: /configuring-arch-linux/
 categories:
   - Technology
@@ -73,28 +73,35 @@ Save settings to the X config file.
 
 To configure the graphical system, get Dropbox synced to be able to use saved entries. First, install yay:
 
-<pre class="wp-block-code"><code>sudo pacman -S base-devel
+````
+sudo pacman -S base-devel
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si</code></pre>
+makepkg -si
+````
 
 Then import public key:
 
-<pre class="wp-block-code"><code>gpg --recv-keys --keyserver hkp://pgp.mit.edu:80 FC918B335044912E</code></pre>
+````
+gpg --recv-keys --keyserver hkp://pgp.mit.edu:80 FC918B335044912E
+````
 
 Install Dropbox:
 
-<pre class="wp-block-code"><code>yay -S dropbox</code></pre>
-
+````
+yay -S dropbox
+````
 Finally, start and sign in to Dropbox.
 
 ### Link Existing Configurations
 
 Make symlinks for the following:
 
-<pre class="wp-block-code"><code>mkdir ~/.config/awesome
+````
+mkdir ~/.config/awesome
 ln -s ~/Dropbox/config/rc.lua ~/.config/awesome/rc.lua
-ln -s ~/Dropbox/config/Xresources-desktop ~/.Xresources</code></pre>
+ln -s ~/Dropbox/config/Xresources-desktop ~/.Xresources
+````
 
 Reboot.
 

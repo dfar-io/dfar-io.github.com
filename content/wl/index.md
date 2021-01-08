@@ -4,6 +4,11 @@ date: 2021-01-02T16:51:30-05:00
 draft: false
 ---
 
+## 2020.01.07
+* Clean 130,131
+
+_short on time today because work_
+
 ## 2020.01.06
 * Press 80 _felt great_
 * Pullups 3 x 5

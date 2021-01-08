@@ -14,7 +14,6 @@ _decimal at end is the price per oz._
 * ANXO Hereford Gold (.31)
 * Blom Tart ($12/4 - .25)
 * BlackGrass Porter's Pick (.47)
-* ANXO Nevertheless ($17/4 - .35)
 * ANXO Time and Place Adam's (.35)
 * [Deer Snacks IV](https://www.shacksbury.com/shop/deer-snack-iv-return-of-the-snack)
 * [Suttons Bay Power Island](https://vinoshipper.com/shop/suttons_bay_ciders/power_island_33112?list=) (.57)
@@ -24,6 +23,7 @@ _decimal at end is the price per oz._
 * TwoK Old World (.21)
 
 ## C
+* ANXO Nevertheless ($17/4 - .35)
 * Ace Joker
 * ANXO Transcontinental ($16/4 - .33)
 * ANXO Happy Trees (.31)

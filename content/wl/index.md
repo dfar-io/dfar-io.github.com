@@ -4,6 +4,12 @@ date: 2021-01-02T16:51:30-05:00
 draft: false
 ---
 
+## 2020.01.09
+* Press 80, 81
+* Pullups 5,5,5
+* Plank 3 x 1min
+* Holds 1min, 2 x 45sec
+
 ## 2020.01.07
 * Clean 130,131
 

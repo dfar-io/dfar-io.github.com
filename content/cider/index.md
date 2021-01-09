@@ -21,6 +21,7 @@ _decimal at end is the price per oz._
 ## B
 * ANXO District Dry (.23)
 * TwoK Old World (.21)
+* BlackGrass Golden Boi (.18)
 
 ## C
 * ANXO Nevertheless ($17/4 - .35)

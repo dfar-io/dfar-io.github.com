@@ -10,6 +10,8 @@ draft: false
 * Plank 3 x 1min
 * Holds 1min, 2 x 45sec
 
+_missed yesterday due to bad scheduling with Novi trip, rescheduled to prevent_
+
 ## 2020.01.07
 * Clean 130,131
 

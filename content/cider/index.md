@@ -33,6 +33,7 @@ _decimal at end is the price per oz._
 * Virtue Brut
 * VanderMill Brut
 * VanderMill Bluish Gold
+* Strongbow Original Dry
 
 ## D
 * Pulsar

@@ -4,6 +4,13 @@ date: 2021-01-02T16:51:30-05:00
 draft: false
 ---
 
+## 2020.01.10
+* Clean 130, 132
+* Bench 3 x 9 x 70lb
+* Rows 3 x 10 x 50lb
+
+_I should try to come up with a third exercise outside of holds/carries_
+
 ## 2020.01.09
 * Press 80, 81
 * Pullups 5,5,5

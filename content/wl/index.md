@@ -4,6 +4,12 @@ date: 2021-01-02T16:51:30-05:00
 draft: false
 ---
 
+## 2020.01.11
+* Squat 170 _tough_
+* Hypers 3 x 12 _bump up to 2.5kg soon?_
+* Curls 3 x 12 x 20kg (BB) _add a kg_
+* Holds 1min5sec, 50sec, 45sec
+
 ## 2020.01.10
 * Clean 130, 132
 * Bench 3 x 9 x 70lb

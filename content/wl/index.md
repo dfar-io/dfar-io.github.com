@@ -48,16 +48,16 @@ _short on time today because work_
 * Clean (130)
 * Incline DB Bench (3x8x70lb)
 * Rows (3x8x50lb)
-* JumpRope 6 x 60j (or Holds)
+* JumpRope 6 x 60j (or Holds, or Planks)
 
 ### Day 2
 * Squat (170)
 * Hypers (3x12)
 * Curls (3x12xBB)
-* Holds
+* Holds (or Planks)
 
 ### Day 3
 * Press (80)
 * Pullups (3 sets)
 * Planks (3 sets)
-* JumpRope 6 x 60j (or Holds)
+* JumpRope 6 x 60j (or Holds, or extra volume)

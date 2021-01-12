@@ -9,9 +9,9 @@ _decimal at end is the price per oz._
 ## S
 * Blom 2020 Dry ($16/4 - .33)
 * BlackGrass Yo Homes (.47)
+* ANXO Hereford Gold (.31)
 
 ## A
-* ANXO Hereford Gold (.31)
 * Blom Tart ($12/4 - .25)
 * BlackGrass Porter's Pick (.47)
 * ANXO Time and Place Adam's (.35)

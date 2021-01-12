@@ -1,7 +1,7 @@
 ---
 title: "Adding Nunit Project to nopCommerce Plugin"
 date: 2021-01-12T11:59:19-05:00
-draft: true
+draft: false
 ---
 
 I've been working on integrating SonarClodu into the nopCommerce Plugin

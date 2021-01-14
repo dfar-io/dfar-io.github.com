@@ -4,6 +4,11 @@ date: 2021-01-02T16:51:30-05:00
 draft: false
 ---
 
+## 2020.01.13
+* Clean 130, 133
+
+_I felt a little queasy so I stopped after clean. I missed yesterday due to work, going to move to 5 days a week to give mtyself some space. If all goes well, going for 135 next time._
+
 ## 2020.01.11
 * Squat 170 _tough_
 * Hypers 3 x 12 _bump up to 2.5kg soon?_

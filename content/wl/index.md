@@ -4,10 +4,15 @@ date: 2021-01-02T16:51:30-05:00
 draft: false
 ---
 
+## 2020.01.14
+* Press/BPA 3 x 12/15 x 20kg
+
+_Dan convinced me to try daily pressing (even on off days) with band pull-aparts. I ordered some Fat Gripz and micro plates and will increment 0.25kg every day, making for a 1.75kg bump every week, or doing 40 in around 3 months. Going to try to stick with doing 12 reps as long as possible._
+
 ## 2020.01.13
 * Clean 130, 133
 
-_I felt a little queasy so I stopped after clean. I missed yesterday due to work, going to move to 5 days a week to give mtyself some space. If all goes well, going for 135 next time._
+_I felt a little queasy so I stopped after clean. I missed yesterday due to work, going to move to 5 days a week to give myself some space. If all goes well, going for 135 next time._
 
 ## 2020.01.11
 * Squat 170 _tough_

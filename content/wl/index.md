@@ -4,6 +4,15 @@ date: 2021-01-02T16:51:30-05:00
 draft: false
 ---
 
+## 2021.01.15
+* Squat 170 _still tough, going for 2 reps next session_
+* Press/BPA 3 x 12/15 x 20 (20.25kg)
+* Hypers 3 x 12
+* BB Curls 3 x 12
+* Carry 3 laps x 70lb
+
+_I don't have the micro weights yet, so going to just increment to get to 225lb by next year this time. Weather was decent so gonna do carries when I can. Finished up in around 45 min._
+
 ## 2020.01.14
 * Press/BPA 3 x 12/15 x 20kg
 

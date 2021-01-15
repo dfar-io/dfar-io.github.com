@@ -71,18 +71,26 @@ _short on time today because work_
 
 ### Day 1
 * Clean (130)
+* FG Press/BPA (3x12/15)
 * Incline DB Bench (3x8x70lb)
 * Rows (3x8x50lb)
 * JumpRope 6 x 60j (or Holds, or Planks)
 
 ### Day 2
 * Squat (170)
+* FG Press/BPA (3x12/15)
 * Hypers (3x12)
 * Curls (3x12xBB)
 * Holds (or Planks)
 
 ### Day 3
 * Press (80)
+* FG Press/BPA (3x12/15)
 * Pullups (3 sets)
 * Planks (3 sets)
 * JumpRope 6 x 60j (or Holds, or extra volume)
+
+## Off Day
+* FG Press/BPA (5x12/15)
+
+_Added the FG Press/BPA sets halfway through the cycle_

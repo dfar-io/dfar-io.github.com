@@ -4,6 +4,12 @@ date: 2021-01-02T16:51:30-05:00
 draft: false
 ---
 
+## 2021.01.17
+* Clean 130, 135 _nice!_
+* FG Press/BPA 3 x 12/15 x 20.5
+
+_cut short due to being out earlier, but happy with cleans regardless_
+
 ## 2021.01.16
 * Press 80, 82, 82 _second 82 was really grindy_
 * Press/BPA 3 x 12/15 x 20.25 _weights came in so starting progression now_

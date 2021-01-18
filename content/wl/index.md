@@ -4,6 +4,13 @@ date: 2021-01-02T16:51:30-05:00
 draft: false
 ---
 
+## 2021.01.18
+* Squat 170, 170
+* FG Press/BPA 3 x 12/15 x 20.75
+* Hypers 3 x 12 _ready to move up_
+* Curls _lets add the FG to these and start with 15s, alongside rotating regular and hammers_
+* Holds 1min10sec 
+
 ## 2021.01.17
 * Clean 130, 135 _nice!_
 * FG Press/BPA 3 x 12/15 x 20.5

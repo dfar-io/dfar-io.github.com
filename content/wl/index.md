@@ -4,6 +4,9 @@ date: 2021-01-02T16:51:30-05:00
 draft: false
 ---
 
+## 2021.01.19
+* FG Press/BPA 3 x 12/15 x 21
+
 ## 2021.01.18
 * Squat 170, 170
 * FG Press/BPA 3 x 12/15 x 20.75

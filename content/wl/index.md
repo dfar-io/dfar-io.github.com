@@ -4,6 +4,13 @@ date: 2021-01-02T16:51:30-05:00
 draft: false
 ---
 
+## 2021.01.20
+* Press 80, 83 x 0
+* FG Press/BPA 3 x 12/15 x 21.25kg
+* Pullups 6, 6
+
+_little disappointed on the press, since I'll be only pressing daily at this point and removing heavy presses._
+
 ## 2021.01.19
 * FG Press/BPA 3 x 12/15 x 21
 

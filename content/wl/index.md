@@ -4,6 +4,9 @@ date: 2021-01-02T16:51:30-05:00
 draft: false
 ---
 
+## 2021.01.21
+* FG Press/BPA 3 x 12/15 x 21.5kg
+
 ## 2021.01.20
 * Press 80, 83 x 0
 * FG Press/BPA 3 x 12/15 x 21.25kg

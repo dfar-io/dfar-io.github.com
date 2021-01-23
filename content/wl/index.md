@@ -22,6 +22,11 @@ inconsistent on training as as whole, but overall I made 18/21 days, which I'm
 very content with. I'll also be skipping the specified deload, just doing it on
 when I feel it. As long as I'm more consistent, I think everything works out.
 
+## 2021.01.22
+* FG Press/BPA 3 x 12/15 x 21.75kg
+
+_Kind of tough to lift at hoke with the dogs sometimes. I might have to just accept that weekends will have less lifting than I'd like._
+
 ## 2021.01.21
 * FG Press/BPA 3 x 12/15 x 21.5kg
 

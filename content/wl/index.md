@@ -4,6 +4,24 @@ date: 2021-01-02T16:51:30-05:00
 draft: false
 ---
 
+## Summary
+
+* 135 clean, feeling great overall
+* Found a decent challenge in 170 squat
+* Missed 83 press
+
+I'm making some changes to do daily presses and skip heavy presses for the time
+being. I'll also:
+ * Add a kg to each of the minimum lifts (once it's too much, I'll do doubles)
+ * Add a single drop set for each core lift (cleans, squats)
+ * Adding fat grips to curls
+ * Adding weight to hypers
+
+Finally, in terms of scheduling, I'm moving to 6x a week. I've been slightly
+inconsistent on training as as whole, but overall I made 18/21 days, which I'm
+very content with. I'll also be skipping the specified deload, just doing it on
+when I feel it. As long as I'm more consistent, I think everything works out.
+
 ## 2021.01.21
 * FG Press/BPA 3 x 12/15 x 21.5kg
 
@@ -12,7 +30,8 @@ draft: false
 * FG Press/BPA 3 x 12/15 x 21.25kg
 * Pullups 6, 6
 
-_little disappointed on the press, since I'll be only pressing daily at this point and removing heavy presses._
+_little disappointed on the press, since I'll be only pressing daily at this
+point and removing heavy presses._
 
 ## 2021.01.19
 * FG Press/BPA 3 x 12/15 x 21
@@ -21,7 +40,8 @@ _little disappointed on the press, since I'll be only pressing daily at this poi
 * Squat 170, 170
 * FG Press/BPA 3 x 12/15 x 20.75
 * Hypers 3 x 12 _ready to move up_
-* Curls _lets add the FG to these and start with 15s, alongside rotating regular and hammers_
+* Curls _lets add the FG to these and start with 15s, alongside rotating
+* regular and hammers_
 * Holds 1min10sec 
 
 ## 2021.01.17
@@ -41,17 +61,24 @@ _cut short due to being out earlier, but happy with cleans regardless_
 * BB Curls 3 x 12
 * Carry 3 laps x 70lb
 
-_I don't have the micro weights yet, so going to just increment to get to 225lb by next year this time. Weather was decent so gonna do carries when I can. Finished up in around 45 min._
+_I don't have the micro weights yet, so going to just increment to get to 225lb
+by next year this time. Weather was decent so gonna do carries when I can.
+Finished up in around 45 min._
 
 ## 2020.01.14
 * Press/BPA 3 x 12/15 x 20kg
 
-_Dan convinced me to try daily pressing (even on off days) with band pull-aparts. I ordered some Fat Gripz and micro plates and will increment 0.25kg every day, making for a 1.75kg bump every week, or doing 40 in around 3 months. Going to try to stick with doing 12 reps as long as possible._
+_Dan convinced me to try daily pressing (even on off days) with band
+pull-aparts. I ordered some Fat Gripz and micro plates and will increment
+0.25kg every day, making for a 1.75kg bump every week, or doing 40 in around 3
+months. Going to try to stick with doing 12 reps as long as possible._
 
 ## 2020.01.13
 * Clean 130, 133
 
-_I felt a little queasy so I stopped after clean. I missed yesterday due to work, going to move to 5 days a week to give myself some space. If all goes well, going for 135 next time._
+_I felt a little queasy so I stopped after clean. I missed yesterday due to
+work, going to move to 5 days a week to give myself some space. If all goes
+well, going for 135 next time._
 
 ## 2020.01.11
 * Squat 170 _tough_
@@ -95,7 +122,8 @@ _short on time today because work_
 * Clean 130 _decent_
 * Bench 3 x 8 x 70lb
 * Rows 3 x 8 x 50lb
-* JR 6 x 40j _a few misses, but better at the end. With some warmup I should do 50-60 jumps_
+* JR 6 x 40j _a few misses, but better at the end. With some warmup I should do
+* 50-60 jumps_
 
 ## Structure
 

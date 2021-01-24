@@ -10,8 +10,10 @@ draft: false
 * Found a decent challenge in 170 squat
 * Missed 83 press
 
-I'm making some changes to do daily presses and skip heavy presses for the time
-being. I'll also:
+Changes being made:
+ * Dropping heavy presses and treating "press" day as a lighter day
+ * Dropping end of cycle deload
+ * Moving to 6x a week (taking off Fridays)
  * Add a kg to each of the minimum lifts (once it's too much, I'll do doubles)
  * Add a single drop set for each core lift (cleans, squats)
  * Adding fat grips to curls
@@ -19,8 +21,7 @@ being. I'll also:
 
 Finally, in terms of scheduling, I'm moving to 6x a week. I've been slightly
 inconsistent on training as as whole, but overall I made 18/21 days, which I'm
-very content with. I'll also be skipping the specified deload, just doing it on
-when I feel it. As long as I'm more consistent, I think everything works out.
+very content with.
 
 ## 2021.01.22
 * FG Press/BPA 3 x 12/15 x 21.75kg

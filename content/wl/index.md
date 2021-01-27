@@ -4,6 +4,18 @@ date: 2021-01-25T16:51:30-05:00
 draft: false
 ---
 
+## 2021.01.27
+* Squat 160, 1x3x140
+* FG OHP/BPA 3 x 12/15 x 22.75kg
+* Pullups 5,5,5
+* Planks 3 x 1min
+* JR 4 x 60j
+
+_I was not feeling motivated for this workout either, but after getting started, I was able to finish strong. I was thinking about reprioritizing things, but ultimately, everything works out well as is. I think the main thing to do is to put some more focus on the volume work, and not worry so much about the heavy single. I think new job is draining me a bit, so I should go through my schedule and try to simplify things a bit more._
+
+## 2021.01.26
+* FG OHP/BPA 3 x 12/15 x 22.5kg
+
 ## 2021.01.25
 * Clean 126 _felt heavy so I stopped, was planning 131_
 * Clean Pull 1 x 3 x 126kg

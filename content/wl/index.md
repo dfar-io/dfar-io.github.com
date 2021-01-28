@@ -4,6 +4,9 @@ date: 2021-01-25T16:51:30-05:00
 draft: false
 ---
 
+## 2021.01.28
+* FG OHP/BPA 3 x 12/15 x 23kg
+
 ## 2021.01.27
 * Squat 160, 1x3x140
 * FG OHP/BPA 3 x 12/15 x 22.75kg

@@ -4,6 +4,11 @@ date: 2021-01-25T16:51:30-05:00
 draft: false
 ---
 
+## 2021.01.29
+* Press 22 x 3 x 41kg
+
+_tried something a little different, I think I'm gonna do this for gaming days and alternate with pullups._
+
 ## 2021.01.28
 * FG OHP/BPA 3 x 12/15 x 23kg
 

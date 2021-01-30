@@ -4,6 +4,14 @@ date: 2021-01-25T16:51:30-05:00
 draft: false
 ---
 
+## 2021.01.30
+* Squat 160, 171, 1x3x140
+* FGOHP/BPA 3 x 12/15 x 23.25kg
+* Pullups 5,5,5
+* Plank 2 x 1min
+
+_good squats today_
+
 ## 2021.01.29
 * FG OHP 22 x 3 x 41kg
 

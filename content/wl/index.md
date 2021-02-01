@@ -4,6 +4,13 @@ date: 2021-01-25T16:51:30-05:00
 draft: false
 ---
 
+## 2021.01.31
+* Clean 130
+* Clean Pull 1 x 3 x 130
+* FP/BPA 3 x 12/15 x 23.5kg
+* Bench 2 x 10 x 70lb
+* Row 8,6 x 70lb _too heavy_
+
 ## 2021.01.30
 * Squat 160, 171, 1x3x140
 * FGOHP/BPA 3 x 12/15 x 23.25kg

@@ -2,11 +2,8 @@
 title: Installing Arch Linux
 author: dfar
 
-date: 2020-12-30T17:19:44+00:00
+date: 2021-02-01T17:19:44+00:00
 url: /installing-arch-linux/
-categories:
-  - Technology
-  - Uncategorized
 
 ---
  
@@ -17,15 +14,17 @@ categories:
 * [Windows (using Arch Linux)](https://superuser.com/a/1387874)
 * Windows &#8211; use [Rufus][1] (you may need to use GPT && DD image mode)
 
-## Installation
+## Windows Installation
 
-If planning to dual boot, install Windows first, using a smaller partition.
+When dual-booting both Windows and Arch Linux, install Windows first using a smaller partition and install any software required.
+
+## Installation
 
 First, boot the Arch Linux USB stick onto the computer of choice. After finished loading, you should see a command terminal.
 
 To increase font size during install, use:
 
-<pre class="wp-block-code"><code>setfont /usr/share/kbd/consolefonts/latarcyrheb-sun32.psfu.gz</code></pre>
+`setfont /usr/share/kbd/consolefonts/latarcyrheb-sun32.psfu.gz`
 
 ### Connect To Internet
 
@@ -73,22 +72,20 @@ Use **cfdisk** to create the following partitions (remember when sizing, you can
 Now format the partitions (using **parted -l** to list disks):
 
 ````
-mkfs.ext4 &lt;PRIMARY_DISK>
-mkswap &lt;SWAP_DISK>
-swapon &lt;SWAP_DISK>
+mkfs.ext4 PRIMARY_DISK
+mkswap SWAP_DISK
+swapon SWAP_DISK
 ````
 
 Mount the newly formatted partitions:
 
 ````
-mount &lt;PRIMARY_DISK> /mnt
+mount PRIMARY_DISK /mnt
 mkdir /mnt/boot
-mount &lt;EFI_DISK> /mnt/boot
+mount EFI_DISK /mnt/boot
 ````
 
 ### Perform Arch Installation
-
-Edit the `/etc/pacman.d/mirrorlist` file and set it to have just 12 United States entries.
 
 Install base Arch Linux:
 
@@ -152,11 +149,20 @@ Configure GRUB boot loader:
 
 `grub-install /dev/sda --efi-directory=/boot`
 
+Add the Windows partition to boot menu options in the file `/etc/grub.d/40_custom`:
+
+```
+menuentry "Windows 10" {
+    search --fs-uuid --no-floppy --set=root UUID_OF_EFI_PARTITION
+    chainloader (${root})/EFI/Microsoft/Boot/bootmgfw.efi
+}
+```
+
 `grub-mkconfig -o /boot/grub/grub.cfg`
 
 ### (Optional) Create Non-Root User
 
-You&#8217;ll want to perform your daily activities without using the root user.
+You'll want to perform your daily activities without using the root user.
 
 ```
 useradd -m dfar
@@ -170,9 +176,10 @@ Edit the **/etc/sudoers** file and allow users of `wheel` group to execute any c
 
 Finally, reboot the system:
 
-<pre class="wp-block-code"><code>exit
-
-shutdown now</code></pre>
+```
+exit
+shutdown now
+```
 
 To verify, remove the USB stick used for installation, and turn on the computer.
 
@@ -181,4 +188,4 @@ You should be able to log in as either the root user or the newly created user s
 Next step involves [configuring the base system][2].
 
  [1]: https://wiki.archlinux.org/index.php/USB_flash_installation_media#Using_Rufus
- [2]: https://dfar.io/configuring-installed-arch-linux/
+ [2]: https://dfar.io/configuring-arch-linux/

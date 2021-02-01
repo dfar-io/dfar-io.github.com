@@ -2,7 +2,7 @@
 title: Configuring Arch Linux
 author: dfar
 
-date: 2021-01-04T02:25:02+00:00
+date: 2021-02-01T02:25:02+00:00
 url: /configuring-arch-linux/
 categories:
   - Technology
@@ -13,14 +13,18 @@ If you&#8217;re [installed Arch Linux][1], the next step is configuring the syst
 
 ## Configure Internet 
 
-**S**et up **networkmanager** and if wireless, connect to an internet source:
+Set up **networkmanager** and if wireless, connect to an internet source:
 
-<pre class="wp-block-code"><code>sudo systemctl enable NetworkManager.service
+```
+sudo systemctl enable NetworkManager.service
 sudo systemctl start NetworkManager.service
+```
 
 # connect to wireless
+```
 nmcli device wifi list
-nmcli device wifi connect SSID password PASSWORD</code></pre>
+nmcli device wifi connect SSID password PASSWORD
+```
 
 Confirm access using `ping`.
 
@@ -48,8 +52,10 @@ Install the following packages to set up the window and display manager
 
 Configure LightDM:
 
-<pre class="wp-block-code"><code>sudo systemctl enable lightdm.service
-sudo systemctl start lightdm.service</code></pre>
+```
+sudo systemctl enable lightdm.service
+sudo systemctl start lightdm.service
+```
 
 You should now have a graphical display running.
 
@@ -61,11 +67,11 @@ First, set up `firefox` and sign in to sync all current changes.
 
 If using multiple monitors, set them up:
 
-<pre class="wp-block-code"><code>sudo nvidia-xconfig</code></pre>
+```sudo nvidia-xconfig```
 
 Reboot computer, then run:
 
-<pre class="wp-block-code"><code>sudo nvidia-settings</code></pre>
+```sudo nvidia-settings```
 
 Save settings to the X config file.
 
@@ -114,13 +120,17 @@ Install the following packages:
 
 To make backlight changes using keyboard shortcuts, edit the **/etc/rc.local** file.
 
-<pre class="wp-block-code"><code>chgrp -R backlighters /sys/class/backlight
-chmod g+w /sys/class/backlight/*/*</code></pre>
+```
+chgrp -R backlighters /sys/class/backlight
+chmod g+w /sys/class/backlight/*/*
+```
 
-Then add your user to the &#8216;backlighters&#8217; group:
+Then add your user to the backlighters group:
 
-<pre class="wp-block-code"><code>sudo groupadd backlighters
-sudo usermod -aG backlighters dfar</code></pre>
+```
+sudo groupadd backlighters
+sudo usermod -aG backlighters dfar
+```
 
 Restart and test the ability to inc/dec backlight with Fn+F11/F12
 
@@ -132,7 +142,7 @@ Install `nautilus`, `flameshot`, `evince`, and `calc`.
 
 Using yay, install `systemd-numlockontty`, and then enable numLockOnTty
 
-<pre class="wp-block-code"><code>sudo systemctl enable numLockOnTty</code></pre>
+`sudo systemctl enable numLockOnTty`
 
 ### Web Browsing/Mail/Chat
 
@@ -184,20 +194,26 @@ Install `sane` and `imagescan`. Then run `utsushi` for scanning.
 
 For printing, install `cups`, `nss-mdns`, `avahi`, `python-gobject`, `pygtk`, `python-dbus`, and then enable and start the services:
 
-<pre class="wp-block-code"><code>sudo systemctl enable org.cups.cupsd.service
+```
+sudo systemctl enable org.cups.cupsd.service
 sudo systemctl start org.cups.cupsd.service
-sudo systemctl start avahi-daemon.service</code></pre>
+sudo systemctl start avahi-daemon.service
+```
 
 Edit `/etc/nsswitch.conf` and change the hosts line to include before `resolve` and `dns`:
 
-<pre class="wp-block-code"><code>mdns_minimal [NOTFOUND=return]</code></pre>
+```
+mdns_minimal [NOTFOUND=return]
+```
 
-Now find the printer&#8217;s IP address:
+Now find the printer's IP address:
 
-<pre class="wp-block-code"><code>avahi-discover</code></pre>
+`avahi-discover`
 
 And add the printer:
 
-<pre class="wp-block-code"><code>lpadmin -p OfficePrinter -E -v ipp://IP_ADDRESS/ipp/print -m everywhere</code></pre>
+```
+lpadmin -p OfficePrinter -E -v ipp://IP_ADDRESS/ipp/print -m everywhere
+```
 
  [1]: https://dfar.io/installing-arch-linux/

@@ -4,6 +4,14 @@ date: 2021-01-25T16:51:30-05:00
 draft: false
 ---
 
+## 2021.02.01
+* Squat 160, 1x3x140
+* FP/BPA 3 x 12/15 x 23.75kg
+* FG Curls/Hammer 4 x 12
+* Hold 1min
+
+_had a headache today, but glad I got everything done_
+
 ## 2021.01.31
 * Clean 130
 * Clean Pull 1 x 3 x 130

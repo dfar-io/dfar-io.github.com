@@ -7,7 +7,7 @@ draft: false
 ## 2021.02.01
 * Squat 160, 1x3x140
 * FP/BPA 3 x 12/15 x 23.75kg
-* FG Curls/Hammer 4 x 12
+* FG Curls/Hammer 4 x 12 x 15lb
 * Hold 1min
 
 _had a headache today, but glad I got everything done_

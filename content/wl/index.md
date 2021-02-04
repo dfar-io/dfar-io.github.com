@@ -4,6 +4,22 @@ date: 2021-01-25T16:51:30-05:00
 draft: false
 ---
 
+## 2021.02.03
+
+### Workout A
+
+### Workout B
+* FPress 14 x 3 x 41kg
+* Pullups 14 x 2
+
+_inbetween MK races - this is definitely better than only doing presses_
+
+## 2021.02.02
+* Clean 130,130 _first was bad, stay upright in 2nd pull_
+* HH Clean 2 x 2 x 70 _might be a good way to drill issue above_
+* FP/B 3 x 12/15 x 24kg
+* Pullups 6,5,5
+
 ## 2021.02.01
 * Squat 160, 1x3x140
 * FP/BPA 3 x 12/15 x 23.75kg

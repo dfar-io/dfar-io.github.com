@@ -7,6 +7,7 @@ draft: false
 ## 2021.02.03
 
 ### Workout A
+* FP/B 3 x 12/15 x 24.25kg
 
 ### Workout B
 * FPress 14 x 3 x 41kg

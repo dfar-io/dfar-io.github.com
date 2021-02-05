@@ -4,6 +4,12 @@ date: 2021-01-25T16:51:30-05:00
 draft: false
 ---
 
+## 2021.02.04
+* Squat 160, 1x3x140
+* Bench/BPA 1 x 10/15 x 70lb
+
+_got pulled away to work midway. I haven't been doing the full workout lately so going to cut down to 3 lifts a day._
+
 ## 2021.02.03
 
 ### Workout A

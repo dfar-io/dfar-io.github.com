@@ -4,6 +4,12 @@ date: 2021-01-25T16:51:30-05:00
 draft: false
 ---
 
+## 2021.02.05
+Meathead MK
+
+* OHP 14 x 4 x 41kg _a little tougher_
+* Pullups 14 x 2
+
 ## 2021.02.04
 * Squat 160, 1x3x140
 * Bench/BPA 1 x 10/15 x 70lb

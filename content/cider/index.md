@@ -24,17 +24,17 @@ _decimal at end is the price per oz._
 * BlackGrass Golden Boi (.18)
 
 ## C
-* ANXO Nevertheless ($17/4 - .35)
 * Ace Joker
+* VanderMill Bluish Gold
+
+## D
+* ANXO Nevertheless ($17/4 - .35)
 * ANXO Transcontinental ($16/4 - .33)
 * ANXO Happy Trees (.31)
 * ANXO Time and Place Sunrise (.35)
 * BlackGrass Northern Spy
 * Virtue Brut
 * VanderMill Brut
-* VanderMill Bluish Gold
-
-## D
 * Strongbow Original Dry
 * Pulsar
 * Blom Ginger Pear

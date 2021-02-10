@@ -27,6 +27,17 @@ _decimal at end is the price per oz._
 * Ace Joker
 * VanderMill Bluish Gold
 
+## To Try
+* Tandem Crabster
+* Farnum Hill Extra Dry
+* Northern Natural Traditional (from Taproot) & Blueberry
+* 45 Fresh Coast (A?)
+* Farmhaus Daily Dry (A?)
+* Original Sin Black Widow (.18)
+* Omme Gang (.29)
+* Happy Camper (.29)
+* The Cucumber One (.21)
+
 ## D
 * ANXO Nevertheless ($17/4 - .35)
 * ANXO Transcontinental ($16/4 - .33)
@@ -65,10 +76,3 @@ _decimal at end is the price per oz._
 * CiderBoys British Dry
 * Blakes Fido
 * Uncle John's Apple ($12/4(16) - .19)
-
-## To Try
-* Tandem Crabster
-* Farnum Hill Extra Dry
-* Northern Natural Traditional (from Taproot) & Blueberry
-* 45 Fresh Coast (A?)
-* Farmhaus Daily Dry (A?)

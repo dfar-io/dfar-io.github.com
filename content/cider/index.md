@@ -22,6 +22,7 @@ _decimal at end is the price per oz._
 * ANXO District Dry (.23)
 * TwoK Old World (.21)
 * BlackGrass Golden Boi (.18)
+* Farmhaus The Cucumber One (.21)
 
 ## C
 * Ace Joker
@@ -36,7 +37,6 @@ _decimal at end is the price per oz._
 * Original Sin Black Widow (.18)
 * Omme Gang (.29)
 * Happy Camper (.29)
-* The Cucumber One (.21)
 
 ## D
 * ANXO Nevertheless ($17/4 - .35)
@@ -61,6 +61,7 @@ _decimal at end is the price per oz._
 * Urbanrest Natty 004
 * Suttons Bay SidraLapeno
 * Beard Bender
+* Blom Apple Cyser
 
 ## F (Nope)
 * Fourth Coast Rooted Insanity

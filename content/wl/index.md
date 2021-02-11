@@ -4,6 +4,14 @@ date: 2021-01-25T16:51:30-05:00
 draft: false
 ---
 
+## 2021.02.10
+Meathead MK
+
+* OHP 8 x 3 x 41kg _easy_
+* Pullups 8 x 2 _switched to pullup grip, I think these work my back better._
+
+_haven't lifted in a few days, been busy with work, but not a great excuse. Going to start back up although no training this weekend either._
+
 ## 2021.02.05
 Meathead MK
 

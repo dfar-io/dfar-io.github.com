@@ -16,6 +16,7 @@ _decimal at end is the price per oz._
 * ANXO Time and Place Adam's (.35)
 * [Deer Snacks IV](https://www.shacksbury.com/shop/deer-snack-iv-return-of-the-snack)
 * [Suttons Bay Power Island](https://vinoshipper.com/shop/suttons_bay_ciders/power_island_33112?list=) (.57)
+* [Omme Gang Dry Cider](https://www.ommegang.com/beerinfo/dry-cider/) (.29)
 
 ## B
 * Blom Tart ($12/4 - .25)
@@ -23,7 +24,6 @@ _decimal at end is the price per oz._
 * TwoK Old World (.21)
 * BlackGrass Golden Boi (.18)
 * [Happy Camper](https://oldwestminster.orderport.net/product-details/0580/Happy-Camper) (.29)
-
 
 ## C
 * Farmhaus The Cucumber One (.21)
@@ -37,7 +37,7 @@ _decimal at end is the price per oz._
 * 45 Fresh Coast (A?)
 * Farmhaus Daily Dry (A?)
 * Original Sin Black Widow (.18)
-* Omme Gang (.29)
+
 
 ## D
 * ANXO Nevertheless ($17/4 - .35)

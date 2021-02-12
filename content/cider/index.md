@@ -22,9 +22,11 @@ _decimal at end is the price per oz._
 * ANXO District Dry (.23)
 * TwoK Old World (.21)
 * BlackGrass Golden Boi (.18)
-* Farmhaus The Cucumber One (.21)
+* [Happy Camper](https://oldwestminster.orderport.net/product-details/0580/Happy-Camper) (.29)
+
 
 ## C
+* Farmhaus The Cucumber One (.21)
 * Ace Joker
 * VanderMill Bluish Gold
 
@@ -36,7 +38,6 @@ _decimal at end is the price per oz._
 * Farmhaus Daily Dry (A?)
 * Original Sin Black Widow (.18)
 * Omme Gang (.29)
-* Happy Camper (.29)
 
 ## D
 * ANXO Nevertheless ($17/4 - .35)

@@ -19,6 +19,7 @@ _decimal at end is the price per oz._
 * [Omme Gang Dry Cider](https://www.ommegang.com/beerinfo/dry-cider/) (.29)
 
 ## B
+* Farmhaus Daily Dry
 * Blom Tart ($12/4 - .25)
 * ANXO District Dry (.23)
 * TwoK Old World (.21)
@@ -35,11 +36,9 @@ _decimal at end is the price per oz._
 * Farnum Hill Extra Dry
 * Northern Natural Traditional (from Taproot) & Blueberry
 * 45 Fresh Coast (A?)
-* Farmhaus Daily Dry (A?)
-* Original Sin Black Widow (.18)
-
 
 ## D
+* Original Sin Black Widow (.18)
 * ANXO Nevertheless ($17/4 - .35)
 * ANXO Transcontinental ($16/4 - .33)
 * ANXO Happy Trees (.31)

@@ -17,9 +17,9 @@ _decimal at end is the price per oz._
 * [Deer Snacks IV](https://www.shacksbury.com/shop/deer-snack-iv-return-of-the-snack)
 * [Suttons Bay Power Island](https://vinoshipper.com/shop/suttons_bay_ciders/power_island_33112?list=) (.57)
 * [Omme Gang Dry Cider](https://www.ommegang.com/beerinfo/dry-cider/) (.29)
+* Farmhaus Daily Dry
 
 ## B
-* Farmhaus Daily Dry
 * Blom Tart ($12/4 - .25)
 * ANXO District Dry (.23)
 * TwoK Old World (.21)
@@ -36,6 +36,7 @@ _decimal at end is the price per oz._
 * Farnum Hill Extra Dry
 * Northern Natural Traditional (from Taproot) & Blueberry
 * 45 Fresh Coast (A?)
+* Bee Well Cider (Bellaire,MI)
 
 ## D
 * Original Sin Black Widow (.18)

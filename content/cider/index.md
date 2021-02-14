@@ -30,6 +30,7 @@ _decimal at end is the price per oz._
 * Farmhaus The Cucumber One (.21)
 * Ace Joker
 * VanderMill Bluish Gold
+* Bee Well King's Cherry
 
 ## To Try
 * Tandem Crabster

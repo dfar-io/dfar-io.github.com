@@ -4,6 +4,12 @@ date: 2021-01-25T16:51:30-05:00
 draft: false
 ---
 
+## 2021.02.15
+* Clean 120
+* FP/B 3 x 12/15 x 20k
+
+_I took 10 days off, so going to just ease back into everything. I cut down on overall training a bit and am picking a few more things to just focus on. Work has been busier than I expected, so I've been putting lifting on the backburner_
+
 ## 2021.02.10
 Meathead MK
 

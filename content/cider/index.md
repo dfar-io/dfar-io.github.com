@@ -20,11 +20,11 @@ _decimal at end is the price per oz._
 * Farmhaus Daily Dry
 
 ## B
-* Blom Tart ($12/4 - .25)
 * ANXO District Dry (.23)
 * TwoK Old World (.21)
 * BlackGrass Golden Boi (.18)
 * [Happy Camper](https://oldwestminster.orderport.net/product-details/0580/Happy-Camper) (.29)
+* Blom Tart ($12/4 - .25)
 
 ## C
 * Farmhaus The Cucumber One (.21)

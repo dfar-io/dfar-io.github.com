@@ -4,6 +4,14 @@ date: 2021-01-25T16:51:30-05:00
 draft: false
 ---
 
+## 2021.02.16
+* Squat 160
+* FBench/B 3 x 12 x 5,10,15lb _im gonna start with 30lb and work up_
+* Hyper 3 x 12
+* JR 4 x 30j/10du
+
+_Sometimes it seems like doing 4 exercises in a day is a lot, but when I get into the groove, it all works out great. I really want to keep a streak going, even if the work is minimal, instead of taking time off. I can always change the paradigm of what I'm doing if I feel I'm burning out._
+
 ## 2021.02.15
 * Clean 120
 * FP/B 3 x 12/15 x 20k

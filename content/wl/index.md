@@ -4,6 +4,13 @@ date: 2021-01-25T16:51:30-05:00
 draft: false
 ---
 
+## 2021.02.17 - Meathead Kart
+
+* FP - 18 x 3 x 40
+* Pullups 18 x 2
+
+_Since we're playing 5:30 to 8, I can expect about 18 sets of whatever I'm doing. I'm going to increase the reps before I increase the weight for both lifts. It started to get challenging near the end._
+
 ## 2021.02.16
 * Squat 160
 * FBench/B 3 x 12 x 5,10,15lb _im gonna start with 30lb and work up_

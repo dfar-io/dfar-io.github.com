@@ -4,8 +4,12 @@ date: 2021-01-25T16:51:30-05:00
 draft: false
 ---
 
-## 2021.02.17 - Meathead Kart
+## 2021.02.18
+* FP/B 3 x 12/15 x 20.25kg
 
+_ going to lift tomorrow since late meetings today_
+
+## 2021.02.17 - Meathead Kart
 * FP - 18 x 3 x 40
 * Pullups 18 x 2
 

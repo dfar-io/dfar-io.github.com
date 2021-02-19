@@ -4,6 +4,13 @@ date: 2021-01-25T16:51:30-05:00
 draft: false
 ---
 
+## 2021.02.19
+* Clean 120, 125, 130 _130 was ugly_
+* HH Clean 2 x 2 x 70
+* FP/B 3 x 12/15 x 20.5k
+* FCurls/Hammers 4 x 12 x 15lb _need 20lbs_
+* JR 6 x 30j/10du OTM
+
 ## 2021.02.18
 * FP/B 3 x 12/15 x 20.25kg
 

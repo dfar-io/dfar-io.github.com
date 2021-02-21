@@ -4,6 +4,15 @@ date: 2021-01-25T16:51:30-05:00
 draft: false
 ---
 
+## 2021.02.21
+* FP/B 3 x 12/15 x 20.5k
+* FCurls/Hammer 2 x 12 x 15lb
+
+## 2021.02.20
+* Squat 160 x 2 _start going for doubles on this_
+* FBench/B 3 x 12/15 x 30lb
+* Hypers 3 x 12
+
 ## 2021.02.19
 * Clean 120, 125, 130 _130 was ugly_
 * HH Clean 2 x 2 x 70

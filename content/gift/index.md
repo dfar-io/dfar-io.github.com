@@ -16,3 +16,4 @@ draft: false
     * Nine and Hilton Market
 * [Heated Gloves](https://www.amazon.com/VELAZZIO-Thermo1-Battery-Heated-Gloves/dp/B07YBWHP2L/ref=sr_1_1?dchild=1&keywords=heated+gloves&qid=1613148444&sr=8-1)
 * Concept Rower Model D
+* 20 or 25lb Dumbbells

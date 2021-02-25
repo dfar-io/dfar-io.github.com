@@ -4,6 +4,12 @@ date: 2021-01-25T16:51:30-05:00
 draft: false
 ---
 
+## 2021.02.24 - Meathead Kart
+* FP/B 30 x 3/10 x 40k
+
+_I was having a hard time remember which to alternate, so decided to just do one movement through the whole thing, and balance the BPAs. Shoulder are feeling
+much better than when I did it before._ 
+
 ## 2021.02.22
 * FP/B 3 x 12/15 x 20.75k
 

@@ -37,7 +37,7 @@ _decimal at end is the price per oz._
 * Farnum Hill Extra Dry
 * Northern Natural Traditional (from Taproot) & Blueberry
 * 45 Fresh Coast (A?)
-* Bee Well Cider (Bellaire,MI)
+* Bee Well White Harvest (.21)
 
 ## D
 * Original Sin Black Widow (.18)

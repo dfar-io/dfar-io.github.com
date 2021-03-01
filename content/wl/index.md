@@ -4,6 +4,12 @@ date: 2021-01-25T16:51:30-05:00
 draft: false
 ---
 
+## 2021.03.02
+* FP/B 3 x 12/15 x 21k
+* Hypers 3 x 12
+
+_work is really picking up so I need to just focus on small daily work._
+
 ## 2021.02.24 - Meathead Kart
 * FP/B 30 x 3/10 x 40k
 

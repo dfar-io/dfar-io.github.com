@@ -5,6 +5,11 @@ draft: false
 ---
 
 ## 2021.03.02
+* FBench/B - 3 x 12 x 30lb
+* FCurls - 4 x 12 x 15lb
+* JR 6 x 30/10
+
+## 2021.03.01
 * FP/B 3 x 12/15 x 21k
 * Hypers 3 x 12
 

@@ -4,10 +4,12 @@ date: 2021-01-25T16:51:30-05:00
 draft: false
 ---
 
+## 2021.03.03 Meathead Kart
+* FP/B - sets of 4 at 40kg, 12 BPA
+
 ## 2021.03.02
-* FBench/B - 3 x 12 x 30lb
-* FCurls - 4 x 12 x 15lb
-* JR 6 x 30/10
+* FBench/B - 3 x 12 x 30lb _increase weigbt_
+* FCurls - 4 x 12 x 15lb 
 
 ## 2021.03.01
 * FP/B 3 x 12/15 x 21k

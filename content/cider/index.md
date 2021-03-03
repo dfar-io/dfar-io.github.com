@@ -21,13 +21,14 @@ _decimal at end is the price per oz._
 
 ## B
 * ANXO District Dry (.23)
-* TwoK Old World (.21)
 * BlackGrass Golden Boi (.18)
+* STEM Cider Dry
 * [Happy Camper](https://oldwestminster.orderport.net/product-details/0580/Happy-Camper) (.29)
 * Blom Tart ($12/4 - .25)
+* TwoK Old World (.21)
 
 ## C
-* Farmhaus The Cucumber One (.21)
+* STEM Cider Raspberry
 * Ace Joker
 * VanderMill Bluish Gold
 * Bee Well King's Cherry
@@ -44,6 +45,7 @@ _decimal at end is the price per oz._
 * ANXO Nevertheless ($17/4 - .35)
 * ANXO Transcontinental ($16/4 - .33)
 * ANXO Happy Trees (.31)
+* Farmhaus The Cucumber One (.21)
 * ANXO Time and Place Sunrise (.35)
 * BlackGrass Northern Spy
 * Virtue Brut

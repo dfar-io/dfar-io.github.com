@@ -4,8 +4,15 @@ date: 2021-01-25T16:51:30-05:00
 draft: false
 ---
 
+## 2021.03.04
+* Clean 120
+* FP/B - 3 x 12 x 21.25k
+* Hypers 3 x 12
+* JR 6 x 30/10
+
 ## 2021.03.03 Meathead Kart
-* FP/B - sets of 4 at 40kg, 12 BPA
+* FP/B - ~35 sets of 4 at 40kg, 12 BPA
+_do sets of 5 next time_
 
 ## 2021.03.02
 * FBench/B - 3 x 12 x 30lb _increase weigbt_

@@ -4,11 +4,11 @@ date: 2021-01-25T16:51:30-05:00
 draft: false
 ---
 
+## 2021.03.05
+* Pushups 3 x 15
+
 ## 2021.03.04
-* Clean 120
-* FP/B - 3 x 12 x 21.25k
-* Hypers 3 x 12
-* JR 6 x 30/10
+* FP/B - 3 x 12/15 x 21.25k
 
 ## 2021.03.03 Meathead Kart
 * FP/B - ~35 sets of 4 at 40kg, 12 BPA

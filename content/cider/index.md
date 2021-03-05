@@ -25,9 +25,9 @@ _decimal at end is the price per oz._
 * STEM Cider Dry
 * [Happy Camper](https://oldwestminster.orderport.net/product-details/0580/Happy-Camper) (.29)
 * Blom Tart ($12/4 - .25)
-* TwoK Old World (.21)
 
 ## C
+* TwoK Old World (.21)
 * STEM Cider Raspberry
 * Ace Joker
 * VanderMill Bluish Gold

@@ -5,7 +5,7 @@ draft: false
 ---
 
 ## 2021.03.08
-* Pushups 20, 15
+* Pushups 20, 20
 
 ## 2021.03.05
 * Pushups 3 x 15

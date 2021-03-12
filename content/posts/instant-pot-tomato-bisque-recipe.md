@@ -11,8 +11,8 @@ draft: false
 * 29oz [diced tomatoes](https://www.costco.com/kirkland-signature-organic-diced-tomatoes%2C-14.5-oz%2C-8-count.product.100334857.html)
 * 1 tbsp sugar
 * 1 cup chicken broth
-* 1 tbsp dried basil _(doubled from orig. recipe)_
-* 1/2 cup heavy cream _(doubled from orig. recipe)_
+* 1 tbsp dried basil
+* 1/2 cup heavy cream
 * _6 celery sticks, diced_
 * _3 carrots, diced_
 

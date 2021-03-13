@@ -74,6 +74,254 @@ You may want to seed data - to do so, edit the `seeds.rb` file to include data f
 
 An easy way to automate this is to add the `rake db:reset` step to the `postCreateCommand` script for the Remote Container, running `bundle install && rake db:reset`. This will clear the DB on rebuild of the container, and run all migrations.
 
+## Setting up CORS
+
+To set up CORS capabilities, check [this guide](https://dev.to/phillipug/comment/16l66)
+
+You can then verify with [this command](https://gist.github.com/exAspArk/07bbbafa2a9171b6c260989780cc0955)
+
+## Setting up authentication with JWT
+
+First, add the `jwt` and `bcrypt` gems:
+
+`bundle add jwt bcrypt`
+
+Then, create a user object that will hold sign-in information:
+
+`rails g scaffold user name:string email:string password_digest:string`
+
+and edit the model created:
+
+``` ruby
+class User < ApplicationRecord
+    has_secure_password
+
+    validates_presence_of :name, :email, :password_digest
+end
+```
+
+then add the following lines to `user_controller.rb`:
+
+``` ruby
+# Allows endpoint(s) to be accessed without authorization
+skip_before_action :authorize_request, :only => :create
+```
+
+and modify the `create` action:
+
+``` ruby
+...
+# POST /users
+  def create
+    user = User.create!(user_params)
+    auth_token = AuthenticateUser.new(user.email, user.password).call
+    response = { message: "Account created.", auth_token: auth_token }
+  end
+...
+# Only allow a list of trusted parameters through.
+    def user_params
+      params.permit(:name, :email, :password)
+    end
+```
+
+Then create `app/lib/json_web_token.rb`:
+
+``` ruby
+class JsonWebToken
+    HMAC_SECRET = Rails.application.secrets.secret_key_base
+
+    def self.encode(payload, exp = 24.hours.from_now)
+        payload[:exp] = exp.to_i
+        JWT.encode(payload, HMAC_SECRET)
+    end
+
+    def self.decode(token)
+        body = JWT.decode(token, HMAC_SECRET)[0]
+        HashWithIndifferentAccess.new body
+
+    rescue JWT::DecodeError => e
+        raise ExceptionHandler::InvalidToken, e.message
+    end
+end
+```
+
+and user service `app/auth/authenticate_user.rb`:
+
+``` ruby
+class AuthenticateUser
+    def initialize(email, password)
+        @email = email
+        @password = password
+    end
+
+    def call
+        JsonWebToken.encode(user_id: user.id) if user
+    end
+
+    private
+
+    attr_reader :email, :password
+
+    # verifies user credentials
+    def user
+        user = User.find_by(email: email)
+        return user if user && user.authenticate(password)
+
+        raise (ExceptionHandler::AuthenticationError, "Invalid credentials.")
+    end
+end
+```
+
+and authorize API request service `app/auth/authorize_api_request.rb`:
+
+``` ruby
+class AuthorizeApiRequest
+    def initialize(headers = {})
+      @headers = headers
+    end
+  
+    # Service entry point - return valid user object
+    def call
+      {
+        user: user
+      }
+    end
+  
+    private
+  
+    attr_reader :headers
+  
+    def user
+      @user ||= User.find(decoded_auth_token[:user_id]) if decoded_auth_token
+      # handle user not found
+    rescue ActiveRecord::RecordNotFound => e
+      # raise custom error
+      raise(
+        ExceptionHandler::InvalidToken,
+        ("Invalid token #{e.message}")
+      )
+    end
+  
+    # decode authentication token
+    def decoded_auth_token
+      @decoded_auth_token ||= JsonWebToken.decode(http_auth_header)
+    end
+  
+    # check for token in `Authorization` header
+    def http_auth_header
+      if headers['Authorization'].present?
+        return headers['Authorization'].split(' ').last
+      end
+        raise(ExceptionHandler::MissingToken, "Missing token.")
+    end
+end
+```
+
+Then create the authentication controller:
+
+`rails g scaffold_controller authentication`
+
+and edit to look like the following:
+
+``` ruby
+class AuthenticationController < ApplicationController
+  skip_before_action :authorize_request, :only => :authenticate
+
+  # POST /login
+  def authenticate
+    auth_token = AuthenticateUser.new(authentication_params[:email], authentication_params[:password]).call
+
+    render json: { auth_token: auth_token }
+  end
+
+  private
+
+  def authentication_params
+    params.fetch(:authentication, {})
+  end
+end
+```
+
+Create the ExceptionHandler class at `app/controllers/concerns/exception_handler.rb`:
+
+``` ruby
+module ExceptionHandler
+    extend ActiveSupport::Concern
+  
+    # Define custom error subclasses - rescue catches `StandardErrors`
+    class AuthenticationError < StandardError; end
+    class MissingToken < StandardError; end
+    class InvalidToken < StandardError; end
+  
+    included do
+      # Define custom handlers
+      rescue_from ActiveRecord::RecordInvalid, with: :four_twenty_two
+      rescue_from ExceptionHandler::AuthenticationError, with: :unauthorized_request
+      rescue_from ExceptionHandler::MissingToken, with: :four_twenty_two
+      rescue_from ExceptionHandler::InvalidToken, with: :four_twenty_two
+  
+      rescue_from ActiveRecord::RecordNotFound do |e|
+        render json: { message: e.message }, status: :not_found
+      end
+    end
+  
+    private
+  
+    # JSON response with message; Status code 422 - unprocessable entity
+    def four_twenty_two(e)
+      render json: { message: e.message }, status: :unprocessable_entity
+    end
+  
+    # JSON response with message; Status code 401 - Unauthorized
+    def unauthorized_request(e)
+      render json: { message: e.message }, status: :unauthorized
+    end
+end
+```
+
+Now add the following to `application_controller.rb`:
+
+``` ruby
+class ApplicationController < ActionController::API
+    skip_before_action :authorize_request, only: :authenticate, raise: false
+
+    include ExceptionHandler
+
+    # will call the below command on every controller action unless exempted
+    before_action :authorize_request
+    attr_reader :current_user
+
+    def authorize_request
+        @current_user = (AuthorizeApiRequest.new(request.headers).call)[:user]
+    end
+end
+
+```
+
+Finally, add the route for logging in at `routes.rb`:
+
+``` ruby
+...
+post '/login', to: 'authentication#authenticate'
+...
+```
+
+### Adding new user
+
+With the configuration above, you can add a user by POSTing to `/user` with this payload:
+
+``` json
+{
+  "name": "NAME",
+  "email": "EMAIL",
+  "password": "PASSWORD"
+}
+```
+
+### Logging in
+
+
+
 ## Deploying to Heroku
 
 ### Setting up PostgreSQL
@@ -120,9 +368,3 @@ After the app is deployed, you'll need to migrate the DB changes using:
 If seed data is desired, you can then run
 
 `heroku run rake db:seed`
-
-## Setting up CORS
-
-To set up CORS capabilities, check [this guide](https://dev.to/phillipug/comment/16l66)
-
-You can then verify with [this command](https://gist.github.com/exAspArk/07bbbafa2a9171b6c260989780cc0955)

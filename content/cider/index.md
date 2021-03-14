@@ -25,6 +25,7 @@ _decimal at end is the price per oz._
 * STEM Cider Dry
 * [Happy Camper](https://oldwestminster.orderport.net/product-details/0580/Happy-Camper) (.29)
 * Blom Tart ($12/4 - .25)
+* Bee Well White Harvest (.21)
 
 ## C
 * TwoK Old World (.21)
@@ -32,42 +33,39 @@ _decimal at end is the price per oz._
 * Ace Joker
 * VanderMill Bluish Gold
 * Bee Well King's Cherry
+* VanderMill Brut
+* Virtue Brut
 
 ## To Try
 * Tandem Crabster
 * Farnum Hill Extra Dry
 * Northern Natural Traditional (from Taproot) & Blueberry
 * 45 Fresh Coast (A?)
-* Bee Well White Harvest (.21)
 
 ## D
+* Arbor Brewing Company Cucumber Lime Gose
+* Aspall Dry
+* BlackGrass Fidy Fidy
+* BlackGrass Northern Spy
+* Blake's Beard Bender
+* Blom Ginger Pear
+* Farmhaus The Cucumber One (.21)
 * Original Sin Black Widow (.18)
+* ANXO Cider Blanc
+* ANXO Happy Trees (.31)
 * ANXO Nevertheless ($17/4 - .35)
 * ANXO Transcontinental ($16/4 - .33)
-* ANXO Happy Trees (.31)
-* Farmhaus The Cucumber One (.21)
 * ANXO Time and Place Sunrise (.35)
-* BlackGrass Northern Spy
-* Virtue Brut
-* VanderMill Brut
 * Strongbow Original Dry
 * Pulsar
-* Blom Ginger Pear
-* Arbor Brewing Company Cucumber Lime Gose
 * Pox Orchard Brut
-* Aspall Dry
-* Tandem Greenman
-* BlackGrass Fidy Fidy
-* ANXO Cider Blanc
-* UrbanRest Natty 003
 * Tandem Earnest
-* Suttons Bay Korzon
+* Tandem Greenman
+* UrbanRest Natty 003
 * Urbanrest Natty 004
+* Suttons Bay Korzon
 * Suttons Bay SidraLapeno
-* Beard Bender
 * Blom Apple Cyser
-
-## F (Nope)
 * Fourth Coast Rooted Insanity
 * Rightful Apple Ale, Cider
 * TwoK HoppD

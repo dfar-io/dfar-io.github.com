@@ -18,4 +18,5 @@ draft: false
 * Concept Rower Model D
 * 20 or 25lb Dumbbells
 * Multipurpose tool x2
+* Ooni Pizza Oven
 * [Ridge wallet](https://www.amazon.com/20Cards-Bulliant-Blocking-One-Piece-Aluminium/dp/B08FHWW3NR/ref=sr_1_31_sspa?adgrpid=1339205728876440&dchild=1&hvadid=83700429339879&hvbmt=be&hvdev=c&hvlocphy=104171&hvnetw=o&hvqmt=e&hvtargid=kwd-83700708792809%3Aloc-190&hydadcr=8382_10807620&keywords=ridge+wallet&qid=1615680495&sr=8-31-spons&psc=1&smid=A2N6D8PSEMR3TA&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyWDM2TzBNMlhZTEJNJmVuY3J5cHRlZElkPUEwODc1MDMzMUQ4MUVPSzNXU0hCMiZlbmNyeXB0ZWRBZElkPUEwMDk3MDgwM1BUVFI4QTA0V0JUSiZ3aWRnZXROYW1lPXNwX2J0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=)

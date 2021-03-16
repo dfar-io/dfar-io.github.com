@@ -3,6 +3,10 @@ title: "Lifting - Cycle 2"
 date: 2021-01-25T16:51:30-05:00
 draft: false
 ---
+## 2021.03.16
+* Squat 140
+
+_Going to try something different - using Dan's rationale and bumping up +0.25kg every workout, and at the end of the month I'll change things up a bit._
 
 ## 2021.03.08
 * Pushups 20, 20

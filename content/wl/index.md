@@ -3,6 +3,15 @@ title: "Lifting - Cycle 2"
 date: 2021-01-25T16:51:30-05:00
 draft: false
 ---
+
+## 2021.03.19
+* Pushups 3 x 15
+
+## 2021.03.17 Meathead Kart
+* Squat ~30 sets of 3 x 70k
+
+_spicy_
+
 ## 2021.03.16
 * Squat 140
 

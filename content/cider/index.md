@@ -30,6 +30,7 @@ _decimal at end is the price per oz._
 ## C
 * TwoK Old World (.21)
 * STEM Cider Raspberry
+* Road to Eris
 * Ace Joker
 * VanderMill Bluish Gold
 * Bee Well King's Cherry
@@ -45,6 +46,7 @@ _decimal at end is the price per oz._
 ## D
 * Arbor Brewing Company Cucumber Lime Gose
 * Aspall Dry
+* Bee Well Ghost
 * BlackGrass Fidy Fidy
 * BlackGrass Northern Spy
 * Blake's Beard Bender

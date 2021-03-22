@@ -4,6 +4,10 @@ date: 2021-01-25T16:51:30-05:00
 draft: false
 ---
 
+## 2021.03.22
+* Hypers 3 x 12
+* Curls 4 x 12 x 15lb
+
 ## 2021.03.19
 * Pushups 3 x 15
 

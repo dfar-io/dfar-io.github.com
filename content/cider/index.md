@@ -26,6 +26,7 @@ _decimal at end is the price per oz._
 * [Happy Camper](https://oldwestminster.orderport.net/product-details/0580/Happy-Camper) (.29)
 * Blom Tart ($12/4 - .25)
 * Bee Well White Harvest (.21)
+* Green Bench Hewes Crab Apple
 
 ## C
 * TwoK Old World (.21)
@@ -44,6 +45,7 @@ _decimal at end is the price per oz._
 * 45 Fresh Coast (A?)
 
 ## D
+* Green Bench St. EDdwards
 * Arbor Brewing Company Cucumber Lime Gose
 * Aspall Dry
 * Bee Well Ghost

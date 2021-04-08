@@ -41,11 +41,13 @@ _decimal at end is the price per oz._
 ## To Try
 * Tandem Crabster
 * Farnum Hill Extra Dry
-* Northern Natural Traditional (from Taproot) & Blueberry
+* Northern Natural Traditional (from Taproot)
+* Northern Natural Blueberry (from Taproot?)
 * 45 Fresh Coast (A?)
+* Original Sin Newtown Pippin
 
-## D
-* Green Bench St. EDdwards
+## No
+* Green Bench St. Edwards
 * Arbor Brewing Company Cucumber Lime Gose
 * Aspall Dry
 * Bee Well Ghost

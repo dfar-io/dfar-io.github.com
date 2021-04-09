@@ -48,6 +48,7 @@ _decimal at end is the price per oz._
 
 ## No
 * Green Bench St. Edwards
+* Green Bench 1124
 * Arbor Brewing Company Cucumber Lime Gose
 * Aspall Dry
 * Bee Well Ghost

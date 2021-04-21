@@ -21,12 +21,12 @@ If no healers, use the higher amount for food.
 * 6 Torches
 * 2 Shovels
 
-### Short
+### Medium
 * 16-24 Food
 * 8 Torches
 * 3 Shovels
 
-### Short
+### Long
 * 36 Food
 * 12 Torches
 * 4 Shovels

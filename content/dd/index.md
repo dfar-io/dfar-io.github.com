@@ -16,12 +16,25 @@ draft: false
 
 If no healers, use the higher amount for food.
 
-|  | Short | Medium | Long |
-| Food | 8-12 | 16-24 | 32-36 |
-| Torches | 6 | 8 | 12 |
-| Shovels | 2 | 3 | 4 |
+### Short
+* 8-12 Food
+* 6 Torches
+* 2 Shovels
 
-Bring items based on areas.
+### Short
+* 16-24 Food
+* 8 Torches
+* 3 Shovels
+
+### Short
+* 36 Food
+* 12 Torches
+* 4 Shovels
+
+### Area-Specific
+
+* Ruins - keys, holy water
+* Cove - extra shovels for chests, oysters
 
 ## Heroes
 
@@ -60,15 +73,23 @@ Bring items based on areas.
 
 ### Houndmaster
 
-* Flexible, two distinct builds based on positions 2,3
-* Attack, Blackjack, Guard, Heal (position 2)
-* Attack, Mark, Stress heal, Guard (position 3)
+* Doesn't work well in 1
+* Two distinct builds based on positions 2,3+4
+* Attack, Harry, Blackjack, Heal (position 2)
+* Attack, Harry, Mark, Stress Heal (position 3+4)
 
 ### Antiquarian
 
 * Used for gathering gold - not for bosses
 * Protect Me works well with either tanks (Leper, Shield) or Riposte (HWM)
 * Have her interact with all Curios
+
+
+### Occultist
+
+* Flexible
+* Strong but inconsistent heal
+* Strong against Eldritch (Cove)
 
 ## Areas
 
@@ -86,7 +107,12 @@ Bring items based on areas.
 
 ### Cove
 
-* Eldritch - Occultist
+* Occultist, Plague, ShieldBreaker
+
+### Farmstead
+
+* String against Blight
+* Must bring either Vestal or Occultist
 
 ## Bosses
 
@@ -111,3 +137,14 @@ Bring items based on areas.
 * Charms allies, summons allies, 2 actions
 * Weak to blight (Plague Doctor)
 * Eldritch (Occultist)
+
+### Crew
+
+* Weak against Blight
+* High Prot
+
+### Miller
+
+* Strong against Bleed
+* Weak against Blight
+* Guardbreak abilities useful (Shield)

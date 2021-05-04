@@ -33,8 +33,6 @@ _decimal at end is the price per oz._
 * STEM Cider Raspberry
 * Road to Eris
 * BlackGrass Ol Grimes
-* Ace Joker
-* VanderMill Bluish Gold
 * Bee Well King's Cherry
 * VanderMill Brut
 * Virtue Brut
@@ -46,9 +44,21 @@ _decimal at end is the price per oz._
 * Northern Natural Blueberry (from Taproot?)
 * 45 Fresh Coast (A?)
 * Original Sin Newtown Pippin
+* UrbanRest Natty 003
 
-## No
+## D
+* Ace Joker
+* Cherry Creek Dancing Elephants
 * Green Bench St. Edwards
+* Pulsar
+* Suttons Bay Korzon
+* Suttons Bay SidraLapeno
+* Tandem Earnest
+* Tandem Greenman
+* Urbanrest Natty 004
+* VanderMill Bluish Gold
+
+## F
 * Green Bench 1124
 * Arbor Brewing Company Cucumber Lime Gose
 * Aspall Dry
@@ -65,14 +75,7 @@ _decimal at end is the price per oz._
 * ANXO Transcontinental ($16/4 - .33)
 * ANXO Time and Place Sunrise (.35)
 * Strongbow Original Dry
-* Pulsar
 * Pox Orchard Brut
-* Tandem Earnest
-* Tandem Greenman
-* UrbanRest Natty 003
-* Urbanrest Natty 004
-* Suttons Bay Korzon
-* Suttons Bay SidraLapeno
 * Blom Apple Cyser
 * Fourth Coast Rooted Insanity
 * Rightful Apple Ale, Cider

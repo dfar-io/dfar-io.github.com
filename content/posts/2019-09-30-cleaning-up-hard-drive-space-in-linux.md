@@ -14,9 +14,9 @@ Install `ncdu`:
 
 `sudo apt-get install ncdu`
 
-Afterwards, start `ncdu` and you&#8217;ll be presented with an interface that&#8217;ll walk you through the directories taking the most space:<figure class="wp-block-image">
+Afterwards, start `ncdu` and you&#8217;ll be presented with an interface that&#8217;ll walk you through the directories taking the most space:
 
-<img src="https://dfar.io/wp-content/uploads/2019/09/image-13.png" alt="" class="wp-image-664" srcset="https://40.76.37.251/wp-content/uploads/2019/09/image-13.png 1011w, https://40.76.37.251/wp-content/uploads/2019/09/image-13-300x297.png 300w, https://40.76.37.251/wp-content/uploads/2019/09/image-13-768x760.png 768w, https://40.76.37.251/wp-content/uploads/2019/09/image-13-100x100.png 100w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" /> </figure> 
+<img src="https://dfar.io/wp-content/uploads/2019/09/image-13.png" alt="" class="wp-image-664" srcset="https://40.76.37.251/wp-content/uploads/2019/09/image-13.png 1011w, https://40.76.37.251/wp-content/uploads/2019/09/image-13-300x297.png 300w, https://40.76.37.251/wp-content/uploads/2019/09/image-13-768x760.png 768w, https://40.76.37.251/wp-content/uploads/2019/09/image-13-100x100.png 100w" sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px" />
 
 ## Troubleshooting &#8211; My Drive is 100% Full
 
@@ -26,10 +26,12 @@ First, see if there are any individual files you can delete to clear some space 
 
 After that, run the following:
 
-<pre class="wp-block-code"><code>sudo apt-get clean
+````
+sudo apt-get clean
 sudo apt install byobu
 sudo purge-old-kernels
 sudo apt autoremove
-sudo update-grub</code></pre>
+sudo update-grub
+````
 
 With this you should be able to install the above and check into what is taking up so much space.

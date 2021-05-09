@@ -27,13 +27,15 @@ _decimal at end is the price per oz._
 * Blom Tart ($12/4 - .25)
 * Bee Well White Harvest (.21)
 * Green Bench Hewes Crab Apple
+* Farm Flor
+* TwoK Old World (.21)
 
 ## C
-* TwoK Old World (.21)
 * STEM Cider Raspberry
 * Road to Eris
 * BlackGrass Ol Grimes
 * Bee Well King's Cherry
+* Mad Farmer Four Berry Pie Cider
 * VanderMill Brut
 * Virtue Brut
 

@@ -4,6 +4,25 @@ date: 2021-04-21T16:51:30-05:00
 draft: false
 ---
 
+## 2021.05.22
+
+* Squat 3 x 5 x 96
+* Press 3 x 5 x 47
+* DL 1 x 5 x 125
+* Curls 2 x 12 x 20lb
+
+_sluggish_
+
+## 2021.05.20
+
+JR 50 to 100 to 50
+
+## 2021.05.19
+
+* Squat 3 x 5 x 93
+* Bench 3 x 5 x 55
+* Power Snatch 3 x 2 x 40 _No thanks to power snatches, stick with power cleans_
+
 ## 2021.05.18
 
 * Curls 4 x 10 x 20lb

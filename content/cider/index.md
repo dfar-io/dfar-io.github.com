@@ -38,6 +38,7 @@ _decimal at end is the price per oz._
 * Mad Farmer Four Berry Pie Cider
 * VanderMill Brut
 * Virtue Brut
+* Virtue Michigan Harvest
 
 ## To Try
 * Tandem Crabster
@@ -51,6 +52,7 @@ _decimal at end is the price per oz._
 ## D
 * Ace Joker
 * Cherry Creek Dancing Elephants
+* Farmhaus Brunch
 * Green Bench St. Edwards
 * Pulsar
 * Suttons Bay Korzon

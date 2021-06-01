@@ -4,6 +4,25 @@ date: 2021-04-21T16:51:30-05:00
 draft: false
 ---
 
+## 
+
+## 2021.05.27
+
+* Squat 3 x 5 x 103
+* Press 3 x 5 x 50
+* DL 1 x 5 x 130
+* Curls 1 x 10 x 20lb
+
+## 2021.05.24
+
+* Squat 3 x 5 x 100
+* Bench 3 x 5 x 57
+* PC 5 x 3 x 75
+
+## 2021.05.23
+
+* 10 Burpees
+
 ## 2021.05.22
 
 * Squat 3 x 5 x 96

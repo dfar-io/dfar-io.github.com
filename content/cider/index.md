@@ -52,6 +52,7 @@ _decimal at end is the price per oz._
 ## D
 * Ace Joker
 * Cherry Creek Dancing Elephants
+* Farmhaus After Glow
 * Farmhaus Brunch
 * Green Bench St. Edwards
 * Pulsar

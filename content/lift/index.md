@@ -4,7 +4,29 @@ date: 2021-04-21T16:51:30-05:00
 draft: false
 ---
 
-## 
+## 2021.06.06
+
+* FG Curls 4 x 10 x 20lb
+
+_going to just focus on curls and stretching extra on off days... gives me a little extra time in case my schedule gets hectic_
+
+## 2021.06.05
+
+* Squat 3 x 5 x 111
+* Bench 3 x 5 x 62
+* PC 5 x 3 x 80
+
+## 2021.06.03
+
+* Squat 3 x 5 x 108
+* Press 3 x 5 x 52
+* DL 1 x 5 x 135
+
+## 2021.06.01
+
+* Squat 3 x 5 x 105
+* Bench 3 x 5 x 60
+* PC 5 x 3 x 77
 
 ## 2021.05.27
 

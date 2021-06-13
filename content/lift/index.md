@@ -1,14 +1,48 @@
 ---
-title: "Starting Strength Programming"
+title: "Lifting Programming"
 date: 2021-04-21T16:51:30-05:00
 draft: false
 ---
+
+## 2021.06.13
+
+* FG Curls 4 x 10 x 20lb
+
+## 2021.06.12
+
+* Squat 3 x 5 x 120
+* Press 3 x 5 x 54
+* DL 1 x 5 x 145
+
+## 2021.06.10
+
+* BB Curls 4 x 10 x 20k
+
+_going to add 0.25kg on each BB curl session, to give me some LP for curls_
+
+## 2021.06.09
+
+* Squat 3 x 5 x 117
+* Bench 3 x 5 x 64
+* PC 5 x 3 x 83
+
+_going to start alternating incline DB bench, feels better on the shoulder, start with 50lb_
+
+## 2021.06.08
+
+* FG Curls 4 x 10 x 20lb
+
+## 2021.06.07
+
+* Squat 3 x 5 x 114
+* Press 3 x 5 x 53
+* DL 1 x 5 x 140
 
 ## 2021.06.06
 
 * FG Curls 4 x 10 x 20lb
 
-_going to just focus on curls and stretching extra on off days... gives me a little extra time in case my schedule gets hectic_
+_going to just focus on curls and stretching extra on off days... gives me a little extra time in case my schedule gets hectic._
 
 ## 2021.06.05
 

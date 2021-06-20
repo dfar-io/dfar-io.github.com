@@ -1,8 +1,38 @@
 ---
-title: "Lifting Programming"
+title: "SS - Phase 1"
 date: 2021-04-21T16:51:30-05:00
 draft: false
 ---
+
+## 2021.06.18
+
+* Squat 3 x 5 x 128
+* Press 3 x 5 x 55
+* DL 1 x 5 x 150
+
+_sluggish today, bad weather_
+
+## 2021.06.17
+
+* FG Curls 4 x 10 x 20lb _increase to 25 next time_
+
+## 2021.06.16
+
+* Squat 3 x 5 x 125
+* DB Bench 3 x 5 x 50lb
+* PC 5 x 3 x 86
+
+_Let's just do DB bench, they feel much better_
+
+## 2021.06.15
+
+* BB Curls 4 x 10 x 20.25
+
+## 2021.06.14
+
+* Squat 3 x 5 x 123
+
+_interrupted at work so just got my squatting in_
 
 ## 2021.06.13
 

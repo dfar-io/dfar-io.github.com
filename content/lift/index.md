@@ -4,6 +4,37 @@ date: 2021-04-21T16:51:30-05:00
 draft: false
 ---
 
+# Review
+
+Progress went like the following:
+* Squat 70 -> 130 (117)
+* Press 40 -> 55 (50)
+* DL 100 -> 150 (135)
+* PC 70 -> 90 (81)
+
+I'm going to do a few things different:
+* Officially giving up barbell bench, just going to stick with DB bench since I like how it feels much more. I will need to figure out a solution for loading this.... maybe get a set of Olympic dumbbells and adjust them, and then use my change plates? (would have to get a set of change plates)
+* Going to start front squatting 80% of my squat on Mondays just to change things up a bit (5x3).
+* Sticking with straight bar curls to use that LP
+* Going to start working out again for Meathead Kart, using some kind of volume setup.... more to come.
+
+Meaning the program looks like (6 days, alternating, Friday off):
+
+## Day 1
+* Squat/Front Squat
+* Press/DB Bench
+* DL/PC
+
+## Day 2
+* Pullups
+* Curls
+
+## 2021.06.21
+
+* Squat 3 x 5 x 130
+* DB Bench 3 x 6 x 50lb
+* PC 5 x 3 x 90
+
 ## 2021.06.19
 
 * Squat 3 x 5 x 128

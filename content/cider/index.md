@@ -58,6 +58,7 @@ _decimal at end is the price per oz._
 * Farmhaus Brunch
 * Green Bench St. Edwards
 * Pulsar
+* STEM Off-Dry
 * Suttons Bay Korzon
 * Suttons Bay SidraLapeno
 * Tandem Earnest

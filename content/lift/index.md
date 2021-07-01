@@ -1,5 +1,5 @@
 ---
-title: "SS - Phase 1"
+title: "Phase 0"
 date: 2021-04-21T16:51:30-05:00
 draft: false
 ---
@@ -11,6 +11,14 @@ Progress went like the following:
 * Press 40 -> 55 (50)
 * DL 100 -> 150 (135)
 * PC 70 -> 90 (81)
+
+I'm liking this idea of having phases that go until something comes up, like a vacation or such. I have another coming up in August, so this will give me about 5 weeks, or 14-15 workouts to progress, so I have a few goals:
+
+* Squat 117 -> 140
+* Front Squat 70 -> 90
+* Press 50 -> 62
+* DL 135 -> 160
+* PC 81 -> 100
 
 I'm going to do a few things different:
 * Officially giving up barbell bench, just going to stick with DB bench since I like how it feels much more. I will need to figure out a solution for loading this.... maybe get a set of Olympic dumbbells and adjust them, and then use my change plates? (would have to get a set of change plates)

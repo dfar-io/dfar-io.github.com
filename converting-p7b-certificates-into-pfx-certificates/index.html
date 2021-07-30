@@ -1,1 +1,34 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Software/DevOps Engineer"><link rel="shortcut icon" href=https://dfar.io/favicon.ico><link rel=stylesheet href=/css/style.min.css><title>Converting P7B Certificates into PFX Certificates</title></head><body><header id=banner><h2><a href=https://dfar.io/>Dave Farinelli</a></h2><nav><ul><li><a href=/about/ title=about>about</a></li></ul></nav></header><main id=content><article><header id=post-header><h1>Converting P7B Certificates into PFX Certificates</h1><time>October 31, 2019</time></header><p>To convert a P7B certificate into a PFX certificate, you’ll need the following:</p><ul><li>The <code>.p7b</code> certificate created after the CSR is generated.</li><li>The private key (likely <code>.pem</code> or <code>.key</code>) generated when generating the CSR.</li></ul><p>First, doublr click the <code>.p7b</code> file and export out all of the certs that appear in Certificate Manager as Base64 encoded <code>.CER</code> files:</p><p></p><p>Once this is done, you’ll be able to create the <code>.PFX</code> file with the following <code>openssl</code> command:</p></article></main><footer id=footer></footer></body></html>
+<!doctype html><html><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Software/DevOps Engineer">
+<link rel="shortcut icon" href=https://dfar.io/favicon.ico>
+<link rel=stylesheet href=/css/style.min.css>
+<title>Converting P7B Certificates into PFX Certificates</title>
+</head>
+<body><header id=banner>
+<h2><a href=https://dfar.io/>Dave Farinelli</a></h2>
+<nav>
+<ul>
+<li>
+<a href=/about/ title=about>about</a>
+</li>
+</ul>
+</nav>
+</header>
+<main id=content>
+<article>
+<header id=post-header>
+<h1>Converting P7B Certificates into PFX Certificates</h1><time>October 31, 2019</time></header><p>To convert a P7B certificate into a PFX certificate, you’ll need the following:</p>
+<ul>
+<li>The <code>.p7b</code> certificate created after the CSR is generated.</li>
+<li>The private key (likely <code>.pem</code> or <code>.key</code>) generated when generating the CSR.</li>
+</ul>
+<p>First, doublr click the <code>.p7b</code> file and export out all of the certs that appear in Certificate Manager as Base64 encoded <code>.CER</code> files:</p>
+<p> </p>
+<p>Once this is done, you’ll be able to create the <code>.PFX</code> file with the following <code>openssl</code> command:</p>
+</article>
+</main><footer id=footer>
+</footer>
+</body>
+</html>

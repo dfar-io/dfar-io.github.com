@@ -1,1 +1,52 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Software/DevOps Engineer"><link rel="shortcut icon" href=https://dfar.io/favicon.ico><link rel=stylesheet href=/css/style.min.css><title>Moving Resources to a Different Azure Tenant</title></head><body><header id=banner><h2><a href=https://dfar.io/>Dave Farinelli</a></h2><nav><ul><li><a href=/about/ title=about>about</a></li></ul></nav></header><main id=content><article><header id=post-header><h1>Moving Resources to a Different Azure Tenant</h1><time>February 22, 2020</time></header><p>Let’s say you have some resources in your Azure tenant that you want to move to a different tenant (such as if you’re going to transfer ownership of a particular set of resources to another company). You can do that with the following steps:</p><h2 id=move-existing-resources-to-a-new-subscription>Move Existing Resources to A New Subscription</h2><ol><li>Create a new subscription in your current tenant as the current account admin (use your own information, which you will change over later so you can be an Account Admin).</li><li>Rename the subscription to something more meaningful to avoid confusion.</li><li>Sign into your tenant and move the desired resources over to the new subscription (you may need to recreate certain resources as some resources cannot be moved).<ol><li>If running any VM backups, you’ll need to delete all images before you can move a VM over. After moving over, make sure to turn backups back on.</li></ol></li></ol><h2 id=transfer-subscription>Transfer Subscription</h2><p>Next, create a new Microsoft account, and create an Azure account to transfer the subscription to – using the phone and credit card of the responsible party. When going through this process, you’ll either need the person by you when setting up the account, or have them set it up on their own.</p><p>Once the account is created, go back to the newly created subscription from above and transfer billing ownership using the email account of the Azure account from above:</p><p></p><p>Setting up the transfer request will send an email to the above – and give them the directions to accept the transfer.</p><h2 id=additional-steps>Additional Steps</h2><p>Once the transfer is done, they will own the resources. Here’s a few more steps you may want to take:</p><h3 id=set-up-custom-domain-for-azure-ad>Set up Custom Domain for Azure AD</h3><p>To set up the ability to use a domain for login to the tenant, you’ll need DNS access to a preferred domain.</p><h3 id=create-an-administrative-user>Create an Administrative User</h3><p>If you want to keep the ability to administer the resources, create a user for yourself and give them the following:</p><ul><li>Global Admin rights in Azure AD</li><li>Owner rights to the subscription</li></ul></article></main><footer id=footer></footer></body></html>
+<!doctype html><html><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Software/DevOps Engineer">
+<link rel="shortcut icon" href=https://dfar.io/favicon.ico>
+<link rel=stylesheet href=/css/style.min.css>
+<title>Moving Resources to a Different Azure Tenant</title>
+</head>
+<body><header id=banner>
+<h2><a href=https://dfar.io/>Dave Farinelli</a></h2>
+<nav>
+<ul>
+<li>
+<a href=/about/ title=about>about</a>
+</li>
+</ul>
+</nav>
+</header>
+<main id=content>
+<article>
+<header id=post-header>
+<h1>Moving Resources to a Different Azure Tenant</h1><time>February 22, 2020</time></header><p>Let’s say you have some resources in your Azure tenant that you want to move to a different tenant (such as if you’re going to transfer ownership of a particular set of resources to another company). You can do that with the following steps:</p>
+<h2 id=move-existing-resources-to-a-new-subscription>Move Existing Resources to A New Subscription</h2>
+<ol>
+<li>Create a new subscription in your current tenant as the current account admin (use your own information, which you will change over later so you can be an Account Admin).</li>
+<li>Rename the subscription to something more meaningful to avoid confusion.</li>
+<li>Sign into your tenant and move the desired resources over to the new subscription (you may need to recreate certain resources as some resources cannot be moved).
+<ol>
+<li>If running any VM backups, you’ll need to delete all images before you can move a VM over. After moving over, make sure to turn backups back on.</li>
+</ol>
+</li>
+</ol>
+<h2 id=transfer-subscription>Transfer Subscription</h2>
+<p>Next, create a new Microsoft account, and create an Azure account to transfer the subscription to – using the phone and credit card of the responsible party. When going through this process, you’ll either need the person by you when setting up the account, or have them set it up on their own.</p>
+<p>Once the account is created, go back to the newly created subscription from above and transfer billing ownership using the email account of the Azure account from above:</p>
+<p> </p>
+<p>Setting up the transfer request will send an email to the above – and give them the directions to accept the transfer.</p>
+<h2 id=additional-steps>Additional Steps</h2>
+<p>Once the transfer is done, they will own the resources. Here’s a few more steps you may want to take:</p>
+<h3 id=set-up-custom-domain-for-azure-ad>Set up Custom Domain for Azure AD</h3>
+<p>To set up the ability to use a domain for login to the tenant, you’ll need DNS access to a preferred domain.</p>
+<h3 id=create-an-administrative-user>Create an Administrative User</h3>
+<p>If you want to keep the ability to administer the resources, create a user for yourself and give them the following:</p>
+<ul>
+<li>Global Admin rights in Azure AD</li>
+<li>Owner rights to the subscription</li>
+</ul>
+</article>
+</main><footer id=footer>
+</footer>
+</body>
+</html>

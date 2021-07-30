@@ -1,1 +1,53 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Software/DevOps Engineer"><link rel="shortcut icon" href=https://dfar.io/favicon.ico><link rel=stylesheet href=/css/style.min.css><title>Set up Pi-Hole to Block Ads at the Network Level</title></head><body><header id=banner><h2><a href=https://dfar.io/>Dave Farinelli</a></h2><nav><ul><li><a href=/about/ title=about>about</a></li></ul></nav></header><main id=content><article><header id=post-header><h1>Set up Pi-Hole to Block Ads at the Network Level</h1><time>October 31, 2019</time></header><p>You can use a Respberry Pi to block all ads coming in at a DNS level</p><p>Requirements:</p><ul><li>CanaKit (provides Raspberry Pi, Power Supply)</li><li>Short ethernet cable</li><li>Monitor and keyboard for initial setup</li></ul><h2 id=raspberry-pi-initial-installation-and-configuration>Raspberry Pi Initial Installation and Configuration</h2><p>Assemble and then plug in the Raspberry Pi, which should take you to the NOOBS setup window.</p><p>Install Raspbian, and work through until you get to the desktop screen for the Raspberry Pi.</p><h2 id=router-configuration>Router Configuration</h2><p>With the Raspberry Pi configured, connect to your router admin page and find the IP address of the Raspberry Pi. Assign a static IP to the Raspberry Pi.</p><h2 id=pi-hole-installation>Pi-Hole Installation</h2><p>On the Raspberry Pi, run the following commands to start installation:</p><p>When asked for Upstream DNS Provider, select Cloudflare.</p><p>For everything else, just select the default options.</p><p>After installation finishes, you’ll be able to log into the web admin with the password provided at the end of installation.</p><p>You may want to change the password used to login, you can run the following command on the Raspberry Pi:</p><h2 id=pi-hole-configuration>Pi-Hole Configuration</h2><p>Access the web interface using http://&lt;IP_ADDRESS>/admin, and log in using the password above.</p><p>Change the DNS server on your router to the IP address above.</p><h2 id=verification>Verification</h2><p>An easy way to verify is to check a page that uses ads (here’s a good example). See if any ads appear, and then check the Pi-Hole admin:</p><p></p><h2 id=referencefigure-classwp-block-embed-wordpress-wp-block-embed-is-type-wp-embed-is-provider-smarthomebeginner>Reference</h2><p><a href=https://kb.netgear.com/25722/How-do-I-reserve-an-IP-address-on-my-NETGEAR-router>https://kb.netgear.com/25722/How-do-I-reserve-an-IP-address-on-my-NETGEAR-router</a></p><p><a href=https://cleanbrowsing.org/guides/cleanbrowsing-netgear-orbi-dns-configuration>https://cleanbrowsing.org/guides/cleanbrowsing-netgear-orbi-dns-configuration</a></p></article></main><footer id=footer></footer></body></html>
+<!doctype html><html><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Software/DevOps Engineer">
+<link rel="shortcut icon" href=https://dfar.io/favicon.ico>
+<link rel=stylesheet href=/css/style.min.css>
+<title>Set up Pi-Hole to Block Ads at the Network Level</title>
+</head>
+<body><header id=banner>
+<h2><a href=https://dfar.io/>Dave Farinelli</a></h2>
+<nav>
+<ul>
+<li>
+<a href=/about/ title=about>about</a>
+</li>
+</ul>
+</nav>
+</header>
+<main id=content>
+<article>
+<header id=post-header>
+<h1>Set up Pi-Hole to Block Ads at the Network Level</h1><time>October 31, 2019</time></header><p>You can use a Respberry Pi to block all ads coming in at a DNS level</p>
+<p>Requirements:</p>
+<ul>
+<li>CanaKit (provides Raspberry Pi, Power Supply)</li>
+<li>Short ethernet cable</li>
+<li>Monitor and keyboard for initial setup</li>
+</ul>
+<h2 id=raspberry-pi-initial-installation-and-configuration>Raspberry Pi Initial Installation and Configuration</h2>
+<p>Assemble and then plug in the Raspberry Pi, which should take you to the NOOBS setup window.</p>
+<p>Install Raspbian, and work through until you get to the desktop screen for the Raspberry Pi.</p>
+<h2 id=router-configuration>Router Configuration</h2>
+<p>With the Raspberry Pi configured, connect to your router admin page and find the IP address of the Raspberry Pi. Assign a static IP to the Raspberry Pi.</p>
+<h2 id=pi-hole-installation>Pi-Hole Installation</h2>
+<p>On the Raspberry Pi, run the following commands to start installation:</p>
+<p>When asked for Upstream DNS Provider, select Cloudflare.</p>
+<p>For everything else, just select the default options.</p>
+<p>After installation finishes, you’ll be able to log into the web admin with the password provided at the end of installation.</p>
+<p>You may want to change the password used to login, you can run the following command on the Raspberry Pi:</p>
+<h2 id=pi-hole-configuration>Pi-Hole Configuration</h2>
+<p>Access the web interface using http://&lt;IP_ADDRESS>/admin, and log in using the password above.</p>
+<p>Change the DNS server on your router to the IP address above.</p>
+<h2 id=verification>Verification</h2>
+<p>An easy way to verify is to check a page that uses ads (here’s a good example). See if any ads appear, and then check the Pi-Hole admin:</p>
+<p> </p>
+<h2 id=referencefigure-classwp-block-embed-wordpress-wp-block-embed-is-type-wp-embed-is-provider-smarthomebeginner>Reference</h2>
+<p><a href=https://kb.netgear.com/25722/How-do-I-reserve-an-IP-address-on-my-NETGEAR-router>https://kb.netgear.com/25722/How-do-I-reserve-an-IP-address-on-my-NETGEAR-router</a></p>
+<p><a href=https://cleanbrowsing.org/guides/cleanbrowsing-netgear-orbi-dns-configuration>https://cleanbrowsing.org/guides/cleanbrowsing-netgear-orbi-dns-configuration</a></p>
+</article>
+</main><footer id=footer>
+</footer>
+</body>
+</html>

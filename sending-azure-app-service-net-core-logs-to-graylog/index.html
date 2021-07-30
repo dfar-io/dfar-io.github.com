@@ -1,1 +1,46 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Software/DevOps Engineer"><link rel="shortcut icon" href=https://dfar.io/favicon.ico><link rel=stylesheet href=/css/style.min.css><title>Sending Azure App Service .NET Core Logs to Graylog</title></head><body><header id=banner><h2><a href=https://dfar.io/>Dave Farinelli</a></h2><nav><ul><li><a href=/about/ title=about>about</a></li></ul></nav></header><main id=content><article><header id=post-header><h1>Sending Azure App Service .NET Core Logs to Graylog</h1><time>November 23, 2020</time></header><h2 id=pre-requisites>Pre-requisites</h2><p>You’ll need:</p><ul><li>A Graylog instance running to send logs to, which should be running a GELF UDP input.</li><li>A .NET Core application to send logs from.</li><li>An Azure App Service to host the above application.</li></ul><h2 id=procedure>Procedure</h2><p>First, add the following packages to your application:</p><ul><li>Serilog.AspNetCore</li><li>Serilog.Sinks.Graylog</li></ul><p>Next, add the following to <code>Program.cs</code>, at the bottom of the CreateDefaultBuilder method:</p><p>Next, configure the <code>appsettings.json</code>file, cleaning the existing Logging config and adding the following:</p><p>Do this for the <code>appsettings.Development.json</code> file to allow console logging when in Development:</p><h2 id=verification>Verification</h2><p>Testing the application locally, check to see that you have console logging activated.</p><p>Once working, deploy the application to your Azure App Service and verify logs are being sent to Graylog.</p><p>To change the Application name, set the “Serilog:Properties:Application” configuration value.</p></article></main><footer id=footer></footer></body></html>
+<!doctype html><html><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Software/DevOps Engineer">
+<link rel="shortcut icon" href=https://dfar.io/favicon.ico>
+<link rel=stylesheet href=/css/style.min.css>
+<title>Sending Azure App Service .NET Core Logs to Graylog</title>
+</head>
+<body><header id=banner>
+<h2><a href=https://dfar.io/>Dave Farinelli</a></h2>
+<nav>
+<ul>
+<li>
+<a href=/about/ title=about>about</a>
+</li>
+</ul>
+</nav>
+</header>
+<main id=content>
+<article>
+<header id=post-header>
+<h1>Sending Azure App Service .NET Core Logs to Graylog</h1><time>November 23, 2020</time></header><h2 id=pre-requisites>Pre-requisites</h2>
+<p>You’ll need:</p>
+<ul>
+<li>A Graylog instance running to send logs to, which should be running a GELF UDP input.</li>
+<li>A .NET Core application to send logs from.</li>
+<li>An Azure App Service to host the above application.</li>
+</ul>
+<h2 id=procedure>Procedure</h2>
+<p>First, add the following packages to your application:</p>
+<ul>
+<li>Serilog.AspNetCore</li>
+<li>Serilog.Sinks.Graylog</li>
+</ul>
+<p>Next, add the following to <code>Program.cs</code>, at the bottom of the CreateDefaultBuilder method:</p>
+<p>Next, configure the <code>appsettings.json</code>file, cleaning the existing Logging config and adding the following:</p>
+<p>Do this for the <code>appsettings.Development.json</code> file to allow console logging when in Development:</p>
+<h2 id=verification>Verification</h2>
+<p>Testing the application locally, check to see that you have console logging activated.</p>
+<p>Once working, deploy the application to your Azure App Service and verify logs are being sent to Graylog.</p>
+<p>To change the Application name, set the “Serilog:Properties:Application” configuration value.</p>
+</article>
+</main><footer id=footer>
+</footer>
+</body>
+</html>

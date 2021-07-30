@@ -1,1 +1,43 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Software/DevOps Engineer"><link rel="shortcut icon" href=https://dfar.io/favicon.ico><link rel=stylesheet href=/css/style.min.css><title>Setting up Jenkins to Auto-Update</title></head><body><header id=banner><h2><a href=https://dfar.io/>Dave Farinelli</a></h2><nav><ul><li><a href=/about/ title=about>about</a></li></ul></nav></header><main id=content><article><header id=post-header><h1>Setting up Jenkins to Auto-Update</h1><time>September 11, 2019</time></header><p>When setting up Jenkins, you’ll have to perform upgrades on the system yourself. You can do this pretty easily, but let’s automate the process so that each night, Jenkins will download and install the latest version.</p><p>To do this you’ll need to have SSH access to the server.</p><h2 id=creating-upgrade-script>Creating Upgrade Script</h2><p>First, SSH into the server.</p><p>Create a <code>bin/</code> folder in the user’s directory:</p><p>If it doesn’t already exist, create a <code>.bash_profile</code> file and add the following:</p><p>Now create the script file for use:</p><p>Create a script with the following contents:</p><p>And make the script executable:</p><p>You can finally test the script by calling <code>./upgrade-jenkins</code>. When it runs, Jenkins should restart with the latest version.</p><h2 id=setting-up-for-automatic-updates>Setting up for Automatic Updates</h2><p>The next step is setting up the script to run each night at some point to promote automatic upgrades, so you don’t have to worry about updating the system. To do this, we’ll create a cron job that runs the above script once a day.</p><p>Set up a crontab file using <code>sudo crontab -e</code>, and add the following to the file to run everyday at 3am. (make sure to check <code>date</code> to see if the system is using UTC):</p><p>Once this is in place, you’ll be running the script above once a day, which will download and run the latest version of Jenkins on a regular basis.</p><p>If you’re running into issues, you can check the logs at:</p><p>Reference:</p><p><a href=https://www.taniarascia.com/how-to-create-and-use-bash-scripts/>https://www.taniarascia.com/how-to-create-and-use-bash-scripts/</a></p></article></main><footer id=footer></footer></body></html>
+<!doctype html><html><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Software/DevOps Engineer">
+<link rel="shortcut icon" href=https://dfar.io/favicon.ico>
+<link rel=stylesheet href=/css/style.min.css>
+<title>Setting up Jenkins to Auto-Update</title>
+</head>
+<body><header id=banner>
+<h2><a href=https://dfar.io/>Dave Farinelli</a></h2>
+<nav>
+<ul>
+<li>
+<a href=/about/ title=about>about</a>
+</li>
+</ul>
+</nav>
+</header>
+<main id=content>
+<article>
+<header id=post-header>
+<h1>Setting up Jenkins to Auto-Update</h1><time>September 11, 2019</time></header><p>When setting up Jenkins, you’ll have to perform upgrades on the system yourself. You can do this pretty easily, but let’s automate the process so that each night, Jenkins will download and install the latest version.</p>
+<p>To do this you’ll need to have SSH access to the server.</p>
+<h2 id=creating-upgrade-script>Creating Upgrade Script</h2>
+<p>First, SSH into the server.</p>
+<p>Create a <code>bin/</code> folder in the user’s directory:</p>
+<p>If it doesn’t already exist, create a <code>.bash_profile</code> file and add the following:</p>
+<p>Now create the script file for use:</p>
+<p>Create a script with the following contents:</p>
+<p>And make the script executable:</p>
+<p>You can finally test the script by calling <code>./upgrade-jenkins</code>. When it runs, Jenkins should restart with the latest version.</p>
+<h2 id=setting-up-for-automatic-updates>Setting up for Automatic Updates</h2>
+<p>The next step is setting up the script to run each night at some point to promote automatic upgrades, so you don’t have to worry about updating the system. To do this, we’ll create a cron job that runs the above script once a day.</p>
+<p>Set up a crontab file using <code>sudo crontab -e</code>, and add the following to the file to run everyday at 3am. (make sure to check <code>date</code> to see if the system is using UTC):</p>
+<p>Once this is in place, you’ll be running the script above once a day, which will download and run the latest version of Jenkins on a regular basis.</p>
+<p>If you’re running into issues, you can check the logs at:</p>
+<p>Reference:</p>
+<p><a href=https://www.taniarascia.com/how-to-create-and-use-bash-scripts/>https://www.taniarascia.com/how-to-create-and-use-bash-scripts/</a></p>
+</article>
+</main><footer id=footer>
+</footer>
+</body>
+</html>

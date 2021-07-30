@@ -1,1 +1,36 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Software/DevOps Engineer"><link rel="shortcut icon" href=https://dfar.io/favicon.ico><link rel=stylesheet href=/css/style.min.css><title>Applying IP Restrictions to a Large Set of Azure Resources</title></head><body><header id=banner><h2><a href=https://dfar.io/>Dave Farinelli</a></h2><nav><ul><li><a href=/about/ title=about>about</a></li></ul></nav></header><main id=content><article><header id=post-header><h1>Applying IP Restrictions to a Large Set of Azure Resources</h1><time>June 20, 2019</time></header><p>To do this, use PowerShell and Azure CLI to collect all of the NSGs and get all of the NSGs in the subscription:</p><p>Then go through every NSG and create the rule:</p><p>Next, get a list of the App Services:</p><p>And go through and add the list of IPs required (must use individual IPs):</p><h2 id=removing-access>Removing Access</h2><p>To delete the same list of rules from the NSGs, use the same name:</p><p>Reference:</p><p><a href="https://docs.microsoft.com/en-us/cli/azure/network/nsg?view=azure-cli-latest#az-network-nsg-list">https://docs.microsoft.com/en-us/cli/azure/network/nsg?view=azure-cli-latest#az-network-nsg-list</a></p><p><a href="https://docs.microsoft.com/en-us/cli/azure/network/nsg/rule?view=azure-cli-latest#az-network-nsg-rule-create">https://docs.microsoft.com/en-us/cli/azure/network/nsg/rule?view=azure-cli-latest#az-network-nsg-rule-create</a></p><p><a href="https://docs.microsoft.com/en-us/cli/azure/network/nsg/rule?view=azure-cli-latest#az-network-nsg-rule-delete">https://docs.microsoft.com/en-us/cli/azure/network/nsg/rule?view=azure-cli-latest#az-network-nsg-rule-delete</a></p></article></main><footer id=footer></footer></body></html>
+<!doctype html><html><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Software/DevOps Engineer">
+<link rel="shortcut icon" href=https://dfar.io/favicon.ico>
+<link rel=stylesheet href=/css/style.min.css>
+<title>Applying IP Restrictions to a Large Set of Azure Resources</title>
+</head>
+<body><header id=banner>
+<h2><a href=https://dfar.io/>Dave Farinelli</a></h2>
+<nav>
+<ul>
+<li>
+<a href=/about/ title=about>about</a>
+</li>
+</ul>
+</nav>
+</header>
+<main id=content>
+<article>
+<header id=post-header>
+<h1>Applying IP Restrictions to a Large Set of Azure Resources</h1><time>June 20, 2019</time></header><p>To do this, use PowerShell and Azure CLI to collect all of the NSGs and get all of the NSGs in the subscription:</p>
+<p>Then go through every NSG and create the rule:</p>
+<p>Next, get a list of the App Services:</p>
+<p>And go through and add the list of IPs required (must use individual IPs):</p>
+<h2 id=removing-access>Removing Access</h2>
+<p>To delete the same list of rules from the NSGs, use the same name:</p>
+<p>Reference:</p>
+<p><a href="https://docs.microsoft.com/en-us/cli/azure/network/nsg?view=azure-cli-latest#az-network-nsg-list">https://docs.microsoft.com/en-us/cli/azure/network/nsg?view=azure-cli-latest#az-network-nsg-list</a></p>
+<p><a href="https://docs.microsoft.com/en-us/cli/azure/network/nsg/rule?view=azure-cli-latest#az-network-nsg-rule-create">https://docs.microsoft.com/en-us/cli/azure/network/nsg/rule?view=azure-cli-latest#az-network-nsg-rule-create</a></p>
+<p><a href="https://docs.microsoft.com/en-us/cli/azure/network/nsg/rule?view=azure-cli-latest#az-network-nsg-rule-delete">https://docs.microsoft.com/en-us/cli/azure/network/nsg/rule?view=azure-cli-latest#az-network-nsg-rule-delete</a></p>
+</article>
+</main><footer id=footer>
+</footer>
+</body>
+</html>

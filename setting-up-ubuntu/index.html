@@ -1,1 +1,75 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Software/DevOps Engineer"><link rel="shortcut icon" href=https://dfar.io/favicon.ico><link rel=stylesheet href=/css/style.min.css><title>Setting Up Ubuntu</title></head><body><header id=banner><h2><a href=https://dfar.io/>Dave Farinelli</a></h2><nav><ul><li><a href=/about/ title=about>about</a></li></ul></nav></header><main id=content><article><header id=post-header><h1>Setting Up Ubuntu</h1><time>February 5, 2020</time></header><p>Recently switched over to using Ubuntu from Windows due to having some issues with running Windows 10 on the desktop. Here’s a quick guide on what I did to get everything set up.</p><h2 id=installation>Installation</h2><p>Pretty simple, just set up a USB stick with Ubuntu on it. When install, using the following configurations:</p><ul><li>Minimal installation</li><li>Install third party tools (save time later)</li></ul><p>Once the installation completes, I make sure to set up the display correctly for monitors, including:</p><ul><li>Setting scale to %200</li><li>Turning on the night light</li></ul><p>And then a few steps before installing software:</p><ul><li>Set up Livepatch (security updates)</li><li>Unpin favorites</li><li>Signing into Firefox with my Firefox account.</li><li>Move Dock to the bottom.</li></ul><h2 id=software>Software</h2><p>I install the following:</p><ul><li>Dropbox</li><li>Franz (login, set dark mode, turn off todos, notifications)</li><li>Mailspring (dark theme, add accounts, turn notifications off)</li><li>VSCode (download FiraCode, sync settings)</li><li>PyGrid (set xdivs to 3, automatic startup)</li><li>Azure CLI</li><li>MySQL Workbench</li><li>OpenVPN Connect (<em>sudo apt-get install openvpn,</em> set up server profiles)</li><li>Remmina (for remoting into Windows PCs)</li><li>Terraform</li><li>kubectl</li><li>Gnome Tweak Tools (animations off, set dark theme, application menu off, 1 static workspace)</li><li>.NET Core SDK<ul><li>Azure Functions Core Tools</li></ul></li><li>VirtualBox (with a Windows 10 VM with 8GB memory, 100GB hard drive space) with the following installed:<ul><li>VS2019</li><li>SSMS</li><li>SQL Server Express</li><li>Dropbox</li><li>Git</li></ul></li></ul></article></main><footer id=footer></footer></body></html>
+<!doctype html><html><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Software/DevOps Engineer">
+<link rel="shortcut icon" href=https://dfar.io/favicon.ico>
+<link rel=stylesheet href=/css/style.min.css>
+<title>Setting Up Ubuntu</title>
+</head>
+<body><header id=banner>
+<h2><a href=https://dfar.io/>Dave Farinelli</a></h2>
+<nav>
+<ul>
+<li>
+<a href=/about/ title=about>about</a>
+</li>
+</ul>
+</nav>
+</header>
+<main id=content>
+<article>
+<header id=post-header>
+<h1>Setting Up Ubuntu</h1><time>February 5, 2020</time></header><p>Recently switched over to using Ubuntu from Windows due to having some issues with running Windows 10 on the desktop. Here’s a quick guide on what I did to get everything set up.</p>
+<h2 id=installation>Installation</h2>
+<p>Pretty simple, just set up a USB stick with Ubuntu on it. When install, using the following configurations:</p>
+<ul>
+<li>Minimal installation</li>
+<li>Install third party tools (save time later)</li>
+</ul>
+<p>Once the installation completes, I make sure to set up the display correctly for monitors, including:</p>
+<ul>
+<li>Setting scale to %200</li>
+<li>Turning on the night light</li>
+</ul>
+<p>And then a few steps before installing software:</p>
+<ul>
+<li>Set up Livepatch (security updates)</li>
+<li>Unpin favorites</li>
+<li>Signing into Firefox with my Firefox account.</li>
+<li>Move Dock to the bottom.</li>
+</ul>
+<h2 id=software>Software</h2>
+<p>I install the following:</p>
+<ul>
+<li>Dropbox</li>
+<li>Franz (login, set dark mode, turn off todos, notifications)</li>
+<li>Mailspring (dark theme, add accounts, turn notifications off)</li>
+<li>VSCode (download FiraCode, sync settings)</li>
+<li>PyGrid (set xdivs to 3, automatic startup)</li>
+<li>Azure CLI</li>
+<li>MySQL Workbench</li>
+<li>OpenVPN Connect (<em>sudo apt-get install openvpn,</em> set up server profiles)</li>
+<li>Remmina (for remoting into Windows PCs)</li>
+<li>Terraform</li>
+<li>kubectl</li>
+<li>Gnome Tweak Tools (animations off, set dark theme, application menu off, 1 static workspace)</li>
+<li>.NET Core SDK
+<ul>
+<li>Azure Functions Core Tools</li>
+</ul>
+</li>
+<li>VirtualBox (with a Windows 10 VM with 8GB memory, 100GB hard drive space) with the following installed:
+<ul>
+<li>VS2019</li>
+<li>SSMS</li>
+<li>SQL Server Express</li>
+<li>Dropbox</li>
+<li>Git</li>
+</ul>
+</li>
+</ul>
+</article>
+</main><footer id=footer>
+</footer>
+</body>
+</html>

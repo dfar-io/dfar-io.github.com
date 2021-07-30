@@ -1,1 +1,63 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Software/DevOps Engineer"><link rel="shortcut icon" href=https://dfar.io/favicon.ico><link rel=stylesheet href=/css/style.min.css><title>Setting up OpenVPN on Azure From Scratch</title></head><body><header id=banner><h2><a href=https://dfar.io/>Dave Farinelli</a></h2><nav><ul><li><a href=/about/ title=about>about</a></li></ul></nav></header><main id=content><article><header id=post-header><h1>Setting up OpenVPN on Azure From Scratch</h1><time>February 19, 2019</time></header><p>Why do this? One of the major benefits being able to use the internet with a specified IP address. If you’re going to be working systems that whitelist specific IP addresses, you can use this solution to allow for access regardless of both machine and location.</p><p>This guide assumes that you:</p><ul><li>Have an Azure subscription in place.</li><li>Have a means of SSHing into a virtual machine, such as <a href=https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse>OpenSSH</a>.</li></ul><h2 id=setting-up-openvpn-server>Setting up OpenVPN Server</h2><p>Create a virtual machine in Azure with the following specs:</p><ul><li>Image: Ubuntu Server 18.04 LTS (or later)</li><li>Size: B1s</li><li>NSG Ports: 22, 80, 443</li></ul><p>Once the virtual machine is created, create an inbound rule that allows access to port 943.</p><p>Once that’s done, SSH into the machine and install OpenVPN Access Server:</p><p>After OpenVPN is installed, set up an admin password:</p><p>After creating a password, log into OpenVPN with the above credentials at <code>https://YOUR_SERVER_ID/admin</code>.</p><h2 id=enabling-https-with-let8217s-encrypt>Enabling HTTPS with Let’s Encrypt</h2><p>To set up a certificate for OpenVPN using Let’s Encrypt, first set up a domain to use with OpenVPN. This can either be:</p><ol><li>A domain created from a DNS name label in the Azure Public IP.</li><li>A separate domain pointing to the DNS name label above with A and/or CNAME records.</li></ol><p>install Certbot onto the OpenVPN server:</p><p>Then run the following commands to stop OpenVPN, apply cert, and start OpenVPN again :</p><p>This command will also handle automatically renewing the cert every three months <em>(via pre-hook and post-hook)</em>, which <strong>will shut down the VPN for a few seconds while renewing, while removing everyone’s connections</strong>. If this is an issue, you can set up a reverse proxy with Apache or NGINX and apply the cert at the reverse proxy level, keeping users connected during renewal.</p><p>Finally, verify the URL above is secured.</p><h3 id=http---https-redirect>HTTP -> HTTPS Redirect</h3><p>The last step is setting up HTTP to redirect to HTTPS, which can be done with a Python script. Create the following file at <code>/usr/local/openvpn_as/port80redirect.py</code>:</p><p>Now set up the script to run at boot:</p><p>Add this line to the bottom:</p><p>Reboot the server, and verify that accessing via HTTP redirects to HTTPS.</p><h2 id=references>References</h2><p>Installing OpenVPN on Ubuntu: <a href=https://openvpn.net/vpn-software-packages/ubuntu/>https://openvpn.net/vpn-software-packages/ubuntu/</a></p><p>Setting up Let’s Encrypt on OpenVPN AS: <a href=https://loige.co/using-lets-encrypt-and-certbot-to-automate-the-creation-of-certificates-for-openvpn/>https://loige.co/using-lets-encrypt-and-certbot-to-automate-the-creation-of-certificates-for-openvpn/</a></p><p>Redirect HTTP -> HTTPS in OpenVPN: <a href=https://openvpn.net/vpn-server-resources/how-to-redirect-http-to-https/>https://openvpn.net/vpn-server-resources/how-to-redirect-http-to-https/</a></p></article></main><footer id=footer></footer></body></html>
+<!doctype html><html><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Software/DevOps Engineer">
+<link rel="shortcut icon" href=https://dfar.io/favicon.ico>
+<link rel=stylesheet href=/css/style.min.css>
+<title>Setting up OpenVPN on Azure From Scratch</title>
+</head>
+<body><header id=banner>
+<h2><a href=https://dfar.io/>Dave Farinelli</a></h2>
+<nav>
+<ul>
+<li>
+<a href=/about/ title=about>about</a>
+</li>
+</ul>
+</nav>
+</header>
+<main id=content>
+<article>
+<header id=post-header>
+<h1>Setting up OpenVPN on Azure From Scratch</h1><time>February 19, 2019</time></header>
+<p>Why do this? One of the major benefits being able to use the internet with a specified IP address. If you’re going to be working systems that whitelist specific IP addresses, you can use this solution to allow for access regardless of both machine and location.</p>
+<p>This guide assumes that you:</p>
+<ul>
+<li>Have an Azure subscription in place.</li>
+<li>Have a means of SSHing into a virtual machine, such as <a href=https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse>OpenSSH</a>.</li>
+</ul>
+<h2 id=setting-up-openvpn-server>Setting up OpenVPN Server</h2>
+<p>Create a virtual machine in Azure with the following specs:</p>
+<ul>
+<li>Image: Ubuntu Server 18.04 LTS (or later)</li>
+<li>Size: B1s</li>
+<li>NSG Ports: 22, 80, 443</li>
+</ul>
+<p>Once the virtual machine is created, create an inbound rule that allows access to port 943.</p>
+<p>Once that’s done, SSH into the machine and install OpenVPN Access Server:</p>
+<p>After OpenVPN is installed, set up an admin password:</p>
+<p>After creating a password, log into OpenVPN with the above credentials at <code>https://YOUR_SERVER_ID/admin</code>.</p>
+<h2 id=enabling-https-with-let8217s-encrypt>Enabling HTTPS with Let’s Encrypt</h2>
+<p>To set up a certificate for OpenVPN using Let’s Encrypt, first set up a domain to use with OpenVPN. This can either be:</p>
+<ol>
+<li>A domain created from a DNS name label in the Azure Public IP.</li>
+<li>A separate domain pointing to the DNS name label above with A and/or CNAME records.</li>
+</ol>
+<p>install Certbot onto the OpenVPN server:</p>
+<p>Then run the following commands to stop OpenVPN, apply cert, and start OpenVPN again :</p>
+<p>This command will also handle automatically renewing the cert every three months <em>(via pre-hook and post-hook)</em>, which <strong>will shut down the VPN for a few seconds while renewing, while removing everyone’s connections</strong>. If this is an issue, you can set up a reverse proxy with Apache or NGINX and apply the cert at the reverse proxy level, keeping users connected during renewal.</p>
+<p>Finally, verify the URL above is secured.</p>
+<h3 id=http---https-redirect>HTTP -> HTTPS Redirect</h3>
+<p>The last step is setting up HTTP to redirect to HTTPS, which can be done with a Python script. Create the following file at <code>/usr/local/openvpn_as/port80redirect.py</code>:</p>
+<p>Now set up the script to run at boot:</p>
+<p>Add this line to the bottom:</p>
+<p>Reboot the server, and verify that accessing via HTTP redirects to HTTPS.</p>
+<h2 id=references>References</h2>
+<p>Installing OpenVPN on Ubuntu: <a href=https://openvpn.net/vpn-software-packages/ubuntu/>https://openvpn.net/vpn-software-packages/ubuntu/</a></p>
+<p>Setting up Let’s Encrypt on OpenVPN AS: <a href=https://loige.co/using-lets-encrypt-and-certbot-to-automate-the-creation-of-certificates-for-openvpn/>https://loige.co/using-lets-encrypt-and-certbot-to-automate-the-creation-of-certificates-for-openvpn/</a></p>
+<p>Redirect HTTP -> HTTPS in OpenVPN: <a href=https://openvpn.net/vpn-server-resources/how-to-redirect-http-to-https/>https://openvpn.net/vpn-server-resources/how-to-redirect-http-to-https/</a></p>
+</article>
+</main><footer id=footer>
+</footer>
+</body>
+</html>

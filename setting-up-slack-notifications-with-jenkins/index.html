@@ -1,1 +1,42 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Software/DevOps Engineer"><link rel="shortcut icon" href=https://dfar.io/favicon.ico><link rel=stylesheet href=/css/style.min.css><title>Setting up Slack Notifications with Jenkins</title></head><body><header id=banner><h2><a href=https://dfar.io/>Dave Farinelli</a></h2><nav><ul><li><a href=/about/ title=about>about</a></li></ul></nav></header><main id=content><article><header id=post-header><h1>Setting up Slack Notifications with Jenkins</h1><time>September 21, 2019</time></header><p>Setting up Slack notifications for build results with Jenkins is pretty simple. You’ll need the following:</p><ul><li>A Jenkins server that you have admin rights to.</li><li>Slack Notification Plugin</li><li>A Slack workspace, ideally with a channel dedicated to Jenkins alerts.</li></ul><h2 id=setup>Setup</h2><p>To set up Slack, go to <strong>.slack.com/apps</strong> and search for Jenkins CI:</p><p></p><p>Add the configuration and set the desired channel where alerts will appear.</p><p>After this, you’ll see some directions on setting up Slack on the Jenkins side.</p><p>When you’ve finished the setup, make sure to test the connection – you should see a message in Slack like the following:</p><p></p><h2 id=adding-jenkins-calls-to-pipeline>Adding Jenkins Calls to Pipeline</h2><p>Once the setup is complete, you can use the following examples to call Slack during the pipeline jobs:</p><p>This example will call a successful message when all stages complete, and sends a failure message if the build as a whole fails.</p></article></main><footer id=footer></footer></body></html>
+<!doctype html><html><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Software/DevOps Engineer">
+<link rel="shortcut icon" href=https://dfar.io/favicon.ico>
+<link rel=stylesheet href=/css/style.min.css>
+<title>Setting up Slack Notifications with Jenkins</title>
+</head>
+<body><header id=banner>
+<h2><a href=https://dfar.io/>Dave Farinelli</a></h2>
+<nav>
+<ul>
+<li>
+<a href=/about/ title=about>about</a>
+</li>
+</ul>
+</nav>
+</header>
+<main id=content>
+<article>
+<header id=post-header>
+<h1>Setting up Slack Notifications with Jenkins</h1><time>September 21, 2019</time></header><p>Setting up Slack notifications for build results with Jenkins is pretty simple. You’ll need the following:</p>
+<ul>
+<li>A Jenkins server that you have admin rights to.</li>
+<li>Slack Notification Plugin</li>
+<li>A Slack workspace, ideally with a channel dedicated to Jenkins alerts.</li>
+</ul>
+<h2 id=setup>Setup</h2>
+<p>To set up Slack, go to <strong>.slack.com/apps</strong> and search for Jenkins CI:</p>
+<p> </p>
+<p>Add the configuration and set the desired channel where alerts will appear.</p>
+<p>After this, you’ll see some directions on setting up Slack on the Jenkins side.</p>
+<p>When you’ve finished the setup, make sure to test the connection – you should see a message in Slack like the following:</p>
+<p> </p>
+<h2 id=adding-jenkins-calls-to-pipeline>Adding Jenkins Calls to Pipeline</h2>
+<p>Once the setup is complete, you can use the following examples to call Slack during the pipeline jobs:</p>
+<p>This example will call a successful message when all stages complete, and sends a failure message if the build as a whole fails.</p>
+</article>
+</main><footer id=footer>
+</footer>
+</body>
+</html>

@@ -1,1 +1,58 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Software/DevOps Engineer"><link rel="shortcut icon" href=https://dfar.io/favicon.ico><link rel=stylesheet href=/css/style.min.css><title>Set up Auto-Renewing Let’s Encrypt Certificates on App Service Linux</title></head><body><header id=banner><h2><a href=https://dfar.io/>Dave Farinelli</a></h2><nav><ul><li><a href=/about/ title=about>about</a></li></ul></nav></header><main id=content><article><header id=post-header><h1>Set up Auto-Renewing Let’s Encrypt Certificates on App Service Linux</h1><time>March 9, 2020</time></header><p>Set up the ability to assign auto-renewing Let’s Encrypt certs to an Azure App Service Linux instance with shibayan’s appservice-acmebot. This will create a Function App that automatically updates the App Service as needed.</p><p>Before getting started, you’ll need to have a few things:</p><ul><li>An Azure App Service (Linux-based).</li><li>DNS records being served using Azure DNS.</li></ul><h2 id=procedure>Procedure</h2><p>First, deploy the solution to your Azure subscription. Use the following for configation:</p><ul><li>Resource group – certbot-rg</li><li>App Name Prefix – certbot-fa</li><li>Mail Address – <em>your email address.</em></li></ul><p>Next, set up the ability for the Certbot function app to access your Linux App Service</p><p></p><ul><li>Select ‘App Service Authentication’ to on.</li><li>Set ‘Log in with Azure Active Directory’</li><li>Set up the ‘Azure Active Directory’ Auth Provider<ul><li>Set Management mode to ‘Express’</li><li>Create a new AD app</li></ul></li><li>Save changes.</li></ul><p></p><p>Now, assign the <strong>Website Contributor</strong> and <strong>Web Plan Contributor</strong> roles to the Certbot function app:</p><p></p><p>Finally, <strong>restart the function app</strong> and access the Function App URL (<a href=https://_your-function-app_.azurewebsites.net/add-certificate)>https://_your-function-app_.azurewebsites.net/add-certificate)</a>. You should be able to see the UI showing the available RGs and App Names available (access can take 30-60 minutes to reflect in Azure, so if you’re seeing a 401, wait a while for things to resolve):</p><p></p><p>Once the certificate is added, you’re all set! Renewals will automatically occur, as the app will scan regularly to check when to renew the certs.</p></article></main><footer id=footer></footer></body></html>
+<!doctype html><html><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Software/DevOps Engineer">
+<link rel="shortcut icon" href=https://dfar.io/favicon.ico>
+<link rel=stylesheet href=/css/style.min.css>
+<title>Set up Auto-Renewing Let’s Encrypt Certificates on App Service Linux</title>
+</head>
+<body><header id=banner>
+<h2><a href=https://dfar.io/>Dave Farinelli</a></h2>
+<nav>
+<ul>
+<li>
+<a href=/about/ title=about>about</a>
+</li>
+</ul>
+</nav>
+</header>
+<main id=content>
+<article>
+<header id=post-header>
+<h1>Set up Auto-Renewing Let’s Encrypt Certificates on App Service Linux</h1><time>March 9, 2020</time></header><p>Set up the ability to assign auto-renewing Let’s Encrypt certs to an Azure App Service Linux instance with shibayan’s appservice-acmebot. This will create a Function App that automatically updates the App Service as needed.</p>
+<p>Before getting started, you’ll need to have a few things:</p>
+<ul>
+<li>An Azure App Service (Linux-based).</li>
+<li>DNS records being served using Azure DNS.</li>
+</ul>
+<h2 id=procedure>Procedure</h2>
+<p>First, deploy the solution to your Azure subscription. Use the following for configation:</p>
+<ul>
+<li>Resource group – certbot-rg</li>
+<li>App Name Prefix – certbot-fa</li>
+<li>Mail Address – <em>your email address.</em></li>
+</ul>
+<p>Next, set up the ability for the Certbot function app to access your Linux App Service</p>
+<p> </p>
+<ul>
+<li>Select ‘App Service Authentication’ to on.</li>
+<li>Set ‘Log in with Azure Active Directory’</li>
+<li>Set up the ‘Azure Active Directory’ Auth Provider
+<ul>
+<li>Set Management mode to ‘Express’</li>
+<li>Create a new AD app</li>
+</ul>
+</li>
+<li>Save changes.</li>
+</ul>
+<p> </p>
+<p>Now, assign the <strong>Website Contributor</strong> and <strong>Web Plan Contributor</strong> roles to the Certbot function app:</p>
+<p> </p>
+<p>Finally, <strong>restart the function app</strong> and access the Function App URL (<a href=https://_your-function-app_.azurewebsites.net/add-certificate)>https://_your-function-app_.azurewebsites.net/add-certificate)</a>. You should be able to see the UI showing the available RGs and App Names available (access can take 30-60 minutes to reflect in Azure, so if you’re seeing a 401, wait a while for things to resolve):</p>
+<p> </p>
+<p>Once the certificate is added, you’re all set! Renewals will automatically occur, as the app will scan regularly to check when to renew the certs.</p>
+</article>
+</main><footer id=footer>
+</footer>
+</body>
+</html>

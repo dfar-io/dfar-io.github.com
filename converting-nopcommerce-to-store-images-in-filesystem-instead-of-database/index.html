@@ -1,1 +1,47 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Software/DevOps Engineer"><link rel="shortcut icon" href=https://dfar.io/favicon.ico><link rel=stylesheet href=/css/style.min.css><title>Converting nopCommerce to Store Images In Filesystem Instead of Database</title></head><body><header id=banner><h2><a href=https://dfar.io/>Dave Farinelli</a></h2><nav><ul><li><a href=/about/ title=about>about</a></li></ul></nav></header><main id=content><article><header id=post-header><h1>Converting nopCommerce to Store Images In Filesystem Instead of Database</h1><time>November 12, 2019</time></header><p>By default, nopCommerce stores all of the images in the database, making for simple access. However, with a lot of images, this puts a lot of load on the database, alongside making for a larger database to maintain.</p><p>Some research shows that the performance doesnt differ greatly between the two options, but here’s a few reasons you might use either:</p><h3 id=storing-in-database>Storing in Database</h3><ul><li>Allows for easier backups & environment clones (only need to clone codebase and DB)</li><li>Single place for image storage (useful with multiple systems)</li></ul><h3 id=storing-on-fileserver>Storing on Fileserver</h3><ul><li>Separates large portion of data from DB (allows for smaller DB)</li><li>Lowers load on DB server.</li></ul><p>First, back up your database – since this is a process that can cause major issues if something were to go wrong (or if you decide to revert back to storing images in the database).</p><p>To convert from storing images in the database to the file server, go to Admin -> Settings -> Media Settings. Click on ‘Change’:</p><p></p><p>After the conversion completes, nopCommerce will automatically convert all images into the /Content/Images folder. You’ll also notice the binaries no longer being stored in the <code>Picture</code> table.</p><h2 id=shrink-database>Shrink Database</h2><p>Once this is done, you have the potential to open a good amount of space on the database, since the binaries of the images are now stored on the fileserver themselves.</p><p>To reclaim this space, you’ll need to shrink the database. Run the following command in SQL:</p><blockquote></blockquote></article></main><footer id=footer></footer></body></html>
+<!doctype html><html><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Software/DevOps Engineer">
+<link rel="shortcut icon" href=https://dfar.io/favicon.ico>
+<link rel=stylesheet href=/css/style.min.css>
+<title>Converting nopCommerce to Store Images In Filesystem Instead of Database</title>
+</head>
+<body><header id=banner>
+<h2><a href=https://dfar.io/>Dave Farinelli</a></h2>
+<nav>
+<ul>
+<li>
+<a href=/about/ title=about>about</a>
+</li>
+</ul>
+</nav>
+</header>
+<main id=content>
+<article>
+<header id=post-header>
+<h1>Converting nopCommerce to Store Images In Filesystem Instead of Database</h1><time>November 12, 2019</time></header><p>By default, nopCommerce stores all of the images in the database, making for simple access. However, with a lot of images, this puts a lot of load on the database, alongside making for a larger database to maintain.</p>
+<p>Some research shows that the performance doesnt differ greatly between the two options, but here’s a few reasons you might use either:</p>
+<h3 id=storing-in-database>Storing in Database</h3>
+<ul>
+<li>Allows for easier backups & environment clones (only need to clone codebase and DB)</li>
+<li>Single place for image storage (useful with multiple systems)</li>
+</ul>
+<h3 id=storing-on-fileserver>Storing on Fileserver</h3>
+<ul>
+<li>Separates large portion of data from DB (allows for smaller DB)</li>
+<li>Lowers load on DB server.</li>
+</ul>
+<p>First, back up your database – since this is a process that can cause major issues if something were to go wrong (or if you decide to revert back to storing images in the database).</p>
+<p>To convert from storing images in the database to the file server, go to Admin -> Settings -> Media Settings. Click on ‘Change’:</p>
+<p> </p>
+<p>After the conversion completes, nopCommerce will automatically convert all images into the /Content/Images folder. You’ll also notice the binaries no longer being stored in the <code>Picture</code> table.</p>
+<h2 id=shrink-database>Shrink Database</h2>
+<p>Once this is done, you have the potential to open a good amount of space on the database, since the binaries of the images are now stored on the fileserver themselves.</p>
+<p>To reclaim this space, you’ll need to shrink the database. Run the following command in SQL:</p>
+<blockquote>
+</blockquote>
+</article>
+</main><footer id=footer>
+</footer>
+</body>
+</html>

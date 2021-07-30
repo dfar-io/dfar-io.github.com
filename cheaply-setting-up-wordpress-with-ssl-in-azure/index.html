@@ -1,7 +1,140 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Software/DevOps Engineer"><link rel="shortcut icon" href=https://dfar.io/favicon.ico><link rel=stylesheet href=/css/style.min.css><title>Setting up WordPress in Azure with SSL for ~$8 a Month</title></head><body><header id=banner><h2><a href=https://dfar.io/>Dave Farinelli</a></h2><nav><ul><li><a href=/about/ title=about>about</a></li></ul></nav></header><main id=content><article><header id=post-header><h1>Setting up WordPress in Azure with SSL for ~$8 a Month</h1><time>March 21, 2019</time></header><ul><li><p>Basic plan (allowing for Always on and SSL): ~$50/month</p></li><li><p>MySQL for Azure: ~$25
-With this solution, you will create everything on one virtual machine, allowing for dynamic scaling as needed for the machine. This does of course come with some downside:</p></li><li><p>You will need to handle backing up of both the files on the server and the data in the database.</p></li></ul><h2 id=creating-the-vm>Creating the VM</h2><p>First, create the VM and Resource Group:</p><ul><li>RG name: ---rg</li><li>VM name: ---vm</li><li>Image: Ubuntu 18.04 LTS</li><li>VM size: B1s</li><li>VNet name: ---vnet</li><li>Diagnostics Storage Account: vmdiag</li><li>Allow Inbound Port Access for HTTP, HTTPS, SSH</li><li>Login access through Azure Active Directory</li></ul><p>Once the VM is created, access the NSG and add a restriction to IP to only allow your local IP to access:</p><p></p><h2 id=access-vm-and-install-lamp-server>Access VM and Install LAMP Server</h2><p>Retrieve the public IP address and SSH into the server:</p><p>Install LAMP Server:</p><p>To ensure the installation happened successfully, run the following commands:</p><p></p><p>Once LAMP server is installed, verify that you can connect to HTTP using the public IP address – you should see the Apache2 Ubuntu Default Page:</p><p></p><p> </p><h2 id=set-up-mysql>Set up MySQL</h2><p>Once the web server is running, the next step is configuring MySQL. Run the following command, installing the Validate Password Plugin and using “Medium” policy:</p><p>When installing, use medium strength, and default yes to all options except “Disallow root login remotely?” <a href=https://passwordsgenerator.net/>Generate a password</a>.<br>The next step is configuring access to MySQL through external servers (such as from a VPN). This assumes you’ll be using the NSG from Azure to restrict access based on desired IP addresses.<br>Run a query to allow access:</p><p>Edit MySQL configuration:</p><p>Comment out the line that says ‘bind-address’.<br>After making that change, restart MySQL:</p><p>Finally, create an NSG rule that allows for external access to port 3306:</p><p></p><p>Once the installation is done, let’s verify that the MySQL server can be accessed. I usually use MySQL Workbench and connect to the server using the following information:</p><ul><li>Hostname: public IP</li></ul><p>After MySQL is set up, set up any database that may be needed.<br>Here, you’ll want to set up the WordPress database server, whether you are starting fresh or migrating from an old instance.<br>If running into an issue with packet size, run the following command in MySQL and restart:</p><p>The final step is creating a DB user specifically for the WordPress installation – this use would only have access to the specific database that WordPress uses. Create a user with the following:</p><ul><li>Allow access to the DB used for the WordPress installation.</li></ul><h2 id=installing-wordpress>Installing WordPress</h2><p>After finishing setting up the LAMP server, next is installing WordPress. Assuming you’ve downloaded the source, you can use the following:</p><pre><code>scp -r .\wordpress-download\ vmadmin@YOUR_SERVER_IP:~
-</code></pre><p>Now you’ll need to SSH into the server and move the files into <code>/var/www/html</code>:</p><pre><code>sudo mv -v ~/wordpress-download/* /var/www/html/
-</code></pre><p>Before doing the 5-minute install, run the following to allow for Apache to have write permissions:<br>Check the group that Apache is running under:</p><p>Now perform the 5-minute install to ensure everything is working, you can access the site using the IP address to ensure everything in place.<br>While doing this, make sure you can do the following:</p><ul><li>Configure Apache to use <code>.htaccess</code> files. Change the following in <code>apache2.conf</code> to change <code>AllowOverride</code> to <code>All</code>:<ul><li></li></ul></li></ul><p>Options Indexes FollowSymLinks
+<!doctype html><html><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Software/DevOps Engineer">
+<link rel="shortcut icon" href=https://dfar.io/favicon.ico>
+<link rel=stylesheet href=/css/style.min.css>
+<title>Setting up WordPress in Azure with SSL for ~$8 a Month</title>
+</head>
+<body><header id=banner>
+<h2><a href=https://dfar.io/>Dave Farinelli</a></h2>
+<nav>
+<ul>
+<li>
+<a href=/about/ title=about>about</a>
+</li>
+</ul>
+</nav>
+</header>
+<main id=content>
+<article>
+<header id=post-header>
+<h1>Setting up WordPress in Azure with SSL for ~$8 a Month</h1><time>March 21, 2019</time></header>
+<ul>
+<li>
+<p>Basic plan (allowing for Always on and SSL): ~$50/month</p>
+</li>
+<li>
+<p>MySQL for Azure: ~$25
+With this solution, you will create everything on one virtual machine, allowing for dynamic scaling as needed for the machine. This does of course come with some downside:</p>
+</li>
+<li>
+<p>You will need to handle backing up of both the files on the server and the data in the database.</p>
+</li>
+</ul>
+<h2 id=creating-the-vm>Creating the VM</h2>
+<p>First, create the VM and Resource Group:</p>
+<ul>
+<li>RG name: ---rg</li>
+<li>VM name: ---vm</li>
+<li>Image: Ubuntu 18.04 LTS</li>
+<li>VM size: B1s</li>
+<li>VNet name: ---vnet</li>
+<li>Diagnostics Storage Account: vmdiag</li>
+<li>Allow Inbound Port Access for HTTP, HTTPS, SSH</li>
+<li>Login access through Azure Active Directory</li>
+</ul>
+<p>Once the VM is created, access the NSG and add a restriction to IP to only allow your local IP to access:</p>
+<p> </p>
+<h2 id=access-vm-and-install-lamp-server>Access VM and Install LAMP Server</h2>
+<p>Retrieve the public IP address and SSH into the server:</p>
+<p>Install LAMP Server:</p>
+<p>To ensure the installation happened successfully, run the following commands:</p>
+<p> </p>
+<p>Once LAMP server is installed, verify that you can connect to HTTP using the public IP address – you should see the Apache2 Ubuntu Default Page:</p>
+<p> </p>
+<p> </p>
+<h2 id=set-up-mysql>Set up MySQL</h2>
+<p>Once the web server is running, the next step is configuring MySQL. Run the following command, installing the Validate Password Plugin and using “Medium” policy:</p>
+<p>When installing, use medium strength, and default yes to all options except “Disallow root login remotely?” <a href=https://passwordsgenerator.net/>Generate a password</a>.<br>
+The next step is configuring access to MySQL through external servers (such as from a VPN). This assumes you’ll be using the NSG from Azure to restrict access based on desired IP addresses.<br>
+Run a query to allow access:</p>
+<p>Edit MySQL configuration:</p>
+<p>Comment out the line that says ‘bind-address’.<br>
+After making that change, restart MySQL:</p>
+<p>Finally, create an NSG rule that allows for external access to port 3306:</p>
+<p> </p>
+<p>Once the installation is done, let’s verify that the MySQL server can be accessed. I usually use MySQL Workbench and connect to the server using the following information:</p>
+<ul>
+<li>Hostname: public IP</li>
+</ul>
+<p>After MySQL is set up, set up any database that may be needed.<br>
+Here, you’ll want to set up the WordPress database server, whether you are starting fresh or migrating from an old instance.<br>
+If running into an issue with packet size, run the following command in MySQL and restart:</p>
+<p>The final step is creating a DB user specifically for the WordPress installation – this use would only have access to the specific database that WordPress uses. Create a user with the following:</p>
+<ul>
+<li>Allow access to the DB used for the WordPress installation.</li>
+</ul>
+<h2 id=installing-wordpress>Installing WordPress</h2>
+<p>After finishing setting up the LAMP server, next is installing WordPress. Assuming you’ve downloaded the source, you can use the following:</p>
+<pre><code>scp -r .\wordpress-download\ vmadmin@YOUR_SERVER_IP:~
+</code></pre>
+<p>Now you’ll need to SSH into the server and move the files into <code>/var/www/html</code>:</p>
+<pre><code>sudo mv -v ~/wordpress-download/* /var/www/html/
+</code></pre>
+<p>Before doing the 5-minute install, run the following to allow for Apache to have write permissions:<br>
+Check the group that Apache is running under:</p>
+<p>Now perform the 5-minute install to ensure everything is working, you can access the site using the IP address to ensure everything in place.<br>
+While doing this, make sure you can do the following:</p>
+<ul>
+<li>Configure Apache to use <code>.htaccess</code> files. Change the following in <code>apache2.conf</code> to change <code>AllowOverride</code> to <code>All</code>:
+<ul>
+<li>
+</li>
+</ul>
+</li>
+</ul>
+<p>Options Indexes FollowSymLinks
 AllowOverride None
 Require all granted
-&lt;/Directory></p><ul><li>Access a page outside of the home page (<code>sudo a2enmod rewrite && sudo systemctl restart apache2</code>)</li><li>Upload a media file to test uploads</li></ul><h2 id=enabling-mail-using-g-suite>Enabling Mail (using G Suite)</h2><p>First, set up DNS to use email. For this example, we are using Google Suite for email. Add the following 5 MX records:</p><ul><li>Host: @</li><li>Records (priority-URL)<ul><li>1-ASPMX.L.GOOGLE.COM.</li><li>5-ALT1.ASPMX.L.GOOGLE.COM.</li><li>5-ALT2.ASPMX.L.GOOGLE.COM.</li><li>10-ALT3.ASPMX.L.GOOGLE.COM.</li><li>10-ALT4.ASPMX.L.GOOGLE.COM.</li></ul></li></ul><p>Then, do the following:<br><a href=https://wpforms.com/how-to-securely-send-wordpress-emails-using-gmail-smtp/>https://wpforms.com/how-to-securely-send-wordpress-emails-using-gmail-smtp/</a></p><h2 id=setting-up-ssl>Setting up SSL</h2><p>Once the web server can be reached and LAMP is installed, the next step is securing the site using SSL. Run the following to enable SSL, enable the SSL site, and restart Apache:</p><p>Once that’s done, access the public IP using HTTPS – you should get an insecure cert warning.<br>Now that we’ve determined the port is listening, let’s set up Let’s Encrypt. Using <a href=https://certbot.eff.org/>CertBot</a> usually makes this much easier. Since in this case, we’re using Apache and Ubuntu 18.04, we just need to populate those values and run the commands provided by CertBot:</p><p></p><p>With these commands, you’ll also need to set up DNS for the domain to use. With the public IP address, create the following:</p><ul><li>create an A record with the host as @ and the IP address as the web server IP address.</li></ul><p>After this finishes, run the CertBot job to create the certificate. After that finishes, allow for the ability to redirect to HTTPS using the CertBot plugin.<br>Reference:</p><ul><li><a href=https://docs.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-lamp-stack>https://docs.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-lamp-stack</a></li></ul><p>]]></p></article></main><footer id=footer></footer></body></html>
+&lt;/Directory></p>
+<ul>
+<li>Access a page outside of the home page (<code>sudo a2enmod rewrite && sudo systemctl restart apache2</code>)</li>
+<li>Upload a media file to test uploads</li>
+</ul>
+<h2 id=enabling-mail-using-g-suite>Enabling Mail (using G Suite)</h2>
+<p>First, set up DNS to use email. For this example, we are using Google Suite for email. Add the following 5 MX records:</p>
+<ul>
+<li>Host: @</li>
+<li>Records (priority-URL)
+<ul>
+<li>1-ASPMX.L.GOOGLE.COM.</li>
+<li>5-ALT1.ASPMX.L.GOOGLE.COM.</li>
+<li>5-ALT2.ASPMX.L.GOOGLE.COM.</li>
+<li>10-ALT3.ASPMX.L.GOOGLE.COM.</li>
+<li>10-ALT4.ASPMX.L.GOOGLE.COM.</li>
+</ul>
+</li>
+</ul>
+<p>Then, do the following:<br>
+<a href=https://wpforms.com/how-to-securely-send-wordpress-emails-using-gmail-smtp/>https://wpforms.com/how-to-securely-send-wordpress-emails-using-gmail-smtp/</a></p>
+<h2 id=setting-up-ssl>Setting up SSL</h2>
+<p>Once the web server can be reached and LAMP is installed, the next step is securing the site using SSL. Run the following to enable SSL, enable the SSL site, and restart Apache:</p>
+<p>Once that’s done, access the public IP using HTTPS – you should get an insecure cert warning.<br>
+Now that we’ve determined the port is listening, let’s set up Let’s Encrypt. Using <a href=https://certbot.eff.org/>CertBot</a> usually makes this much easier. Since in this case, we’re using Apache and Ubuntu 18.04, we just need to populate those values and run the commands provided by CertBot:</p>
+<p> </p>
+<p>With these commands, you’ll also need to set up DNS for the domain to use. With the public IP address, create the following:</p>
+<ul>
+<li>create an A record with the host as @ and the IP address as the web server IP address.</li>
+</ul>
+<p>After this finishes, run the CertBot job to create the certificate. After that finishes, allow for the ability to redirect to HTTPS using the CertBot plugin.<br>
+Reference:</p>
+<ul>
+<li><a href=https://docs.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-lamp-stack>https://docs.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-lamp-stack</a></li>
+</ul>
+<p>]]></p>
+</article>
+</main><footer id=footer>
+</footer>
+</body>
+</html>

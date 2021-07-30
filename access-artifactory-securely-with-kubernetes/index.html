@@ -1,1 +1,43 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Software/DevOps Engineer"><link rel="shortcut icon" href=https://dfar.io/favicon.ico><link rel=stylesheet href=/css/style.min.css><title>Access Artifactory Securely with Kubernetes</title></head><body><header id=banner><h2><a href=https://dfar.io/>Dave Farinelli</a></h2><nav><ul><li><a href=/about/ title=about>about</a></li></ul></nav></header><main id=content><article><header id=post-header><h1>Access Artifactory Securely with Kubernetes</h1><time>June 30, 2020</time></header><p>To allow Kubernetes to download images from a secured Artifactory instance (for example, an instance that doesn’t allow anonymous access):</p><h2 id=artifactory-user-setup>Artifactory User Setup</h2><ol><li>Create a user in Artifactory to serve as the service principal.</li><li>Log into this user and create an API token.</li></ol><h2 id=docker-credentials>Docker Credentials</h2><p>With the API token, log into the Docker instance (username is service account username, password is API key):</p><p>Once logged in successfully, access the <code>config.json</code> file created to get the token to use.</p><h2 id=kubernetes-token-creation>Kubernetes Token Creation</h2><p>Upload the following JSON, using the auth token generated above:</p><h2 id=kubernetes-deployment-reference>Kubernetes Deployment Reference</h2><p>Finally, reference the auth token in your Kubernetes deployments:</p><h2 id=troubleshooting>Troubleshooting</h2><p>If you’re having issues, make sure the server name used in the deployment and the server name logged in (including port numbers) match.</p><h2 id=reference>Reference</h2><p><a href=https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/>https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/</a></p></article></main><footer id=footer></footer></body></html>
+<!doctype html><html><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Software/DevOps Engineer">
+<link rel="shortcut icon" href=https://dfar.io/favicon.ico>
+<link rel=stylesheet href=/css/style.min.css>
+<title>Access Artifactory Securely with Kubernetes</title>
+</head>
+<body><header id=banner>
+<h2><a href=https://dfar.io/>Dave Farinelli</a></h2>
+<nav>
+<ul>
+<li>
+<a href=/about/ title=about>about</a>
+</li>
+</ul>
+</nav>
+</header>
+<main id=content>
+<article>
+<header id=post-header>
+<h1>Access Artifactory Securely with Kubernetes</h1><time>June 30, 2020</time></header><p>To allow Kubernetes to download images from a secured Artifactory instance (for example, an instance that doesn’t allow anonymous access):</p>
+<h2 id=artifactory-user-setup>Artifactory User Setup</h2>
+<ol>
+<li>Create a user in Artifactory to serve as the service principal.</li>
+<li>Log into this user and create an API token.</li>
+</ol>
+<h2 id=docker-credentials>Docker Credentials</h2>
+<p>With the API token, log into the Docker instance (username is service account username, password is API key):</p>
+<p>Once logged in successfully, access the <code>config.json</code> file created to get the token to use.</p>
+<h2 id=kubernetes-token-creation>Kubernetes Token Creation</h2>
+<p>Upload the following JSON, using the auth token generated above:</p>
+<h2 id=kubernetes-deployment-reference>Kubernetes Deployment Reference</h2>
+<p>Finally, reference the auth token in your Kubernetes deployments:</p>
+<h2 id=troubleshooting>Troubleshooting</h2>
+<p>If you’re having issues, make sure the server name used in the deployment and the server name logged in (including port numbers) match.</p>
+<h2 id=reference>Reference</h2>
+<p><a href=https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/>https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/</a></p>
+</article>
+</main><footer id=footer>
+</footer>
+</body>
+</html>

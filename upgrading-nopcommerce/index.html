@@ -1,1 +1,46 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Software/DevOps Engineer"><link rel="shortcut icon" href=https://dfar.io/favicon.ico><link rel=stylesheet href=/css/style.min.css><title>Upgrading nopCommerce</title></head><body><header id=banner><h2><a href=https://dfar.io/>Dave Farinelli</a></h2><nav><ul><li><a href=/about/ title=about>about</a></li></ul></nav></header><main id=content><article><header id=post-header><h1>Upgrading nopCommerce</h1><time>February 21, 2020</time></header><p>Upgrading nopCommerce is a manual process that requires a decent amonut to work to get in place. When upgrading, you’ll need to upgrade sequentially (3.80 -> 3.90 -> 4.00 -> etc.).</p><p><strong>NOTE</strong>: When performing this process on a live site, <strong>make sure to close the store during the upgrade process</strong> so no changes occur on the site during upgrade.</p><h2 id=upgrade-database>Upgrade Database</h2><p>First, you’ll need to upgrade the database using a script provided by nopCommerce. <a href=https://github.com/nopSolutions/nopCommerce/tree/develop/upgradescripts>Download the script here</a> based on the version and apply the changes in the SQL script to a copied version of the database.</p><h2 id=upgrade-site-files>Upgrade Site Files</h2><p>The script above with have a README.txt file that describes the next steps, which is essentially:</p><ul><li>Download the source code for the upgrade version</li><li>Porting over the specific configuration files (Settings.txt, InstalledPlugins.txt, etc.) and <strong>making sure to point to the newly created database above</strong>.</li></ul><p>If storing images on the filesystem, make sure to copy images over in /Content/images as well.</p><p>At this point, you should be able to see the front page of the site.</p><h2 id=restore-theme>Restore Theme</h2><p>If you were using a theme in the previous version, you’ll need to get the correct version of it and restore it.</p><p>First, if there are any SQL scripts for the theme, run those on the upgraded database.</p><p>Upload the theme to the nopCommerce installation, alongside any plugins required by the theme.</p><p>After this is done, check the site again and confirm the new theme is being used.</p><h2 id=restore-plugins>Restore Plugins</h2><p>Finally, go through the plugins from the original site and add the appropriate version. If you’re using the source code version of nopCommerce, you’ll want to make sure the plugin is set up to use the latest version of nopCommerce, and that it compiles.</p><p>Some plugins will require database upgrades as well.</p></article></main><footer id=footer></footer></body></html>
+<!doctype html><html><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Software/DevOps Engineer">
+<link rel="shortcut icon" href=https://dfar.io/favicon.ico>
+<link rel=stylesheet href=/css/style.min.css>
+<title>Upgrading nopCommerce</title>
+</head>
+<body><header id=banner>
+<h2><a href=https://dfar.io/>Dave Farinelli</a></h2>
+<nav>
+<ul>
+<li>
+<a href=/about/ title=about>about</a>
+</li>
+</ul>
+</nav>
+</header>
+<main id=content>
+<article>
+<header id=post-header>
+<h1>Upgrading nopCommerce</h1><time>February 21, 2020</time></header><p>Upgrading nopCommerce is a manual process that requires a decent amonut to work to get in place. When upgrading, you’ll need to upgrade sequentially (3.80 -> 3.90 -> 4.00 -> etc.).</p>
+<p><strong>NOTE</strong>: When performing this process on a live site, <strong>make sure to close the store during the upgrade process</strong> so no changes occur on the site during upgrade.</p>
+<h2 id=upgrade-database>Upgrade Database</h2>
+<p>First, you’ll need to upgrade the database using a script provided by nopCommerce. <a href=https://github.com/nopSolutions/nopCommerce/tree/develop/upgradescripts>Download the script here</a> based on the version and apply the changes in the SQL script to a copied version of the database.</p>
+<h2 id=upgrade-site-files>Upgrade Site Files</h2>
+<p>The script above with have a README.txt file that describes the next steps, which is essentially:</p>
+<ul>
+<li>Download the source code for the upgrade version</li>
+<li>Porting over the specific configuration files (Settings.txt, InstalledPlugins.txt, etc.) and <strong>making sure to point to the newly created database above</strong>.</li>
+</ul>
+<p>If storing images on the filesystem, make sure to copy images over in /Content/images as well.</p>
+<p>At this point, you should be able to see the front page of the site.</p>
+<h2 id=restore-theme>Restore Theme</h2>
+<p>If you were using a theme in the previous version, you’ll need to get the correct version of it and restore it.</p>
+<p>First, if there are any SQL scripts for the theme, run those on the upgraded database.</p>
+<p>Upload the theme to the nopCommerce installation, alongside any plugins required by the theme.</p>
+<p>After this is done, check the site again and confirm the new theme is being used.</p>
+<h2 id=restore-plugins>Restore Plugins</h2>
+<p>Finally, go through the plugins from the original site and add the appropriate version. If you’re using the source code version of nopCommerce, you’ll want to make sure the plugin is set up to use the latest version of nopCommerce, and that it compiles.</p>
+<p>Some plugins will require database upgrades as well.</p>
+</article>
+</main><footer id=footer>
+</footer>
+</body>
+</html>

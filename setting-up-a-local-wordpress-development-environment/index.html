@@ -1,2 +1,72 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Software/DevOps Engineer"><link rel="shortcut icon" href=https://dfar.io/favicon.ico><link rel=stylesheet href=/css/style.min.css><title>Setting Up a Local WordPress Development Environment</title></head><body><header id=banner><h2><a href=https://dfar.io/>Dave Farinelli</a></h2><nav><ul><li><a href=/about/ title=about>about</a></li></ul></nav></header><main id=content><article><header id=post-header><h1>Setting Up a Local WordPress Development Environment</h1><time>July 16, 2018</time></header><ul><li>Setting up the website and adding content.</li><li>Installing plugins to test their functionality.</li><li>Viewing a functional website without a shared environment.</li><li>Theme or plugin development.
-This guide will walk you through the following steps.</li></ul><ol><li>Installing a LAMP Development Environment</li><li>Creating a database</li><li>Downloading WordPress core files, and setting them up on server.</li><li>Creating a local domain for use.</li></ol><h2 id=installing-a-lamp-development-environment>Installing A LAMP Development Environment</h2><p>XAMPP is a cross-platform LAMP (Linux, Apache, MySQL, PHP) environment used for running WordPress on your local machine.  A few platform-specific alternatives to use as well are WampServer for Windows, and MampServer for OS X.  All of these options will provide the same functionality for running a local WordPress environment, but I chose XAMPP for the following reasons:</p><ul><li>Cross-platform compatibility, the setup and configuration for this tool will stay the same between different platforms.</li><li>Personal preference for the XAMPP Control Panel over the other tools_._</li><li>The use of MariaDB over MySQL**.</li></ul><p><em>**Note that XAMPP actually uses MariaDB as it’s database server.  This is different than the standard MySQL database server used for WordPress.   I’ve provided a reference to a few articles at the end of this post if you’re interested in learning more.</em></p><h2 id=starting-with-xampp>Starting with XAMPP</h2><p>When opening XAMPP, you’ll be presented with the Control Panel:<br>To get the environment started, start both the Apache and MySQL services.  Check that the server is running correctly by accessing http://localhost on your machine.  If the XAMPP dashboard appears, you’re good to move to the next step.</p><h2 id=creating-a-database>Creating a Database</h2><p>The next step is creating or importing a database in your local MySQL server.  This can be done using phpMyAdmin (set up with your XAMPP installation) or by using MySQL Workbench to connect.  I’ll use MySQL Workbench, since it gives a more friendly UI to work with.<br>Right-click ‘Schemas’ on the left side to create a database for WordPress to use.  Later, you’ll use this schema name when running the WordPress installer.</p><h2 id=linkinginstalling-wordpress>Linking/Installing WordPress</h2><p>After the server is running and the database created, the next step is to get the WordPress source code onto the server.  Download the files for WordPress and copy them to a directory on your computer, something like:</p><p>You’ll likely want to store the source code for the site somewhere other than the /htdocs folder.  This way, you can have a central repository on your machine for all projects.  You can use a symlink to accomplish this.  Open a command line terminal as an admin and run the following:</p><p>After this, check that you can access the WordPress installation at **http://localhost/.  **Assuming you can see the WordPress installation screen, you have everything ready to get started.  You can progress from here if you so desire, but let’s also create a local domain for use as well, to make access to the site a little easier.</p><h2 id=creating-a-local-domain>Creating a Local Domain</h2><p>Creating a local domain will allow you to access your local running website at something such as <strong>http://local..com</strong>.  There are two parts:</p><ol><li>Editing the Apache server configuration to serve the local domain.</li><li>Editing the hosts file to point the new domain from your machine to your server.</li></ol><p>First, open the Apache Virtual Hosts configuration file at C:\xampp\apache\conf\extra\httpd-vhosts.conf and add the following:</p><p>Next, open the C:\Windows\System32\drivers\etc\hosts <strong>as an administrator</strong> and add the following:</p><p>Restart Apache using XAMPP Control Panel.  Attempt to access the site using the local domain.  If you’re able to access the WordPress installer screen at the local domain, you’ll all set to start the 5-minute installation.</p><h2 id=complete-the-5-minute-wordpress-installation>Complete the 5-minute WordPress Installation</h2><p>Installing WordPress is very simple.  Select the language for installation, and then fill out the database connection details like below.  You’ll just need to change the database name to the schema created:<br>You should now be all set with a local WordPress environment, useful for plugin development, trying out different themes, and other configuration changes without affecting a live website.</p><h2 id=references>References</h2><p>MySQL Face-off:   MySQL or MariaDB?]]></p></article></main><footer id=footer></footer></body></html>
+<!doctype html><html><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Software/DevOps Engineer">
+<link rel="shortcut icon" href=https://dfar.io/favicon.ico>
+<link rel=stylesheet href=/css/style.min.css>
+<title>Setting Up a Local WordPress Development Environment</title>
+</head>
+<body><header id=banner>
+<h2><a href=https://dfar.io/>Dave Farinelli</a></h2>
+<nav>
+<ul>
+<li>
+<a href=/about/ title=about>about</a>
+</li>
+</ul>
+</nav>
+</header>
+<main id=content>
+<article>
+<header id=post-header>
+<h1>Setting Up a Local WordPress Development Environment</h1><time>July 16, 2018</time></header>
+<ul>
+<li>Setting up the website and adding content.</li>
+<li>Installing plugins to test their functionality.</li>
+<li>Viewing a functional website without a shared environment.</li>
+<li>Theme or plugin development.
+This guide will walk you through the following steps.</li>
+</ul>
+<ol>
+<li>Installing a LAMP Development Environment</li>
+<li>Creating a database</li>
+<li>Downloading WordPress core files, and setting them up on server.</li>
+<li>Creating a local domain for use.</li>
+</ol>
+<h2 id=installing-a-lamp-development-environment>Installing A LAMP Development Environment</h2>
+<p>XAMPP is a cross-platform LAMP (Linux, Apache, MySQL, PHP) environment used for running WordPress on your local machine.  A few platform-specific alternatives to use as well are WampServer for Windows, and MampServer for OS X.  All of these options will provide the same functionality for running a local WordPress environment, but I chose XAMPP for the following reasons:</p>
+<ul>
+<li>Cross-platform compatibility, the setup and configuration for this tool will stay the same between different platforms.</li>
+<li>Personal preference for the XAMPP Control Panel over the other tools_._</li>
+<li>The use of MariaDB over MySQL**.</li>
+</ul>
+<p><em>**Note that XAMPP actually uses MariaDB as it’s database server.  This is different than the standard MySQL database server used for WordPress.   I’ve provided a reference to a few articles at the end of this post if you’re interested in learning more.</em></p>
+<h2 id=starting-with-xampp>Starting with XAMPP</h2>
+<p>When opening XAMPP, you’ll be presented with the Control Panel:<br>
+To get the environment started, start both the Apache and MySQL services.  Check that the server is running correctly by accessing http://localhost on your machine.  If the XAMPP dashboard appears, you’re good to move to the next step.</p>
+<h2 id=creating-a-database>Creating a Database</h2>
+<p>The next step is creating or importing a database in your local MySQL server.  This can be done using phpMyAdmin (set up with your XAMPP installation) or by using MySQL Workbench to connect.  I’ll use MySQL Workbench, since it gives a more friendly UI to work with.<br>
+Right-click ‘Schemas’ on the left side to create a database for WordPress to use.  Later, you’ll use this schema name when running the WordPress installer.</p>
+<h2 id=linkinginstalling-wordpress>Linking/Installing WordPress</h2>
+<p>After the server is running and the database created, the next step is to get the WordPress source code onto the server.  Download the files for WordPress and copy them to a directory on your computer, something like:</p>
+<p>You’ll likely want to store the source code for the site somewhere other than the /htdocs folder.  This way, you can have a central repository on your machine for all projects.  You can use a symlink to accomplish this.  Open a command line terminal as an admin and run the following:</p>
+<p>After this, check that you can access the WordPress installation at **http://localhost/.  **Assuming you can see the WordPress installation screen, you have everything ready to get started.  You can progress from here if you so desire, but let’s also create a local domain for use as well, to make access to the site a little easier.</p>
+<h2 id=creating-a-local-domain>Creating a Local Domain</h2>
+<p>Creating a local domain will allow you to access your local running website at something such as <strong>http://local..com</strong>.  There are two parts:</p>
+<ol>
+<li>Editing the Apache server configuration to serve the local domain.</li>
+<li>Editing the hosts file to point the new domain from your machine to your server.</li>
+</ol>
+<p>First, open the Apache Virtual Hosts configuration file at C:\xampp\apache\conf\extra\httpd-vhosts.conf and add the following:</p>
+<p>Next, open the C:\Windows\System32\drivers\etc\hosts <strong>as an administrator</strong> and add the following:</p>
+<p>Restart Apache using XAMPP Control Panel.  Attempt to access the site using the local domain.  If you’re able to access the WordPress installer screen at the local domain, you’ll all set to start the 5-minute installation.</p>
+<h2 id=complete-the-5-minute-wordpress-installation>Complete the 5-minute WordPress Installation</h2>
+<p>Installing WordPress is very simple.  Select the language for installation, and then fill out the database connection details like below.  You’ll just need to change the database name to the schema created:<br>
+You should now be all set with a local WordPress environment, useful for plugin development, trying out different themes, and other configuration changes without affecting a live website.</p>
+<h2 id=references>References</h2>
+<p>MySQL Face-off:   MySQL or MariaDB?]]></p>
+</article>
+</main><footer id=footer>
+</footer>
+</body>
+</html>

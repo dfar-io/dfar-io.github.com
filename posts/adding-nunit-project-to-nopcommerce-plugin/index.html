@@ -1,7 +1,31 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Software/DevOps Engineer"><link rel="shortcut icon" href=https://dfar.io/favicon.ico><link rel=stylesheet href=/css/style.min.css><title>Adding Nunit Project to nopCommerce Plugin</title></head><body><header id=banner><h2><a href=https://dfar.io/>Dave Farinelli</a></h2><nav><ul><li><a href=/about/ title=about>about</a></li></ul></nav></header><main id=content><article><header id=post-header><h1>Adding Nunit Project to nopCommerce Plugin</h1><time>January 12, 2021</time></header><p>I&rsquo;ve been working on integrating SonarClodu into the nopCommerce Plugin
+<!doctype html><html><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Software/DevOps Engineer">
+<link rel="shortcut icon" href=https://dfar.io/favicon.ico>
+<link rel=stylesheet href=/css/style.min.css>
+<title>Adding Nunit Project to nopCommerce Plugin</title>
+</head>
+<body><header id=banner>
+<h2><a href=https://dfar.io/>Dave Farinelli</a></h2>
+<nav>
+<ul>
+<li>
+<a href=/about/ title=about>about</a>
+</li>
+</ul>
+</nav>
+</header>
+<main id=content>
+<article>
+<header id=post-header>
+<h1>Adding Nunit Project to nopCommerce Plugin</h1><time>January 12, 2021</time></header><p>I&rsquo;ve been working on integrating SonarClodu into the nopCommerce Plugin
 development workflow, and came across a procedure that helps with building
 out a plugin with the ability to easily integrate it into a fresh copy of
-nopCommerce.</p><p>As an example, you can see it in the <a href=https://github.com/dfar-io/freshaddress-integration-for-nopcommerce>FreshAddress Integration Plugin source code</a>.</p><h2 id=plugin-folder-structure>Plugin Folder Structure</h2><pre><code>.github/workflows
+nopCommerce.</p>
+<p>As an example, you can see it in the <a href=https://github.com/dfar-io/freshaddress-integration-for-nopcommerce>FreshAddress Integration Plugin source code</a>.</p>
+<h2 id=plugin-folder-structure>Plugin Folder Structure</h2>
+<pre><code>.github/workflows
 Source
     Plugin Project
 Tests
@@ -10,13 +34,25 @@ Tests
 LICENSE
 README.md
 sonar-helper.sh
-</code></pre><p>A few things to take apart here:</p><ul><li><code>sonar-helper.sh</code> is a helper script that adds a flag to all other nopCommerce
-projects to prevent them from being included in Sonar report.</li></ul><h2 id=creating-the-test-project>Creating the Test Project</h2><p>When creating the Test project, I&rsquo;ve set it up to mimic the nopCommerce tech stack <em>(you can change the naming based on ypur plugin)</em>:</p><pre><code>dotnet new nunit -n Nop.Plugin.Misc.FreshAddressIntegration.Tests -o Tests
+</code></pre><p>A few things to take apart here:</p>
+<ul>
+<li><code>sonar-helper.sh</code> is a helper script that adds a flag to all other nopCommerce
+projects to prevent them from being included in Sonar report.</li>
+</ul>
+<h2 id=creating-the-test-project>Creating the Test Project</h2>
+<p>When creating the Test project, I&rsquo;ve set it up to mimic the nopCommerce tech stack <em>(you can change the naming based on ypur plugin)</em>:</p>
+<pre><code>dotnet new nunit -n Nop.Plugin.Misc.FreshAddressIntegration.Tests -o Tests
 
 dotnet add package coverlet.msbuild
 dotnet add package FluentAssertions
 dotnet add package Moq
 
 dotnet add reference ../Source/Nop.Plugin.Misc.FreshAddress.csproj
-</code></pre><p>Then when running tests with coverage, you can run with the following:</p><pre><code>dotnet test Plugins/Tests/Nop.Plugin.Misc.FreshAddress.Tests.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
-</code></pre><p>This will generate the report that gets imported into Sonar and provides reporting.</p></article></main><footer id=footer></footer></body></html>
+</code></pre><p>Then when running tests with coverage, you can run with the following:</p>
+<pre><code>dotnet test Plugins/Tests/Nop.Plugin.Misc.FreshAddress.Tests.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+</code></pre><p>This will generate the report that gets imported into Sonar and provides reporting.</p>
+</article>
+</main><footer id=footer>
+</footer>
+</body>
+</html>

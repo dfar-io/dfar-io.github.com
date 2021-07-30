@@ -1,1 +1,87 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Software/DevOps Engineer"><link rel="shortcut icon" href=https://dfar.io/favicon.ico><link rel=stylesheet href=/css/style.min.css><title>Setting Up WordPress With An Azure VM</title></head><body><header id=banner><h2><a href=https://dfar.io/>Dave Farinelli</a></h2><nav><ul><li><a href=/about/ title=about>about</a></li></ul></nav></header><main id=content><article><header id=post-header><h1>Setting Up WordPress With An Azure VM</h1><time>February 2, 2020</time></header><p>This guide will walk though setting up a WordPress site using an Azure VM. Some of the perks of doing this are:</p><ul><li>Cost-wise, you can spend as little as ~$8 a month to get a fully functional WordPress site running. If you try using MySQL and App Services in Azure, you’ll looking to spend ~$40 a month for worse specs.</li><li>You can scale the site up as needed if performance demands arise.</li></ul><h2 id=procedure>Procedure</h2><h3 id=step-1-create-an-azure-vm>Step 1: Create An Azure VM</h3><p>First, create an Azure VM with the following specs:</p><ul><li>Image of Ubuntu 18.04 LTS</li><li>Size of B1s (anything less and you’ll run into issues)</li><li>Azure Backup (optional, provides a means to restore VM from scratch)</li></ul><p>Once the VM is set, set the following Network Security Group rules:</p><ul><li>Public Access – ports 80/443</li><li>Private Access (such as your IP address) – ports 22/3306</li></ul><h3 id=step-2-set-up-lamp-server>Step 2: Set up LAMP Server</h3><p>SSH into the server and install a LAMP server with the following:</p><p>After installation, verify correct installation:</p><h3 id=step-3-configure-mysql>Step 3: Configure MySQL</h3><p>Run the following:</p><p>Do the following:</p><ul><li>Install the Validate Password Plugin at “Medium”</li><li>Say yes to all options except “Disallow root login remotely”</li></ul><p>Run a query to allow access:</p><p>Edit the file <strong>/etc/mysql/mysql.conf.d/mysqld.cnf</strong> and comment out the <strong>bind-address</strong> line.</p><p>Restart MySQL:</p><p>Finally, test connecting to the database server using a tool like MySQL Workbench. When connected to the database server, do the following:</p><ul><li>Create a DB (either copied from a migration or a fresh database)</li><li>Create a user that has access to the DB above.</li></ul><h3 id=step-4-install-wordpress>Step 4: Install WordPress</h3><p>Download and unzip WordPress into <strong>/var/www/html</strong>:</p><p>Configure <strong>/etc/apache2/apache2.conf</strong> and allow AllowOverride to All in the <strong>/var/www</strong> directory.</p><p>Set the correct permissions for Apache:</p><p>As a final step, delete the <strong>index.html</strong> file from Apache:</p><p>You should now be able to run the WordPress installer and connect the database.</p><p>Once the WordPress Installer has run, log into the backend and check the site health to see if there are any misconfigurations within the system:</p><p></p><h2 id=optional-steps>Optional Steps</h2><h3 id=setting-up-ssl-with-let8217s-encrypt>Setting Up SSL With Let’s Encrypt</h3><p>Before setting up SSL, you’ll need to set up a domain and set the appropriate DNS settings to be able to run the Let’s Encrypt process.</p><p>Enable SSL and restart Apache:</p><p>Run the commands provided by CertBot.</p><h3 id=enable-mail>Enable Mail</h3><p>The easiest way to enable mail is to use the WP Mail SMTP plugin. Once configured, you can use the plugin to set up alongside the email carrier of choice and test the submission functionality.</p><h3 id=increase-upload-size>Increase Upload Size</h3><p>To increase upload size (for things like uploading themes/plugins/media), edit the <strong>/etc/php/7.2/apache2/php.ini</strong> file:</p><p>Then restart Apache:</p><h3 id=restore-from-a-backup>Restore from a Backup</h3><p>If opted into backup when creating the VM, the VM will have an automatic daily backup progress that you can use to restore the VM at any point.</p><p>To restore a new VM, access the Recovery Vault and go to Backup Items -> Your VM Name -> Restore VM. Once you go this, you have two options:</p><ul><li>Completely create a new VM with the data restored.</li><li>Restore the disks into your current VM (VM must be turned off to do this).</li></ul></article></main><footer id=footer></footer></body></html>
+<!doctype html><html><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Software/DevOps Engineer">
+<link rel="shortcut icon" href=https://dfar.io/favicon.ico>
+<link rel=stylesheet href=/css/style.min.css>
+<title>Setting Up WordPress With An Azure VM</title>
+</head>
+<body><header id=banner>
+<h2><a href=https://dfar.io/>Dave Farinelli</a></h2>
+<nav>
+<ul>
+<li>
+<a href=/about/ title=about>about</a>
+</li>
+</ul>
+</nav>
+</header>
+<main id=content>
+<article>
+<header id=post-header>
+<h1>Setting Up WordPress With An Azure VM</h1><time>February 2, 2020</time></header><p>This guide will walk though setting up a WordPress site using an Azure VM. Some of the perks of doing this are:</p>
+<ul>
+<li>Cost-wise, you can spend as little as ~$8 a month to get a fully functional WordPress site running. If you try using MySQL and App Services in Azure, you’ll looking to spend ~$40 a month for worse specs.</li>
+<li>You can scale the site up as needed if performance demands arise.</li>
+</ul>
+<h2 id=procedure>Procedure</h2>
+<h3 id=step-1-create-an-azure-vm>Step 1: Create An Azure VM</h3>
+<p>First, create an Azure VM with the following specs:</p>
+<ul>
+<li>Image of Ubuntu 18.04 LTS</li>
+<li>Size of B1s (anything less and you’ll run into issues)</li>
+<li>Azure Backup (optional, provides a means to restore VM from scratch)</li>
+</ul>
+<p>Once the VM is set, set the following Network Security Group rules:</p>
+<ul>
+<li>Public Access – ports 80/443</li>
+<li>Private Access (such as your IP address) – ports 22/3306</li>
+</ul>
+<h3 id=step-2-set-up-lamp-server>Step 2: Set up LAMP Server</h3>
+<p>SSH into the server and install a LAMP server with the following:</p>
+<p>After installation, verify correct installation:</p>
+<h3 id=step-3-configure-mysql>Step 3: Configure MySQL</h3>
+<p>Run the following:</p>
+<p>Do the following:</p>
+<ul>
+<li>Install the Validate Password Plugin at “Medium”</li>
+<li>Say yes to all options except “Disallow root login remotely”</li>
+</ul>
+<p>Run a query to allow access:</p>
+<p>Edit the file <strong>/etc/mysql/mysql.conf.d/mysqld.cnf</strong> and comment out the <strong>bind-address</strong> line.</p>
+<p>Restart MySQL:</p>
+<p>Finally, test connecting to the database server using a tool like MySQL Workbench. When connected to the database server, do the following:</p>
+<ul>
+<li>Create a DB (either copied from a migration or a fresh database)</li>
+<li>Create a user that has access to the DB above.</li>
+</ul>
+<h3 id=step-4-install-wordpress>Step 4: Install WordPress</h3>
+<p>Download and unzip WordPress into <strong>/var/www/html</strong>:</p>
+<p>Configure <strong>/etc/apache2/apache2.conf</strong> and allow AllowOverride to All in the <strong>/var/www</strong> directory.</p>
+<p>Set the correct permissions for Apache:</p>
+<p>As a final step, delete the <strong>index.html</strong> file from Apache:</p>
+<p>You should now be able to run the WordPress installer and connect the database.</p>
+<p>Once the WordPress Installer has run, log into the backend and check the site health to see if there are any misconfigurations within the system:</p>
+<p> </p>
+<h2 id=optional-steps>Optional Steps</h2>
+<h3 id=setting-up-ssl-with-let8217s-encrypt>Setting Up SSL With Let’s Encrypt</h3>
+<p>Before setting up SSL, you’ll need to set up a domain and set the appropriate DNS settings to be able to run the Let’s Encrypt process.</p>
+<p>Enable SSL and restart Apache:</p>
+<p>Run the commands provided by CertBot.</p>
+<h3 id=enable-mail>Enable Mail</h3>
+<p>The easiest way to enable mail is to use the WP Mail SMTP plugin. Once configured, you can use the plugin to set up alongside the email carrier of choice and test the submission functionality.</p>
+<h3 id=increase-upload-size>Increase Upload Size</h3>
+<p>To increase upload size (for things like uploading themes/plugins/media), edit the <strong>/etc/php/7.2/apache2/php.ini</strong> file:</p>
+<p>Then restart Apache:</p>
+<h3 id=restore-from-a-backup>Restore from a Backup</h3>
+<p>If opted into backup when creating the VM, the VM will have an automatic daily backup progress that you can use to restore the VM at any point.</p>
+<p>To restore a new VM, access the Recovery Vault and go to Backup Items -> Your VM Name -> Restore VM. Once you go this, you have two options:</p>
+<ul>
+<li>Completely create a new VM with the data restored.</li>
+<li>Restore the disks into your current VM (VM must be turned off to do this).</li>
+</ul>
+</article>
+</main><footer id=footer>
+</footer>
+</body>
+</html>

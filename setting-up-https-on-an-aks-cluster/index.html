@@ -1,1 +1,46 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Software/DevOps Engineer"><link rel="shortcut icon" href=https://dfar.io/favicon.ico><link rel=stylesheet href=/css/style.min.css><title>Setting up HTTPS on an AKS Cluster</title></head><body><header id=banner><h2><a href=https://dfar.io/>Dave Farinelli</a></h2><nav><ul><li><a href=/about/ title=about>about</a></li></ul></nav></header><main id=content><article><header id=post-header><h1>Setting up HTTPS on an AKS Cluster</h1><time>June 24, 2019</time></header><h2 id=pre-reqs>Pre-Reqs</h2><p>The following is required:</p><ul><li>An ingress controller should already be installed.</li><li>The public IP of the Ingress controller should have a DNS name.</li><li>Helm needs to be running at 2.13.1.</li><li>The Kubernetes cluster should be publicly accessible (to allow cert creation)</li></ul><p>To check if Helm is running with version <strong>2.13.1</strong> (there is a bug that doesn’t allow 2.14+ to work). To check, run the following:</p><p>If the output doesn’t match as below, you need to downgrade Helm. Install:</p><h2 id=procedure>Procedure</h2><p>Run the following commands:</p><p>Create the following YAML file `cluster-issuer.yml’:</p><p>Apply the changes to the cluster:</p><p>Create the <code>certificate.yml</code> file:</p><p>Apply those changes:</p><h2 id=verification>Verification</h2><p>Confirm creation of the certificate:</p><p>You should see the following:</p><p>Verify HTTPS can be accessed.</p></article></main><footer id=footer></footer></body></html>
+<!doctype html><html><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Software/DevOps Engineer">
+<link rel="shortcut icon" href=https://dfar.io/favicon.ico>
+<link rel=stylesheet href=/css/style.min.css>
+<title>Setting up HTTPS on an AKS Cluster</title>
+</head>
+<body><header id=banner>
+<h2><a href=https://dfar.io/>Dave Farinelli</a></h2>
+<nav>
+<ul>
+<li>
+<a href=/about/ title=about>about</a>
+</li>
+</ul>
+</nav>
+</header>
+<main id=content>
+<article>
+<header id=post-header>
+<h1>Setting up HTTPS on an AKS Cluster</h1><time>June 24, 2019</time></header><h2 id=pre-reqs>Pre-Reqs</h2>
+<p>The following is required:</p>
+<ul>
+<li>An ingress controller should already be installed.</li>
+<li>The public IP of the Ingress controller should have a DNS name.</li>
+<li>Helm needs to be running at 2.13.1.</li>
+<li>The Kubernetes cluster should be publicly accessible (to allow cert creation)</li>
+</ul>
+<p>To check if Helm is running with version <strong>2.13.1</strong> (there is a bug that doesn’t allow 2.14+ to work). To check, run the following:</p>
+<p>If the output doesn’t match as below, you need to downgrade Helm. Install:</p>
+<h2 id=procedure>Procedure</h2>
+<p>Run the following commands:</p>
+<p>Create the following YAML file `cluster-issuer.yml’:</p>
+<p>Apply the changes to the cluster:</p>
+<p>Create the <code>certificate.yml</code> file:</p>
+<p>Apply those changes:</p>
+<h2 id=verification>Verification</h2>
+<p>Confirm creation of the certificate:</p>
+<p>You should see the following:</p>
+<p>Verify HTTPS can be accessed.</p>
+</article>
+</main><footer id=footer>
+</footer>
+</body>
+</html>

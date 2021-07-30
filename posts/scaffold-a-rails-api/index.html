@@ -1,6 +1,38 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Software/DevOps Engineer"><link rel="shortcut icon" href=https://dfar.io/favicon.ico><link rel=stylesheet href=/css/style.min.css><title>Scaffolding a Ruby on Rails Api</title></head><body><header id=banner><h2><a href=https://dfar.io/>Dave Farinelli</a></h2><nav><ul><li><a href=/about/ title=about>about</a></li></ul></nav></header><main id=content><article><header id=post-header><h1>Scaffolding a Ruby on Rails Api</h1><time>March 6, 2021</time></header><h2 id=visual-studio-code-setup>Visual Studio Code Setup</h2><p>First, I recommend getting VSCode&rsquo;s Remote Container set up to allow for container-based development and not requiring adding dependencies to your local machine.</p><p>Create a directory that will store your Rails project.</p><p><code>mkdir rails-api</code>
-<code>cd rails-api</code></p><p>Then download the Remote Containers VSCode extension, and add a <code>.devcontainer</code> file using the Ruby on Rails community image.</p><h2 id=scaffolding-the-rails-api>Scaffolding the Rails API</h2><p>Inside the container, create the Rails API using <code>rails new . --api</code>.</p><p>You can now push this</p><h2 id=set-up-debugging-for-vscode>Set up Debugging for VSCode</h2><p>To set up debugging inside VSCode, run the following commands:</p><pre><code>bundle add ruby-debug-ide debase
-</code></pre><p>Then add the following to <code>.vscode/launch.json</code>:</p><pre><code>{
+<!doctype html><html><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Software/DevOps Engineer">
+<link rel="shortcut icon" href=https://dfar.io/favicon.ico>
+<link rel=stylesheet href=/css/style.min.css>
+<title>Scaffolding a Ruby on Rails Api</title>
+</head>
+<body><header id=banner>
+<h2><a href=https://dfar.io/>Dave Farinelli</a></h2>
+<nav>
+<ul>
+<li>
+<a href=/about/ title=about>about</a>
+</li>
+</ul>
+</nav>
+</header>
+<main id=content>
+<article>
+<header id=post-header>
+<h1>Scaffolding a Ruby on Rails Api</h1><time>March 6, 2021</time></header><h2 id=visual-studio-code-setup>Visual Studio Code Setup</h2>
+<p>First, I recommend getting VSCode&rsquo;s Remote Container set up to allow for container-based development and not requiring adding dependencies to your local machine.</p>
+<p>Create a directory that will store your Rails project.</p>
+<p><code>mkdir rails-api</code>
+<code>cd rails-api</code></p>
+<p>Then download the Remote Containers VSCode extension, and add a <code>.devcontainer</code> file using the Ruby on Rails community image.</p>
+<h2 id=scaffolding-the-rails-api>Scaffolding the Rails API</h2>
+<p>Inside the container, create the Rails API using <code>rails new . --api</code>.</p>
+<p>You can now push this</p>
+<h2 id=set-up-debugging-for-vscode>Set up Debugging for VSCode</h2>
+<p>To set up debugging inside VSCode, run the following commands:</p>
+<pre><code>bundle add ruby-debug-ide debase
+</code></pre><p>Then add the following to <code>.vscode/launch.json</code>:</p>
+<pre><code>{
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
@@ -18,14 +50,36 @@
         ]
     }]
 }
-</code></pre><p>You&rsquo;ll now be able to run and debug the API locally at port 3000.</p><p>Finally, edit the <code>.devcontainer/devcontainer.json</code> file to have <code>postCreateCommand</code> use <code>bundle install</code> so dependencies for the container will always load on build.</p><h2 id=create-endpoint>Create endpoint</h2><p>To create an endpoint, use the following command:</p><p><code>rails g scaffold &lt;entity> &lt;fields></code></p><p>So as an example:</p><p><code>rails g scaffold person name:string title:string</code></p><p>Start the application and view the endpoint created above, noting that CRUD functionality is built in.</p><h3 id=seeding-data>Seeding Data</h3><p>You may want to seed data - to do so, edit the <code>seeds.rb</code> file to include data for your class. After that, run the <code>rake db:setup</code> command to set up the DB with the migrations and seeded data correctly.</p><p>An easy way to automate this is to add the <code>rake db:reset</code> step to the <code>postCreateCommand</code> script for the Remote Container, running <code>bundle install && rake db:reset</code>. This will clear the DB on rebuild of the container, and run all migrations.</p><h2 id=setting-up-cors>Setting up CORS</h2><p>To set up CORS capabilities, check <a href=https://dev.to/phillipug/comment/16l66>this guide</a></p><p>You can then verify with <a href=https://gist.github.com/exAspArk/07bbbafa2a9171b6c260989780cc0955>this command</a></p><h2 id=setting-up-authentication-with-jwt>Setting up authentication with JWT</h2><p>First, add the <code>jwt</code> and <code>bcrypt</code> gems:</p><p><code>bundle add jwt bcrypt</code></p><p>Then, create a user object that will hold sign-in information:</p><p><code>rails g scaffold user name:string email:string password_digest:string</code></p><p>and edit the model created:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>User</span> <span style=color:#f92672>&lt;</span> <span style=color:#66d9ef>ApplicationRecord</span>
+</code></pre><p>You&rsquo;ll now be able to run and debug the API locally at port 3000.</p>
+<p>Finally, edit the <code>.devcontainer/devcontainer.json</code> file to have <code>postCreateCommand</code> use <code>bundle install</code> so dependencies for the container will always load on build.</p>
+<h2 id=create-endpoint>Create endpoint</h2>
+<p>To create an endpoint, use the following command:</p>
+<p><code>rails g scaffold &lt;entity> &lt;fields></code></p>
+<p>So as an example:</p>
+<p><code>rails g scaffold person name:string title:string</code></p>
+<p>Start the application and view the endpoint created above, noting that CRUD functionality is built in.</p>
+<h3 id=seeding-data>Seeding Data</h3>
+<p>You may want to seed data - to do so, edit the <code>seeds.rb</code> file to include data for your class. After that, run the <code>rake db:setup</code> command to set up the DB with the migrations and seeded data correctly.</p>
+<p>An easy way to automate this is to add the <code>rake db:reset</code> step to the <code>postCreateCommand</code> script for the Remote Container, running <code>bundle install && rake db:reset</code>. This will clear the DB on rebuild of the container, and run all migrations.</p>
+<h2 id=setting-up-cors>Setting up CORS</h2>
+<p>To set up CORS capabilities, check <a href=https://dev.to/phillipug/comment/16l66>this guide</a></p>
+<p>You can then verify with <a href=https://gist.github.com/exAspArk/07bbbafa2a9171b6c260989780cc0955>this command</a></p>
+<h2 id=setting-up-authentication-with-jwt>Setting up authentication with JWT</h2>
+<p>First, add the <code>jwt</code> and <code>bcrypt</code> gems:</p>
+<p><code>bundle add jwt bcrypt</code></p>
+<p>Then, create a user object that will hold sign-in information:</p>
+<p><code>rails g scaffold user name:string email:string password_digest:string</code></p>
+<p>and edit the model created:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>User</span> <span style=color:#f92672>&lt;</span> <span style=color:#66d9ef>ApplicationRecord</span>
     has_secure_password
 
     validates_presence_of <span style=color:#e6db74>:name</span>, <span style=color:#e6db74>:email</span>, <span style=color:#e6db74>:password_digest</span>
 <span style=color:#66d9ef>end</span>
-</code></pre></div><p>then add the following lines to <code>user_controller.rb</code>:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#75715e># Allows endpoint(s) to be accessed without authorization</span>
+</code></pre></div><p>then add the following lines to <code>user_controller.rb</code>:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#75715e># Allows endpoint(s) to be accessed without authorization</span>
 skip_before_action <span style=color:#e6db74>:authorize_request</span>, <span style=color:#e6db74>:only</span> <span style=color:#f92672>=&gt;</span> <span style=color:#e6db74>:create</span>
-</code></pre></div><p>and modify the <code>create</code> action:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#f92672>...</span>
+</code></pre></div><p>and modify the <code>create</code> action:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#f92672>...</span>
 <span style=color:#75715e># POST /users</span>
   <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>create</span>
     user <span style=color:#f92672>=</span> <span style=color:#66d9ef>User</span><span style=color:#f92672>.</span>create!(user_params)
@@ -37,7 +91,8 @@ skip_before_action <span style=color:#e6db74>:authorize_request</span>, <span st
     <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>user_params</span>
       params<span style=color:#f92672>.</span>permit(<span style=color:#e6db74>:name</span>, <span style=color:#e6db74>:email</span>, <span style=color:#e6db74>:password</span>)
     <span style=color:#66d9ef>end</span>
-</code></pre></div><p>Then create <code>app/lib/json_web_token.rb</code>:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>JsonWebToken</span>
+</code></pre></div><p>Then create <code>app/lib/json_web_token.rb</code>:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>JsonWebToken</span>
     <span style=color:#66d9ef>HMAC_SECRET</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>Rails</span><span style=color:#f92672>.</span>application<span style=color:#f92672>.</span>secrets<span style=color:#f92672>.</span>secret_key_base
 
     <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>self</span><span style=color:#f92672>.</span><span style=color:#a6e22e>encode</span>(payload, exp <span style=color:#f92672>=</span> <span style=color:#ae81ff>24</span><span style=color:#f92672>.</span>hours<span style=color:#f92672>.</span>from_now)
@@ -53,7 +108,8 @@ skip_before_action <span style=color:#e6db74>:authorize_request</span>, <span st
         <span style=color:#66d9ef>raise</span> <span style=color:#66d9ef>ExceptionHandler</span><span style=color:#f92672>::</span><span style=color:#66d9ef>InvalidToken</span>, e<span style=color:#f92672>.</span>message
     <span style=color:#66d9ef>end</span>
 <span style=color:#66d9ef>end</span>
-</code></pre></div><p>and user service <code>app/auth/authenticate_user.rb</code>:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>AuthenticateUser</span>
+</code></pre></div><p>and user service <code>app/auth/authenticate_user.rb</code>:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>AuthenticateUser</span>
     <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>initialize</span>(email, password)
         @email <span style=color:#f92672>=</span> email
         @password <span style=color:#f92672>=</span> password
@@ -75,7 +131,8 @@ skip_before_action <span style=color:#e6db74>:authorize_request</span>, <span st
         <span style=color:#66d9ef>raise</span> (<span style=color:#66d9ef>ExceptionHandler</span><span style=color:#f92672>::</span><span style=color:#66d9ef>AuthenticationError</span>, <span style=color:#e6db74>&#34;Invalid credentials.&#34;</span>)
     <span style=color:#66d9ef>end</span>
 <span style=color:#66d9ef>end</span>
-</code></pre></div><p>and authorize API request service <code>app/auth/authorize_api_request.rb</code>:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>AuthorizeApiRequest</span>
+</code></pre></div><p>and authorize API request service <code>app/auth/authorize_api_request.rb</code>:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>AuthorizeApiRequest</span>
     <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>initialize</span>(headers <span style=color:#f92672>=</span> {})
       @headers <span style=color:#f92672>=</span> headers
     <span style=color:#66d9ef>end</span>
@@ -115,7 +172,10 @@ skip_before_action <span style=color:#e6db74>:authorize_request</span>, <span st
         <span style=color:#66d9ef>raise</span>(<span style=color:#66d9ef>ExceptionHandler</span><span style=color:#f92672>::</span><span style=color:#66d9ef>MissingToken</span>, <span style=color:#e6db74>&#34;Missing token.&#34;</span>)
     <span style=color:#66d9ef>end</span>
 <span style=color:#66d9ef>end</span>
-</code></pre></div><p>Then create the authentication controller:</p><p><code>rails g scaffold_controller authentication</code></p><p>and edit to look like the following:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>AuthenticationController</span> <span style=color:#f92672>&lt;</span> <span style=color:#66d9ef>ApplicationController</span>
+</code></pre></div><p>Then create the authentication controller:</p>
+<p><code>rails g scaffold_controller authentication</code></p>
+<p>and edit to look like the following:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>AuthenticationController</span> <span style=color:#f92672>&lt;</span> <span style=color:#66d9ef>ApplicationController</span>
   skip_before_action <span style=color:#e6db74>:authorize_request</span>, <span style=color:#e6db74>:only</span> <span style=color:#f92672>=&gt;</span> <span style=color:#e6db74>:authenticate</span>
 
   <span style=color:#75715e># POST /login</span>
@@ -131,7 +191,8 @@ skip_before_action <span style=color:#e6db74>:authorize_request</span>, <span st
     params<span style=color:#f92672>.</span>fetch(<span style=color:#e6db74>:authentication</span>, {})
   <span style=color:#66d9ef>end</span>
 <span style=color:#66d9ef>end</span>
-</code></pre></div><p>Create the ExceptionHandler class at <code>app/controllers/concerns/exception_handler.rb</code>:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#66d9ef>module</span> ExceptionHandler
+</code></pre></div><p>Create the ExceptionHandler class at <code>app/controllers/concerns/exception_handler.rb</code>:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#66d9ef>module</span> ExceptionHandler
     <span style=color:#66d9ef>extend</span> <span style=color:#66d9ef>ActiveSupport</span><span style=color:#f92672>::</span><span style=color:#66d9ef>Concern</span>
   
     <span style=color:#75715e># Define custom error subclasses - rescue catches `StandardErrors`</span>
@@ -163,7 +224,8 @@ skip_before_action <span style=color:#e6db74>:authorize_request</span>, <span st
       render <span style=color:#e6db74>json</span>: { <span style=color:#e6db74>message</span>: e<span style=color:#f92672>.</span>message }, <span style=color:#e6db74>status</span>: <span style=color:#e6db74>:unauthorized</span>
     <span style=color:#66d9ef>end</span>
 <span style=color:#66d9ef>end</span>
-</code></pre></div><p>Now add the following to <code>application_controller.rb</code>:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>ApplicationController</span> <span style=color:#f92672>&lt;</span> <span style=color:#66d9ef>ActionController</span><span style=color:#f92672>::</span><span style=color:#66d9ef>API</span>
+</code></pre></div><p>Now add the following to <code>application_controller.rb</code>:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>ApplicationController</span> <span style=color:#f92672>&lt;</span> <span style=color:#66d9ef>ActionController</span><span style=color:#f92672>::</span><span style=color:#66d9ef>API</span>
     skip_before_action <span style=color:#e6db74>:authorize_request</span>, <span style=color:#e6db74>only</span>: <span style=color:#e6db74>:authenticate</span>, <span style=color:#66d9ef>raise</span>: <span style=color:#66d9ef>false</span>
 
     <span style=color:#66d9ef>include</span> <span style=color:#66d9ef>ExceptionHandler</span>
@@ -177,17 +239,27 @@ skip_before_action <span style=color:#e6db74>:authorize_request</span>, <span st
     <span style=color:#66d9ef>end</span>
 <span style=color:#66d9ef>end</span>
 
-</code></pre></div><p>Finally, add the route for logging in at <code>routes.rb</code>:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#f92672>...</span>
+</code></pre></div><p>Finally, add the route for logging in at <code>routes.rb</code>:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#f92672>...</span>
 post <span style=color:#e6db74>&#39;/login&#39;</span>, <span style=color:#e6db74>to</span>: <span style=color:#e6db74>&#39;authentication#authenticate&#39;</span>
 <span style=color:#f92672>...</span>
-</code></pre></div><h3 id=adding-new-user>Adding new user</h3><p>With the configuration above, you can add a user by POSTing to <code>/user</code> with this payload:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
+</code></pre></div><h3 id=adding-new-user>Adding new user</h3>
+<p>With the configuration above, you can add a user by POSTing to <code>/user</code> with this payload:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
   <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;NAME&#34;</span>,
   <span style=color:#f92672>&#34;email&#34;</span>: <span style=color:#e6db74>&#34;EMAIL&#34;</span>,
   <span style=color:#f92672>&#34;password&#34;</span>: <span style=color:#e6db74>&#34;PASSWORD&#34;</span>
 }
-</code></pre></div><h3 id=logging-in>Logging in</h3><h2 id=deploying-to-heroku>Deploying to Heroku</h2><h3 id=setting-up-postgresql>Setting up PostgreSQL</h3><p>To deploy to Heroku, the Rails app needs to use Postgresql instead of sqlite.</p><p>First, set up Postgresql in your development container using <a href=https://dev.to/imiked/starting-a-rails-app-using-vscode-containers-1gj9>this guide</a>.</p><p>Next, set up the appropriate gems:</p><pre><code>bundle add pg
+</code></pre></div><h3 id=logging-in>Logging in</h3>
+<h2 id=deploying-to-heroku>Deploying to Heroku</h2>
+<h3 id=setting-up-postgresql>Setting up PostgreSQL</h3>
+<p>To deploy to Heroku, the Rails app needs to use Postgresql instead of sqlite.</p>
+<p>First, set up Postgresql in your development container using <a href=https://dev.to/imiked/starting-a-rails-app-using-vscode-containers-1gj9>this guide</a>.</p>
+<p>Next, set up the appropriate gems:</p>
+<pre><code>bundle add pg
 bundle remove sqlite3
-</code></pre><p>Finally, edit <code>config/database.yml</code>:</p><pre><code>default: &amp;default
+</code></pre><p>Finally, edit <code>config/database.yml</code>:</p>
+<pre><code>default: &amp;default
   adapter: postgresql
   encoding: unicode
   host: db
@@ -197,7 +269,18 @@ bundle remove sqlite3
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: &lt;%= ENV.fetch(&quot;RAILS_MAX_THREADS&quot;) { 5 } %&gt;
 
-</code></pre><p>Rebuild the container and run locally to verify everything working.</p><h3 id=deploying>Deploying</h3><p>Once this is done, you can deploy the app to Heroku. You can do this manually
+</code></pre><p>Rebuild the container and run locally to verify everything working.</p>
+<h3 id=deploying>Deploying</h3>
+<p>Once this is done, you can deploy the app to Heroku. You can do this manually
 using Heroku CLI, or you can connect the app via GitHub and Heroku to enable
 automatic deployments. If you run into issues, you can pull the logs from
-Heroku CLI.</p><p>After the app is deployed, you&rsquo;ll need to migrate the DB changes using:</p><p><code>heroku run rake db:migrate</code></p><p>If seed data is desired, you can then run</p><p><code>heroku run rake db:seed</code></p></article></main><footer id=footer></footer></body></html>
+Heroku CLI.</p>
+<p>After the app is deployed, you&rsquo;ll need to migrate the DB changes using:</p>
+<p><code>heroku run rake db:migrate</code></p>
+<p>If seed data is desired, you can then run</p>
+<p><code>heroku run rake db:seed</code></p>
+</article>
+</main><footer id=footer>
+</footer>
+</body>
+</html>

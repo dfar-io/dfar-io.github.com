@@ -1,1 +1,53 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Software/DevOps Engineer"><link rel="shortcut icon" href=https://dfar.io/favicon.ico><link rel=stylesheet href=/css/style.min.css><title>Setting up a SonarQube Server in Azure</title></head><body><header id=banner><h2><a href=https://dfar.io/>Dave Farinelli</a></h2><nav><ul><li><a href=/about/ title=about>about</a></li></ul></nav></header><main id=content><article><header id=post-header><h1>Setting up a SonarQube Server in Azure</h1><time>January 9, 2020</time></header><p>To get started with using <a href=https://www.sonarqube.org/>SonarQube</a> in Azure, do the following.</p><p>Create a virtual machine with the <strong>Standard B2s</strong> (~$30/month) size or larger.</p><p>SSH into the server and download all pre-reqs:</p><p>Create a non-root user:</p><p>Download and unzip SonarQube (you can get the wget URL from the <a href=https://www.sonarqube.org/downloads/>Downloads</a> page):</p><p>Then start it using the following <strong>as the non-root user</strong>:</p><p>Wait for the text <strong>SonarQube is up</strong> and then verify access at IP_ADDRESS:9000 (you can log in with admin/admin).</p><h2 id=set-up-postgresql>Set Up PostgreSQL</h2><p>Next step is setting up a dedicated database – we will use PostgreSQL to accomplish this.</p><p>Install PostgreSQL:</p><p>And connect into the server instance and run the following commands:</p><p>Now modify <strong>/opt/sonarqube/conf/sonar.properties</strong>:</p><p>Add the following line to <strong>/etc/sysctl.conf:</strong></p><p>To finish, <strong>restart the server</strong>, start up SonarQube again and verify that it can start up successfully, alongside having the “embedded DB” warning removed from the login screen.</p><h2 id=set-to-run-as-a-service-on-vm-start>Set to Run As A Service On VM Start</h2><p>Next, we’ll set up the ability to start SonarQube on VM start by running SonarQube as a service.</p><p>Add the following file <strong>/etc/systemd/system/sonarqube.service:</strong></p><p>Then enable and start the service:</p><p>Confirm by restarting the server and checking that SonarQube is running.</p><h2 id=setting-up-reverse-proxy-and-https-with-let8217s-encrypt>Setting up Reverse Proxy and HTTPS with Let’s Encrypt</h2><p>Next step is setting up HTTPS, in this case we’ll use Let’s Encrypt for the certificate. To serve the correct ports, we’ll <a href=https://dfar.io/setting-up-artifactory-to-use-a-root-domain-with-a-reverse-proxy/>set up Apache and serve it as a proxy</a> to the built-in Tomcat server that SonarQube provides.</p><p>When looking to configure Apache, set up the pre-reqs:</p><p>Add these lines to <strong>/etc/apache2/sites-enabled/000-default.conf:</strong></p><p>Restart Apache:</p><p>And check that you can access SonarQube using port 80 (HTTP).</p><p>Once port 80 is accessible, you can follow the <a href=https://certbot.eff.org/lets-encrypt/ubuntubionic-apache>Certbot</a> steps to enable HTTPS.</p><h2 id=next-stepsfigure-classwp-block-embed-wordpress-wp-block-embed-is-type-wp-embed-is-provider-dave-farinelli>Next Steps</h2></article></main><footer id=footer></footer></body></html>
+<!doctype html><html><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Software/DevOps Engineer">
+<link rel="shortcut icon" href=https://dfar.io/favicon.ico>
+<link rel=stylesheet href=/css/style.min.css>
+<title>Setting up a SonarQube Server in Azure</title>
+</head>
+<body><header id=banner>
+<h2><a href=https://dfar.io/>Dave Farinelli</a></h2>
+<nav>
+<ul>
+<li>
+<a href=/about/ title=about>about</a>
+</li>
+</ul>
+</nav>
+</header>
+<main id=content>
+<article>
+<header id=post-header>
+<h1>Setting up a SonarQube Server in Azure</h1><time>January 9, 2020</time></header><p>To get started with using <a href=https://www.sonarqube.org/>SonarQube</a> in Azure, do the following.</p>
+<p>Create a virtual machine with the <strong>Standard B2s</strong> (~$30/month) size or larger.</p>
+<p>SSH into the server and download all pre-reqs:</p>
+<p>Create a non-root user:</p>
+<p>Download and unzip SonarQube (you can get the wget URL from the <a href=https://www.sonarqube.org/downloads/>Downloads</a> page):</p>
+<p>Then start it using the following <strong>as the non-root user</strong>:</p>
+<p>Wait for the text <strong>SonarQube is up</strong> and then verify access at IP_ADDRESS:9000 (you can log in with admin/admin).</p>
+<h2 id=set-up-postgresql>Set Up PostgreSQL</h2>
+<p>Next step is setting up a dedicated database – we will use PostgreSQL to accomplish this.</p>
+<p>Install PostgreSQL:</p>
+<p>And connect into the server instance and run the following commands:</p>
+<p>Now modify <strong>/opt/sonarqube/conf/sonar.properties</strong>:</p>
+<p>Add the following line to <strong>/etc/sysctl.conf:</strong></p>
+<p>To finish, <strong>restart the server</strong>, start up SonarQube again and verify that it can start up successfully, alongside having the “embedded DB” warning removed from the login screen.</p>
+<h2 id=set-to-run-as-a-service-on-vm-start>Set to Run As A Service On VM Start</h2>
+<p>Next, we’ll set up the ability to start SonarQube on VM start by running SonarQube as a service.</p>
+<p>Add the following file <strong>/etc/systemd/system/sonarqube.service:</strong></p>
+<p>Then enable and start the service:</p>
+<p>Confirm by restarting the server and checking that SonarQube is running.</p>
+<h2 id=setting-up-reverse-proxy-and-https-with-let8217s-encrypt>Setting up Reverse Proxy and HTTPS with Let’s Encrypt</h2>
+<p>Next step is setting up HTTPS, in this case we’ll use Let’s Encrypt for the certificate. To serve the correct ports, we’ll <a href=https://dfar.io/setting-up-artifactory-to-use-a-root-domain-with-a-reverse-proxy/>set up Apache and serve it as a proxy</a> to the built-in Tomcat server that SonarQube provides.</p>
+<p>When looking to configure Apache, set up the pre-reqs:</p>
+<p>Add these lines to <strong>/etc/apache2/sites-enabled/000-default.conf:</strong></p>
+<p>Restart Apache:</p>
+<p>And check that you can access SonarQube using port 80 (HTTP).</p>
+<p>Once port 80 is accessible, you can follow the <a href=https://certbot.eff.org/lets-encrypt/ubuntubionic-apache>Certbot</a> steps to enable HTTPS.</p>
+<h2 id=next-stepsfigure-classwp-block-embed-wordpress-wp-block-embed-is-type-wp-embed-is-provider-dave-farinelli>Next Steps</h2>
+</article>
+</main><footer id=footer>
+</footer>
+</body>
+</html>

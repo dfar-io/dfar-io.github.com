@@ -1,1 +1,27 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Software/DevOps Engineer"><link rel="shortcut icon" href=https://dfar.io/favicon.ico><link rel=stylesheet href=/css/style.min.css><title>Git Repo Best Practices</title></head><body><header id=banner><h2><a href=https://dfar.io/>Dave Farinelli</a></h2><nav><ul><li><a href=/about/ title=about>about</a></li></ul></nav></header><main id=content><article><header id=post-header><h1>Git Repo Best Practices</h1><time>April 21, 2019</time></header><p>When creating a repository for a project, here are a few best practices to keep everything in good working state. Forcing Pull Request Merges to master When creating a repo, it’s a good idea to keep the master branch deployable and clean at all times. A good way to do this is to not allow direct commits to the branch. In turn, if you have a CI/CD process in place, you can have more confidence that checking things into master can result in a deployment. In a system using trunk-based deployment, you may decide to automatically deploy all changes from master into production. You can do this in Github with the following steps: Go to the repo, and go to ‘Settings’. Click on ‘Branches’. Create the rule: Once this is done, if you try to commit directly to master, you’ll see the following:</p></article></main><footer id=footer></footer></body></html>
+<!doctype html><html><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Software/DevOps Engineer">
+<link rel="shortcut icon" href=https://dfar.io/favicon.ico>
+<link rel=stylesheet href=/css/style.min.css>
+<title>Git Repo Best Practices</title>
+</head>
+<body><header id=banner>
+<h2><a href=https://dfar.io/>Dave Farinelli</a></h2>
+<nav>
+<ul>
+<li>
+<a href=/about/ title=about>about</a>
+</li>
+</ul>
+</nav>
+</header>
+<main id=content>
+<article>
+<header id=post-header>
+<h1>Git Repo Best Practices</h1><time>April 21, 2019</time></header><p>When creating a repository for a project, here are a few best practices to keep everything in good working state. Forcing Pull Request Merges to master When creating a repo, it’s a good idea to keep the master branch deployable and clean at all times. A good way to do this is to not allow direct commits to the branch. In turn, if you have a CI/CD process in place, you can have more confidence that checking things into master can result in a deployment. In a system using trunk-based deployment, you may decide to automatically deploy all changes from master into production. You can do this in Github with the following steps: Go to the repo, and go to ‘Settings’. Click on ‘Branches’. Create the rule: Once this is done, if you try to commit directly to master, you’ll see the following: </p>
+</article>
+</main><footer id=footer>
+</footer>
+</body>
+</html>

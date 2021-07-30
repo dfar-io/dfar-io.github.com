@@ -1,1 +1,70 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Software/DevOps Engineer"><link rel="shortcut icon" href=https://dfar.io/favicon.ico><link rel=stylesheet href=/css/style.min.css><title>Creating an Angular and Azure Function API App with Azure Static Web App</title></head><body><header id=banner><h2><a href=https://dfar.io/>Dave Farinelli</a></h2><nav><ul><li><a href=/about/ title=about>about</a></li></ul></nav></header><main id=content><article><header id=post-header><h1>Creating an Angular and Azure Function API App with Azure Static Web App</h1><time>May 27, 2020</time></header><p>Recently, Azure released Azure Static Web Apps, which looks like a way to host static web sites easily. Some of the perks I see immediately are:</p><ul><li>Works well with SPA technologies (Angular, React, Vue)</li><li>Serve an API using Azure Functions</li><li>Automatic integration with GitHub and GitHub Actions to deploy immediately</li><li>Currently costs nothing (while this is in preview)</li></ul><h2 id=pre-requisites>Pre-requisites</h2><p>To get started, you’ll need:</p><ul><li>Angular CLI</li><li>Azure Functions Core Tools</li><li>An Azure account</li></ul><h2 id=create-a-github-repo-with-angular-and-azure-function-apps>Create a GitHub Repo with Angular and Azure Function Apps</h2><p>First, create a repo in your GitHub account, and clone that repo to your local PC.</p><p>Now create an Angular app with the CLI:</p><p>Next, create an Azure Functions API <strong>(currently, there is a limitation that <a href=https://docs.microsoft.com/en-us/azure/static-web-apps/apis#constraints>only allows for use of Javascript</a> as the runtime)</strong>:</p><p>Commit the changes made above, and then let’s move onto creating the Azure Static Web App.</p><h2 id=creating-azure-static-web-app>Creating Azure Static Web App</h2><p>Next, create an Azure Static Web App in your Azure account. When doing this, do the following:</p><ul><li>Sign in to your GitHub account and select the correct repository and branch.</li><li>For build details, use the following information (replacing <em>azure-static-web-app-poc</em> with):<ul><li>App location: <strong>app</strong></li><li>Api location: <strong>api</strong></li><li>App artifact location: <strong>dist/APPNAME</strong></li></ul></li></ul><h2 id=automatic-deployment>Automatic Deployment</h2><p>After creating the Static Web App, a GitHub Workflows file will be created and committed to your repo. In turn, your skeleton application should be built and deployed automatically.</p><p>With the deployment completed, you can view the deployed UI and API by checking the URL of the Static Web App in the Azure portal:</p><ul><li>UI – check the URL provided.</li><li>API – check the URL, plus <code>/api/TestFunction</code></li></ul><p></p><h2 id=setting-a-custom-domain>Setting a Custom Domain</h2><p>To set up a custom domain, access the ‘Custom Domains’ option on the sidebar. You’ll create a CNAME record as requested for the domain being used.</p><p>In terms of SSL Certificates, you don’t have to worry. Azure Static Web Apps will handle this completely for you. However, I was only able to create a www domain (as opposed to a root domain).</p><h2 id=further-reading>Further Reading</h2><p>Microsoft’s Guide on Static Web Apps: <a href=https://docs.microsoft.com/en-us/azure/static-web-apps/overview>https://docs.microsoft.com/en-us/azure/static-web-apps/overview</a></p></article></main><footer id=footer></footer></body></html>
+<!doctype html><html><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Software/DevOps Engineer">
+<link rel="shortcut icon" href=https://dfar.io/favicon.ico>
+<link rel=stylesheet href=/css/style.min.css>
+<title>Creating an Angular and Azure Function API App with Azure Static Web App</title>
+</head>
+<body><header id=banner>
+<h2><a href=https://dfar.io/>Dave Farinelli</a></h2>
+<nav>
+<ul>
+<li>
+<a href=/about/ title=about>about</a>
+</li>
+</ul>
+</nav>
+</header>
+<main id=content>
+<article>
+<header id=post-header>
+<h1>Creating an Angular and Azure Function API App with Azure Static Web App</h1><time>May 27, 2020</time></header><p>Recently, Azure released Azure Static Web Apps, which looks like a way to host static web sites easily. Some of the perks I see immediately are:</p>
+<ul>
+<li>Works well with SPA technologies (Angular, React, Vue)</li>
+<li>Serve an API using Azure Functions</li>
+<li>Automatic integration with GitHub and GitHub Actions to deploy immediately</li>
+<li>Currently costs nothing (while this is in preview)</li>
+</ul>
+<h2 id=pre-requisites>Pre-requisites</h2>
+<p>To get started, you’ll need:</p>
+<ul>
+<li>Angular CLI</li>
+<li>Azure Functions Core Tools</li>
+<li>An Azure account</li>
+</ul>
+<h2 id=create-a-github-repo-with-angular-and-azure-function-apps>Create a GitHub Repo with Angular and Azure Function Apps</h2>
+<p>First, create a repo in your GitHub account, and clone that repo to your local PC.</p>
+<p>Now create an Angular app with the CLI:</p>
+<p>Next, create an Azure Functions API <strong>(currently, there is a limitation that <a href=https://docs.microsoft.com/en-us/azure/static-web-apps/apis#constraints>only allows for use of Javascript</a> as the runtime)</strong>:</p>
+<p>Commit the changes made above, and then let’s move onto creating the Azure Static Web App.</p>
+<h2 id=creating-azure-static-web-app>Creating Azure Static Web App</h2>
+<p>Next, create an Azure Static Web App in your Azure account. When doing this, do the following:</p>
+<ul>
+<li>Sign in to your GitHub account and select the correct repository and branch.</li>
+<li>For build details, use the following information (replacing <em>azure-static-web-app-poc</em> with):
+<ul>
+<li>App location: <strong>app</strong></li>
+<li>Api location: <strong>api</strong></li>
+<li>App artifact location: <strong>dist/APPNAME</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id=automatic-deployment>Automatic Deployment</h2>
+<p>After creating the Static Web App, a GitHub Workflows file will be created and committed to your repo. In turn, your skeleton application should be built and deployed automatically.</p>
+<p>With the deployment completed, you can view the deployed UI and API by checking the URL of the Static Web App in the Azure portal:</p>
+<ul>
+<li>UI – check the URL provided.</li>
+<li>API – check the URL, plus <code>/api/TestFunction</code></li>
+</ul>
+<p> </p>
+<h2 id=setting-a-custom-domain>Setting a Custom Domain</h2>
+<p>To set up a custom domain, access the ‘Custom Domains’ option on the sidebar. You’ll create a CNAME record as requested for the domain being used.</p>
+<p>In terms of SSL Certificates, you don’t have to worry. Azure Static Web Apps will handle this completely for you. However, I was only able to create a www domain (as opposed to a root domain).</p>
+<h2 id=further-reading>Further Reading</h2>
+<p>Microsoft’s Guide on Static Web Apps: <a href=https://docs.microsoft.com/en-us/azure/static-web-apps/overview>https://docs.microsoft.com/en-us/azure/static-web-apps/overview</a></p>
+</article>
+</main><footer id=footer>
+</footer>
+</body>
+</html>

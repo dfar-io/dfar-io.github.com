@@ -16,6 +16,7 @@ _decimal at end is the price per oz._
 * BlackGrass Porter's Pick (.47)
 * Big Mountain Olde English
 * ANXO Time and Place Adam's (.35)
+* Dready Cida
 * [Deer Snacks IV](https://www.shacksbury.com/shop/deer-snack-iv-return-of-the-snack)
 * [Suttons Bay Power Island](https://vinoshipper.com/shop/suttons_bay_ciders/power_island_33112?list=) (.57)
 * [Omme Gang Dry Cider](https://www.ommegang.com/beerinfo/dry-cider/) (.29)

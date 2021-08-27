@@ -28,7 +28,6 @@ _decimal at end is the price per oz._
 * STEM Cider Dry
 * [Happy Camper](https://oldwestminster.orderport.net/product-details/0580/Happy-Camper) (.29)
 * Blom Tart ($12/4 - .25)
-* Bee Well White Harvest (.21)
 * Green Bench Hewes Crab Apple
 * TwoK Old World (.21)
 * Farm Flor
@@ -52,6 +51,7 @@ _decimal at end is the price per oz._
 
 ## D
 * Ace Joker
+* Bee Well White Harvest
 * Cherry Creek Dancing Elephants
 * Farmhaus After Glow
 * Farmhaus Brunch

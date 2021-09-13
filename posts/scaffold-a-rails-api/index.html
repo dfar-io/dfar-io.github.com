@@ -30,9 +30,9 @@
 <p>You can now push this</p>
 <h2 id=set-up-debugging-for-vscode>Set up Debugging for VSCode</h2>
 <p>To set up debugging inside VSCode, run the following commands:</p>
-<pre><code>bundle add ruby-debug-ide debase
+<pre tabindex=0><code>bundle add ruby-debug-ide debase
 </code></pre><p>Then add the following to <code>.vscode/launch.json</code>:</p>
-<pre><code>{
+<pre tabindex=0><code>{
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
@@ -256,10 +256,10 @@ post <span style=color:#e6db74>&#39;/login&#39;</span>, <span style=color:#e6db7
 <p>To deploy to Heroku, the Rails app needs to use Postgresql instead of sqlite.</p>
 <p>First, set up Postgresql in your development container using <a href=https://dev.to/imiked/starting-a-rails-app-using-vscode-containers-1gj9>this guide</a>.</p>
 <p>Next, set up the appropriate gems:</p>
-<pre><code>bundle add pg
+<pre tabindex=0><code>bundle add pg
 bundle remove sqlite3
 </code></pre><p>Finally, edit <code>config/database.yml</code>:</p>
-<pre><code>default: &amp;default
+<pre tabindex=0><code>default: &amp;default
   adapter: postgresql
   encoding: unicode
   host: db

@@ -22,10 +22,10 @@
 <h1>Configuring Arch Linux</h1><time>February 1, 2021</time></header><p>If you’re <a href=https://dfar.io/installing-arch-linux/>installed Arch Linux</a>, the next step is configuring the system to work as desired. In this guide, I walk through my general configuration of a newly installed Arch Linux instance.</p>
 <h2 id=configure-internet>Configure Internet</h2>
 <p>Set up <strong>networkmanager</strong> and if wireless, connect to an internet source:</p>
-<pre><code>sudo systemctl enable NetworkManager.service
+<pre tabindex=0><code>sudo systemctl enable NetworkManager.service
 sudo systemctl start NetworkManager.service
 </code></pre><h1 id=connect-to-wireless>connect to wireless</h1>
-<pre><code>nmcli device wifi list
+<pre tabindex=0><code>nmcli device wifi list
 nmcli device wifi connect SSID password PASSWORD
 </code></pre><p>Confirm access using <code>ping</code>.</p>
 <h2 id=set-up-desktop-environment>Set up Desktop Environment</h2>
@@ -52,7 +52,7 @@ nmcli device wifi connect SSID password PASSWORD
 </li>
 </ul>
 <p>Configure LightDM:</p>
-<pre><code>sudo systemctl enable lightdm.service
+<pre tabindex=0><code>sudo systemctl enable lightdm.service
 sudo systemctl start lightdm.service
 </code></pre><p>You should now have a graphical display running.</p>
 <h2 id=configure-desktop-environment>Configure Desktop Environment</h2>
@@ -65,18 +65,18 @@ sudo systemctl start lightdm.service
 <p>Save settings to the X config file.</p>
 <h3 id=set-up-dropbox>Set up Dropbox</h3>
 <p>To configure the graphical system, get Dropbox synced to be able to use saved entries. First, install yay:</p>
-<pre><code>sudo pacman -S base-devel
+<pre tabindex=0><code>sudo pacman -S base-devel
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 </code></pre><p>Then import public key:</p>
-<pre><code>gpg --recv-keys --keyserver hkp://pgp.mit.edu:80 FC918B335044912E
+<pre tabindex=0><code>gpg --recv-keys --keyserver hkp://pgp.mit.edu:80 FC918B335044912E
 </code></pre><p>Install Dropbox:</p>
-<pre><code>yay -S dropbox
+<pre tabindex=0><code>yay -S dropbox
 </code></pre><p>Finally, start and sign in to Dropbox.</p>
 <h3 id=link-existing-configurations>Link Existing Configurations</h3>
 <p>Make symlinks for the following:</p>
-<pre><code>mkdir ~/.config/awesome
+<pre tabindex=0><code>mkdir ~/.config/awesome
 ln -s ~/Dropbox/config/rc.lua ~/.config/awesome/rc.lua
 ln -s ~/Dropbox/config/Xresources-desktop ~/.Xresources
 </code></pre><p>Reboot.</p>
@@ -87,10 +87,10 @@ ln -s ~/Dropbox/config/Xresources-desktop ~/.Xresources
 <li><code>acpilight</code></li>
 </ul>
 <p>To make backlight changes using keyboard shortcuts, edit the <strong>/etc/rc.local</strong> file.</p>
-<pre><code>chgrp -R backlighters /sys/class/backlight
+<pre tabindex=0><code>chgrp -R backlighters /sys/class/backlight
 chmod g+w /sys/class/backlight/*/*
 </code></pre><p>Then add your user to the backlighters group:</p>
-<pre><code>sudo groupadd backlighters
+<pre tabindex=0><code>sudo groupadd backlighters
 sudo usermod -aG backlighters dfar
 </code></pre><p>Restart and test the ability to inc/dec backlight with Fn+F11/F12</p>
 <h2 id=installing-and-configure-software>Installing and Configure Software</h2>
@@ -133,15 +133,15 @@ sudo usermod -aG backlighters dfar
 <h3 id=scannerprinter>Scanner/Printer</h3>
 <p>Install <code>sane</code> and <code>imagescan</code>. Then run <code>utsushi</code> for scanning.</p>
 <p>For printing, install <code>cups</code>, <code>nss-mdns</code>, <code>avahi</code>, <code>python-gobject</code>, <code>pygtk</code>, <code>python-dbus</code>, and then enable and start the services:</p>
-<pre><code>sudo systemctl enable org.cups.cupsd.service
+<pre tabindex=0><code>sudo systemctl enable org.cups.cupsd.service
 sudo systemctl start org.cups.cupsd.service
 sudo systemctl start avahi-daemon.service
 </code></pre><p>Edit <code>/etc/nsswitch.conf</code> and change the hosts line to include before <code>resolve</code> and <code>dns</code>:</p>
-<pre><code>mdns_minimal [NOTFOUND=return]
+<pre tabindex=0><code>mdns_minimal [NOTFOUND=return]
 </code></pre><p>Now find the printer&rsquo;s IP address:</p>
 <p><code>avahi-discover</code></p>
 <p>And add the printer:</p>
-<pre><code>lpadmin -p OfficePrinter -E -v ipp://IP_ADDRESS/ipp/print -m everywhere
+<pre tabindex=0><code>lpadmin -p OfficePrinter -E -v ipp://IP_ADDRESS/ipp/print -m everywhere
 </code></pre></article>
 </main><footer id=footer>
 </footer>

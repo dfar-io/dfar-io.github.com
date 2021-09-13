@@ -35,7 +35,7 @@
 <p>Wired, use <code>ping</code> to confirm access.</p>
 <h4 id=wireless>Wireless</h4>
 <p>Run the following commands:</p>
-<pre><code>iwctl
+<pre tabindex=0><code>iwctl
 device list
 station wlan0 get-networks
 station wlan0 connect SSID
@@ -43,7 +43,7 @@ exit
 </code></pre><p>Verify access with <code>ping google.com</code></p>
 <h3 id=synchronize-clock>Synchronize Clock</h3>
 <p>To set the clock, run:</p>
-<pre><code>timedatectl set-ntp true
+<pre tabindex=0><code>timedatectl set-ntp true
 timedatectl status
 </code></pre><h3 id=set-up-partitions>Set up Partitions</h3>
 <p>If needed, set up partitions for the overall system. First, use <strong>parted -l</strong> to determine both:</p>
@@ -59,34 +59,34 @@ timedatectl status
 </ul>
 <h3 id=format--mount-partitions>Format & Mount Partitions</h3>
 <p>Now format the partitions (using <strong>parted -l</strong> to list disks):</p>
-<pre><code>mkfs.ext4 PRIMARY_DISK
+<pre tabindex=0><code>mkfs.ext4 PRIMARY_DISK
 mkswap SWAP_DISK
 swapon SWAP_DISK
 </code></pre><p>Mount the newly formatted partitions:</p>
-<pre><code>mount PRIMARY_DISK /mnt
+<pre tabindex=0><code>mount PRIMARY_DISK /mnt
 mkdir /mnt/boot
 mount EFI_DISK /mnt/boot
 </code></pre><h3 id=perform-arch-installation>Perform Arch Installation</h3>
 <p>Install base Arch Linux:</p>
-<pre><code>pacstrap /mnt base linux linux-firmware nano grub efibootmgr networkmanager git firefox sudo
+<pre tabindex=0><code>pacstrap /mnt base linux linux-firmware nano grub efibootmgr networkmanager git firefox sudo
 </code></pre><p>Generate an <code>fstab</code> file:</p>
-<pre><code>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+<pre tabindex=0><code>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
 </code></pre><p>Change root into the new system to set time zone and localization:</p>
-<pre><code>arch-chroot /mnt
-</code></pre><pre><code>ln -sf /usr/share/zoneinfo/America/Detroit /etc/localtime
+<pre tabindex=0><code>arch-chroot /mnt
+</code></pre><pre tabindex=0><code>ln -sf /usr/share/zoneinfo/America/Detroit /etc/localtime
 hwclock --systohc
 </code></pre><p>Change the default console font size at <strong>/etc/vconsole.conf</strong>:</p>
 <p><code>FONT=latarcyrheb-sun32</code></p>
 <p>Generate locales and set locale:</p>
-<pre><code># comment out needed locales
+<pre tabindex=0><code># comment out needed locales
 nano /etc/locale.gen
 locale-gen
-</code></pre><pre><code>nano /etc/locale.conf
+</code></pre><pre tabindex=0><code>nano /etc/locale.conf
 # set content to LANG=en_US.UTF-8
 </code></pre><p>Set up network configuration (computer name):</p>
-<pre><code># set computer name
+<pre tabindex=0><code># set computer name
 nano /etc/hostname
-</code></pre><pre><code># configure hosts file, add contents below
+</code></pre><pre tabindex=0><code># configure hosts file, add contents below
 nano /etc/hosts
 
 127.0.0.1	localhost
@@ -96,20 +96,20 @@ nano /etc/hosts
 <p>Configure GRUB boot loader:</p>
 <p><code>grub-install /dev/sda --efi-directory=/boot</code></p>
 <p>Add the Windows partition to boot menu options in the file <code>/etc/grub.d/40_custom</code>:</p>
-<pre><code>menuentry &quot;Windows 10&quot; {
+<pre tabindex=0><code>menuentry &quot;Windows 10&quot; {
     search --fs-uuid --no-floppy --set=root UUID_OF_EFI_PARTITION
     chainloader (${root})/EFI/Microsoft/Boot/bootmgfw.efi
 }
 </code></pre><p><code>grub-mkconfig -o /boot/grub/grub.cfg</code></p>
 <h3 id=optional-create-non-root-user>(Optional) Create Non-Root User</h3>
 <p>You&rsquo;ll want to perform your daily activities without using the root user.</p>
-<pre><code>useradd -m dfar
+<pre tabindex=0><code>useradd -m dfar
 passwd dfar
 usermod -aG wheel,audio,video,optical,storage dfar
 </code></pre><p>Edit the <strong>/etc/sudoers</strong> file and allow users of <code>wheel</code> group to execute any command.</p>
 <h2 id=conclusion>Conclusion</h2>
 <p>Finally, reboot the system:</p>
-<pre><code>exit
+<pre tabindex=0><code>exit
 shutdown now
 </code></pre><p>To verify, remove the USB stick used for installation, and turn on the computer.</p>
 <p>You should be able to log in as either the root user or the newly created user specified earlier. If you end up at the terminal, you’ve successfully installed Arch Linux!</p>

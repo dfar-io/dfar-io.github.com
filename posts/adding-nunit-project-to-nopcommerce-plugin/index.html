@@ -25,7 +25,7 @@ out a plugin with the ability to easily integrate it into a fresh copy of
 nopCommerce.</p>
 <p>As an example, you can see it in the <a href=https://github.com/dfar-io/freshaddress-integration-for-nopcommerce>FreshAddress Integration Plugin source code</a>.</p>
 <h2 id=plugin-folder-structure>Plugin Folder Structure</h2>
-<pre><code>.github/workflows
+<pre tabindex=0><code>.github/workflows
 Source
     Plugin Project
 Tests
@@ -41,7 +41,7 @@ projects to prevent them from being included in Sonar report.</li>
 </ul>
 <h2 id=creating-the-test-project>Creating the Test Project</h2>
 <p>When creating the Test project, I&rsquo;ve set it up to mimic the nopCommerce tech stack <em>(you can change the naming based on ypur plugin)</em>:</p>
-<pre><code>dotnet new nunit -n Nop.Plugin.Misc.FreshAddressIntegration.Tests -o Tests
+<pre tabindex=0><code>dotnet new nunit -n Nop.Plugin.Misc.FreshAddressIntegration.Tests -o Tests
 
 dotnet add package coverlet.msbuild
 dotnet add package FluentAssertions
@@ -49,7 +49,7 @@ dotnet add package Moq
 
 dotnet add reference ../Source/Nop.Plugin.Misc.FreshAddress.csproj
 </code></pre><p>Then when running tests with coverage, you can run with the following:</p>
-<pre><code>dotnet test Plugins/Tests/Nop.Plugin.Misc.FreshAddress.Tests.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+<pre tabindex=0><code>dotnet test Plugins/Tests/Nop.Plugin.Misc.FreshAddress.Tests.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
 </code></pre><p>This will generate the report that gets imported into Sonar and provides reporting.</p>
 </article>
 </main><footer id=footer>

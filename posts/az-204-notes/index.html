@@ -1,0 +1,62 @@
+<!doctype html><html><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Software/DevOps Engineer">
+<link rel="shortcut icon" href=https://dfar.io/favicon.ico>
+<link rel=stylesheet href=/css/style.min.css>
+<title>Azure 204 Notes</title>
+</head>
+<body><header id=banner>
+<h2><a href=https://dfar.io/>Dave Farinelli</a></h2>
+<nav>
+<ul>
+<li>
+<a href=/about/ title=about>about</a>
+</li>
+</ul>
+</nav>
+</header>
+<main id=content>
+<article>
+<header id=post-header>
+<h1>Azure 204 Notes</h1><time>November 2, 2021</time></header><h2 id=create-serverless-applications>Create Serverless Applications</h2>
+<ul>
+<li>Logic Apps - design first, for Devs, GUI/Code, provides integrations</li>
+<li>Microsoft Power Automate - design first, for BAs/users, GUI only, self-service</li>
+<li>WebJobs - code first, runs program/script automatically, control of JobHost and retry logic</li>
+<li>Azure Function - code first, most versatile, should be default option</li>
+</ul>
+<h3 id=azure-functions>Azure Functions</h3>
+<ul>
+<li>Pay-as-you-go - cheap to use</li>
+<li>Stateless</li>
+<li>Event driven (multiple options)</li>
+<li>Limited execution time/frequency (5 mins)</li>
+<li>Can use Consumption plan (serverless) or App Service (dedicated, avoids cold starts)</li>
+<li>Monitoring possible through App. Insights</li>
+</ul>
+<h4 id=terminology>Terminology</h4>
+<ul>
+<li>Inputs - data/file provided</li>
+<li>Actions - operations</li>
+<li>Conditions - check if logic</li>
+<li>Output - created data/file</li>
+<li>Triggers - events</li>
+<li>Bindings - connects data/services to function (potentially w/o code)</li>
+</ul>
+<h4 id=http-trigger-security>HTTP Trigger Security</h4>
+<ul>
+<li>Function - function-specific or admin key</li>
+<li>Admin - admin key only</li>
+<li>Anonymous - no key required</li>
+</ul>
+<p>Can be provided by either:</p>
+<ol>
+<li>HTTP Header <code>x-functions-key</code>. (recommended)</li>
+<li>Query string param <code>code</code>.</li>
+</ol>
+</article>
+</main><footer id=footer>
+</footer>
+</body>
+</html>

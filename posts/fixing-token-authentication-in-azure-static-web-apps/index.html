@@ -1,37 +1,9 @@
-<!doctype html><html><head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="Software/DevOps Engineer">
-<link rel="shortcut icon" href=https://dfar.io/favicon.ico>
-<link rel=stylesheet href=/css/style.min.css>
-<title>Fixing Token Authentication in Azure Static Web Apps</title>
-</head>
-<body><header id=banner>
-<h2><a href=https://dfar.io/>Dave Farinelli</a></h2>
-<nav>
-<ul>
-<li>
-<a href=/about/ title=about>about</a>
-</li>
-</ul>
-</nav>
-</header>
-<main id=content>
-<article>
-<header id=post-header>
-<h1>Fixing Token Authentication in Azure Static Web Apps</h1><time>January 3, 2021</time></header><p>I recently moved my app <a href=https://www.journally.io/>Journally</a> over to an Azure
+<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Software/DevOps Engineer"><link rel="shortcut icon" href=https://dfar.io/favicon.ico><link rel=stylesheet href=/css/style.min.css><title>Fixing Token Authentication in Azure Static Web Apps</title></head><body><header id=banner><h2><a href=https://dfar.io/>Dave Farinelli</a></h2><nav><ul><li><a href=/about/ title=about>about</a></li></ul></nav></header><main id=content><article><header id=post-header><h1>Fixing Token Authentication in Azure Static Web Apps</h1><time>January 3, 2021</time></header><p>I recently moved my app <a href=https://www.journally.io/>Journally</a> over to an Azure
 Static Web App in order to save on costs and explore the new technology. When I
 switched over, I found that anything related to using a bearer token was no
-longer working.</p>
-<p>A little bit of searching found <a href=https://github.com/Azure/static-web-apps/issues/34>this post</a>,
+longer working.</p><p>A little bit of searching found <a href=https://github.com/Azure/static-web-apps/issues/34>this post</a>,
 basically saying that Azure Static Web Apps uses the <code>Authorization</code> header when
 communication between the UI and Function API. Easy solution: I changed Journally
 to use <code>JournallyAuthorization</code> instead of <code>Authorization</code>, and everything works
-after that.</p>
-<p>Would have been good to have this documented, but nice to at least see there&rsquo;s a
-relatively easy fix for it.</p>
-</article>
-</main><footer id=footer>
-</footer>
-</body>
-</html>
+after that.</p><p>Would have been good to have this documented, but nice to at least see there&rsquo;s a
+relatively easy fix for it.</p></article></main><footer id=footer></footer></body></html>

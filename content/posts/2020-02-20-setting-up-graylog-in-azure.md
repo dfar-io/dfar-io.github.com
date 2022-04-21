@@ -18,10 +18,10 @@ Create a VM using the following:
 
 SSH into the server and follow [this guide](https://docs.graylog.org/en/3.1/pages/installation/os/ubuntu.html) to get Graylog installed.
 
-To set up public access, set the following variables in Graylog config file:
+To set up public access, set the following variables in Graylog config file (make sure to include the leading slash in external_uri):
 ```
 http_bind_address = PRIVATE_IP
-http_external_uri = http://<PUBLIC_IP>
+http_external_uri = http://<PUBLIC_IP>/
 ```
 
 Once fully installed, set up an Apache reverse proxy:

@@ -16,35 +16,42 @@ Create a VM using the following:
   * Minimum Size: B2s (~$30/month)
   * Open ports 80,443,22
 
-SSH into the server and follow <a rel="noreferrer noopener" aria-label="this guide (opens in a new tab)" href="https://docs.graylog.org/en/3.1/pages/installation/os/ubuntu.html" target="_blank">this guide</a> to get Graylog installed.
+SSH into the server and follow [this guide](https://docs.graylog.org/en/3.1/pages/installation/os/ubuntu.html) to get Graylog installed.
 
 To set up public access, set the following variables in Graylog config file:
-
-<pre class="wp-block-code"><code>http_bind_address = PRIVATE_IP
-http_external_uri = http://&lt;PUBLIC_IP>/</code></pre>
+```
+http_bind_address = PRIVATE_IP
+http_external_uri = http://<PUBLIC_IP>
+```
 
 Once fully installed, set up an Apache reverse proxy:
 
-<pre class="wp-block-code"><code>sudo apt-get install apache2 -y
-sudo a2enmod proxy_http proxy_ajp rewrite deflate headers proxy_balancer proxy_connect proxy_html ssl lbmethod_byrequests slotmem_shm proxy</code></pre>
+```
+sudo apt-get install apache2 -y
+sudo a2enmod proxy_http proxy_ajp rewrite deflate headers proxy_balancer proxy_connect proxy_html ssl lbmethod_byrequests slotmem_shm proxy
+```
 
 Edit `/etc/apache2/sites-enabled/000-default.conf`:
 
-<pre class="wp-block-code"><code>ProxyPass "/"  "http://PRIVATE_IP:9000/"
-ProxyPassReverse "/"  "http://PRIVATE_IP:9000/"</code></pre>
+```
+ProxyPass "/"  "http://PRIVATE_IP:9000/"
+ProxyPassReverse "/"  "http://PRIVATE_IP:9000/"
+```
 
 Then restart both servers:
 
-<pre class="wp-block-code"><code>sudo systemctl restart graylog-server.service
-sudo systemctl restart apache2</code></pre>
+```
+sudo systemctl restart graylog-server.service
+sudo systemctl restart apache2
+```
 
-To verify installation, access at <IP_ADDRESS> to verify the installation. If you see the Graylog login screen, you&#8217;ve successfully set up the server.
+To verify installation, access at <IP_ADDRESS> to verify the installation. If you see the Graylog login screen, you've successfully set up the server.
 
 Finish by setting the SSH networking rule to a trusted IP to improve security.
 
 ## Set up HTTPS using Let&#8217;s Encrypt
 
-To set up HTTPS using Let&#8217;s Encrypt, use the <a rel="noreferrer noopener" aria-label="Certbot (opens in a new tab)" href="https://certbot.eff.org/lets-encrypt/ubuntubionic-apache" target="_blank">Certbot</a> directions.
+To set up HTTPS using Let&#8217;s Encrypt, use the [Certbot](https://certbot.eff.org/lets-encrypt/ubuntubionic-apache) directions.
 
 Once that&#8217;s done, make sure to change `http_external_uri` in the Graylog config file and restart Graylog.
 
@@ -52,11 +59,11 @@ Once that&#8217;s done, make sure to change `http_external_uri` in the Graylog c
 
 First, SSH into the server and configure Elasticsearch (`/etc/elasticsearch/elasticsearch.yml`) to bind to the private IP of the VM:
 
-<pre class="wp-block-code"><code>network.host: PRIVATE_IP</code></pre>
+```network.host: PRIVATE_IP```
 
 Restart Elasticsearch, then configure Graylog to listen to the new Elasticsearch host:
 
-<pre class="wp-block-code"><code>elasticsearch_hosts = http://PUBLIC_IP:9200</code></pre>
+`elasticsearch_hosts = http://PUBLIC_IP:9200`
 
 Restart Graylog, then open the firewall to allow for port 9200 to be accessible by the cluster IP. Confirm access by trying to hit port 9200.
 

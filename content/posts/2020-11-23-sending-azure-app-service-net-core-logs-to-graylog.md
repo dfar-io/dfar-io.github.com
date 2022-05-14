@@ -25,13 +25,16 @@ First, add the following packages to your application:
 
 Next, add the following to `Program.cs`, at the bottom of the CreateDefaultBuilder method:
 
-<pre class="wp-block-code"><code>.UseSerilog((hostingContext, loggerConfiguration) =>
+```
+.UseSerilog((hostingContext, loggerConfiguration) =>
              loggerConfiguration.ReadFrom
-.Configuration(hostingContext.Configuration));</code></pre>
+.Configuration(hostingContext.Configuration));
+```
 
 Next, configure the `appsettings.json`file, cleaning the existing Logging config and adding the following:
 
-<pre class="wp-block-code"><code>"Serilog": {
+```
+"Serilog": {
     "Using": &#91; "Serilog.Sinks.Graylog" ],
     "MinimumLevel": "Information",
     "WriteTo": &#91;
@@ -47,18 +50,21 @@ Next, configure the `appsettings.json`file, cleaning the existing Logging config
     "Properties": {
       "Application": "APPLICATION_NAME"
     }
-  },</code></pre>
+  },
+```
 
 Do this for the `appsettings.Development.json` file to allow console logging when in Development:
 
-<pre class="wp-block-code"><code>"Serilog": {
+```
+"Serilog": {
     "Using": &#91; "Serilog.Sinks.Console" ],
     "MinimumLevel": "Information",
     "WriteTo": &#91;
       { "Name": "Console" }
     ],
     "Application": "APPLICATION_NAME"
-  },</code></pre>
+  }
+```
 
 ## Verification
 

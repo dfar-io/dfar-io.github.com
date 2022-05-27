@@ -4,10 +4,10 @@ date: 2022-05-14T13:01:41Z
 draft: false
 ---
 
-1. [Setting up with VSCode](#setting-up-with-vscode)
-2. [Setting up video playback](#setting-up-video-playback)
-3. [Setting up local environment variables with .env](#setting-up-local-environment-variables-with-env)
-4. [Setting up Github Actions](#setting-up-github-actions)
+- [Setting up with VSCode](#setting-up-with-vscode)
+- [Setting up video playback](#setting-up-video-playback)
+- [Setting up local environment variables with .env](#setting-up-local-environment-variables-with-env)
+- [Setting up Github Actions](#setting-up-github-actions)
 
 ## Setting up with VSCode
 

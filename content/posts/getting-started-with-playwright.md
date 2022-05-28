@@ -8,6 +8,7 @@ draft: false
 - [Setting up video playback](#setting-up-video-playback)
 - [Setting up local environment variables with .env](#setting-up-local-environment-variables-with-env)
 - [Setting up Github Actions](#setting-up-github-actions)
+- [Upload Github Action video artifacts on failure](#upload-github-action-video-artifacts-on-failure)
 
 ## Setting up with VSCode
 
@@ -146,4 +147,15 @@ jobs:
       run: npm i
     - name: Run Playwright script
       run: node main.ts
+```
+
+## Upload Github Action video artifacts on failure
+
+If a script in Github Actions fails, it can be useful having the video available to see what happened - adding the following to the bottom of the `.yml` file will upload the video file created to the job:
+
+``` yml
+- uses: actions/upload-artifact@v3
+  if: ${{ failure() }}
+  with:
+    path: video/*
 ```

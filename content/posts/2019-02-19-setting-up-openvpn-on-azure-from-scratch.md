@@ -126,4 +126,6 @@ Setting up Let&#8217;s Encrypt on OpenVPN AS: <https://loige.co/using-lets-encry
 
 Redirect HTTP -> HTTPS in OpenVPN: <https://openvpn.net/vpn-server-resources/how-to-redirect-http-to-https/>
 
+Clearing configuration DB for renewal: <https://serverfault.com/a/1021892>
+
  [1]: https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse

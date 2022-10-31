@@ -6,34 +6,31 @@ draft: false
 
 ## Ingredients
 
-* 2x 6.5oz canned clams
-* 3 slices bacon
-* 2 tbsp butter
-* 1/2 onion, diced
-* 1 celery stalk
-* 1 clove garlic
-* 1/4 tsp sugar
-* 2/3 cup half & half
-* 1 tbsp corn starch
-* 1 cup diced potatoes (gold or red)
-* 1 strand thyme
-* 1/2 tsp salt
-* 1/8 tsp pepper
-
-Serves about 2 cups.
+* 3x 6.5oz canned clams
+* 1 cup heavy whipping cream
+* 1 tbsp butter
+* 1 onion
+* 2 potatoes
+* 2 celery ribs
+* 1/2 package bacon
+* 3 tbsp flour
+* 12 cup chicken broth
+* old bay
+* corn starch
+* garlic
 
 ## Process
 
-1. Cut bacon into small pieces, saute in IP until almost crispy.
-1. Make 1 cup clam juice/water mixture.
-1. Add butter, onion, celery, thyme, cook until onion translucent.
-1. Add garlic, salt, pepper, stir for 1 minute.
-1. Add potatoes, sugar, clam juice.
-1. Seal IP, 4 minutes manual high pressure, then rest for 3.
-1. Mash potatoes.
-1. Saute (low if possible), add clams and half & half (DO NOT BOIL)
-1. Add corn starch
+1. Saute on more, add butter
+1. Dice bacon & add to IP, cook to translucent
+1. Dice onion, celery, cook to translucent
+1. Add flour, cook 1 min
+1. Strain clams, add juice & chicken broth, stir
+2. Add diced potates, garlic, stir
+3. Cook manual high 5 minutes, vent
+4. Saute, add clams, heavy whipping cream, old bay
+5. Add 2 tbsp corn starch slurry
 
 ## Reference
 
-[Simply Happy Foodie](https://www.simplyhappyfoodie.com/instant-pot-clam-chowder/)
+https://www.youtube.com/watch?v=hXsGhq82CAI

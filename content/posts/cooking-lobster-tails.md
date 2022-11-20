@@ -1,5 +1,5 @@
 ---
-title: "Cooking Lonster Tails"
+title: "Cooking Lobster Tails"
 date: 2022-11-20T13:39:58Z
 draft: false
 ---

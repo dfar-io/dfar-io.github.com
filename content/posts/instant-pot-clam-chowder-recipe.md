@@ -9,9 +9,9 @@ draft: false
 * 3x 6.5oz canned clams
 * 1 cup heavy whipping cream
 * 1 tbsp butter
-* 1 onion
+* 1 onion (diced)
 * 2 potatoes
-* 2 celery ribs
+* 2 celery ribs (diced)
 * 1/2 package bacon
 * 3 tbsp flour
 * 1/2 cup chicken broth

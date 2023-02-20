@@ -1,0 +1,6 @@
+<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Software/DevOps Engineer"><link rel="shortcut icon" href=https://dfar.io/favicon.ico><link rel=stylesheet href=/css/style.min.css><title>Fixing MSBuild TARGETPATH Issue</title></head><body><header id=banner><h2><a href=https://dfar.io/>Dave Farinelli</a></h2><nav><ul><li><a href=/about/ title=about>about</a></li></ul></nav></header><main id=content><article><header id=post-header><h1>Fixing MSBuild TARGETPATH Issue</h1><time>February 20, 2023</time></header><p>Ran into an issue that was causing the following error on GitLab when trying
+to build a package:</p><pre tabindex=0><code>/usr/share/dotnet/sdk/7.0.103/Sdks/NuGet.Build.Tasks.Pack/build/NuGet.Build.Tasks.Pack.targets(221,5): error NU5026: The file &#39;${TARGETPATH}&#39; to be packed was not found on disk. [/hugo servbuilds/organization/My.Project/My.Project/My.Project.csproj]
+</code></pre><p>The solution is to define TargetPath explicitly in all <code>.csproj</code> files by adding a PropertyGroup section like so:</p><pre tabindex=0><code>&lt;PropertyGroup&gt;
+    &lt;TargetPath&gt;$(ProjectDir)$(OutputPath)$(ProjectFileName)&lt;/TargetPath&gt;
+&lt;/PropertyGroup&gt;
+</code></pre></article></main><footer id=footer></footer></body></html>

@@ -16,6 +16,7 @@ to build a package:
 The solution is to define TargetPath explicitly in all `.csproj` files by adding a PropertyGroup section like so:
 
 ```
+<!-- fixes TARGETPATH issue -->
 <PropertyGroup>
     <TargetPath>$(ProjectDir)$(OutputPath)$(ProjectFileName)</TargetPath>
 </PropertyGroup>

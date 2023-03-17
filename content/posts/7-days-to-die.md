@@ -8,27 +8,26 @@ categories:
 
 ## Rules
 
-1. Perma-death
-2. Nightly hordes
-3. Insane difficulty
+1. Perma-death (do not place a bedroll)
+2. Insane difficulty
+3. BM Frequency 1
 4. Nightmare speed
-5. Feral sense on
-6. AI Block 300
-7. BM Count 64
+5. Feral sense all
+6. AI Block 300 (both normal and blood moon)
+7. Loot respawn disabled
+8. Delete all on death
+9. BM Count 64
 
 ## Strategy
 
 1. Sexy Trex x2
-2. Wood, Stone, Cobble, Base (5x5)
-3. Food, Padded
-4. Forge (find wrench, pipes)
-5. Iron, Pickaxe/Baseball Bat
-6. Workbench (wrench, claw hammer)
-7. Cement, cement bars (mine stone)
-8. Electric fence w/ protection
-9. Armor/Pump Shotgun (sewing kits, shotgun parts)
-10. Motorcycle
-11. Chem station (acid, beaker)
-12. Auger
-13. Steel, Blade Trap
-14. Ammo, Medkits (for T5s)
+2. Wood, Stone, Cobble, Quest (1st night in POI)
+3. Food, Base, Padded
+4. Forge (pipes, leather)
+5. Pickaxe, Claw, Bat/Sledge
+6. Workbench (wrench, claw hammer, Adv Eng 2)
+7. Cement
+8. Electric fence w/ protection (Adv. Eng 3)
+9. Chem station (acid, beaker)
+10. Steel, Blade Trap
+11. Ammo, Medkits (for T5s)

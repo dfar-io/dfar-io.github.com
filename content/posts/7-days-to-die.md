@@ -21,14 +21,15 @@ categories:
 ## Strategy
 
 1. Sexy Trex 2
-2. 300 Wood, 150 Stone/Cobble, Fetch, Base
-3. Pot/Food, Padded (1pt Master Chef)
-4. Forge (1pt Adv Eng, 10 leather, 3 pipes/duct)
-5. Pickaxe, Claw (1pt Miner)
-6. Bat (1pt Pummel, 3pts Sexy Trex 3)
-7. Workbench (wrench, claw hammer, 3 pts Adv Eng 2)
-8. Cement
-9. Electric fence w/ protection (Adv. Eng 3)
-10. Chem station (acid, beaker)
-11. Steel, Blade Trap
-12. Ammo, Medkits (for T5s)
+2. 300 Wood, 150 Stone/Cobble
+3. Fetch, Base POI (main floor, then higher ground)
+4. Pot/Food, Padded (1pt Master Chef)
+5. Forge (1pt Adv Eng, 10 leather, 3 pipes/duct)
+6. Pickaxe, Claw (1pt Miner)
+7. Bat (1pt Pummel, 3pts Sexy Trex 3)
+8. Workbench (wrench, claw hammer, 3 pts Adv Eng 2)
+9. Cement
+10. Electric fence w/ protection (Adv. Eng 3)
+11. Chem station (acid, beaker)
+12. Steel, Blade Trap
+13. Ammo, Medkits (for T5s)

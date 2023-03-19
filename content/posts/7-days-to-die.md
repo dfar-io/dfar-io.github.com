@@ -25,7 +25,7 @@ categories:
 3. Pot/Food, Padded (1pt Master Chef)
 4. Forge (1pt Adv Eng, 10 leather, 3 pipes/duct)
 5. Pickaxe, Claw (1pt Miner)
-6. Bat/Sledge (1pt Pummel, 3pts Sexy Trex 3)
+6. Bat (1pt Pummel, 3pts Sexy Trex 3)
 7. Workbench (wrench, claw hammer, 3 pts Adv Eng 2)
 8. Cement
 9. Electric fence w/ protection (Adv. Eng 3)

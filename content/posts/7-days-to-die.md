@@ -22,7 +22,7 @@ categories:
 
 1. Sexy Trex 2
 2. 300 Wood, 150 Stone/Cobble
-3. Fetch, Base POI (main floor, then higher ground)
+3. Fetch, Base POI (main floor, then higher ground, ideally to flat roof)
 4. Pot/Food, Padded (1pt Master Chef)
 5. Forge (1pt Adv Eng, 10 leather, 3 pipes/duct)
 6. Pickaxe, Claw (1pt Miner)

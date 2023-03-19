@@ -20,14 +20,15 @@ categories:
 
 ## Strategy
 
-1. Sexy Trex x2
-2. Wood, Stone, Cobble, Quest (1st night in POI)
-3. Food, Base, Padded
-4. Forge (pipes, leather)
-5. Pickaxe, Claw, Bat/Sledge
-6. Workbench (wrench, claw hammer, Adv Eng 2)
-7. Cement
-8. Electric fence w/ protection (Adv. Eng 3)
-9. Chem station (acid, beaker)
-10. Steel, Blade Trap
-11. Ammo, Medkits (for T5s)
+1. Sexy Trex 2
+2. 300 Wood, 150 Stone/Cobble, Fetch, Base
+3. Pot/Food, Padded (1pt Master Chef)
+4. Forge (1pt Adv Eng, 10 leather, 3 pipes/duct)
+5. Pickaxe, Claw (1pt Miner)
+6. Bat/Sledge (1pt Pummel, 3pts Sexy Trex 3)
+7. Workbench (wrench, claw hammer, 3 pts Adv Eng 2)
+8. Cement
+9. Electric fence w/ protection (Adv. Eng 3)
+10. Chem station (acid, beaker)
+11. Steel, Blade Trap
+12. Ammo, Medkits (for T5s)

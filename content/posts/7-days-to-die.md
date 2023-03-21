@@ -21,12 +21,11 @@ categories:
 ## Strategy
 
 1. Sexy Trex 2
-2. 300 Wood, 150 Stone/Cobble
-3. Fetch, Base POI (main floor, then higher ground, ideally to flat roof)
-4. Pot/Food, Padded (1pt Master Chef)
-5. Forge (1pt Adv Eng, 10 leather, 3 pipes/duct)
-6. Pickaxe, Claw (1pt Miner)
-7. Bat (1pt Pummel, 3pts Sexy Trex 3)
+2. StoneSledge, 300 Wood, 150 Stone/Cobble
+3. Quest/POI Base
+4. Pot, Forge, Food (2pts Master Chef/Adv Eng, 3 pipes/duct, 10 leather)
+5. Padded, Pickaxe, Claw (1pt Miner)
+7. Bat/Sledge (1pt Pummel/Skull, 3pts Sexy Trex 3)
 8. Workbench (wrench, claw hammer, 3 pts Adv Eng 2)
 9. Cement
 10. Electric fence w/ protection (Adv. Eng 3)

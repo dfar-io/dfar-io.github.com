@@ -21,9 +21,9 @@ categories:
 ## Strategy
 
 1. Sexy Trex 2
-2. 300 Wood, 150 Stone/Cobble
-3. Quest/POI Base
-4. Pot, Forge, Food (2pts Master Chef/Adv Eng, 3 pipes/duct, 10 leather)
+2. 600 Wood, 400 Cobble, 200 Stone
+3. Base
+4. Forge, Pot, Food (2pts Master Chef/Adv Eng, 3 pipes/duct, 10 leather)
 5. Padded, Pickaxe, Claw (1pt Miner)
 7. Bat (1pt Pummel, 3pts Sexy Trex 3)
 8. Workbench (claw, 1pt wrench, 3 pts Adv Eng 2)
@@ -32,3 +32,5 @@ categories:
 11. Chem station (acid, beaker)
 12. Steel, Blade Trap
 13. Ammo, Medkits (for T5s)
+
+![base diagram](https://ibb.co/2hVvgsq)

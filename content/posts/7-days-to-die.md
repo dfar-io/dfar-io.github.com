@@ -33,4 +33,4 @@ categories:
 12. Steel, Blade Trap
 13. Ammo, Medkits (for T5s)
 
-![base diagram](https://ibb.co/2hVvgsq)
+[base diagram](https://ibb.co/2hVvgsq)

@@ -17,8 +17,7 @@ categories:
 7. Loot respawn disabled
 8. Delete all on death
 9. BM Count 64
-10. Air drops daily
-11. Air drops marked
+10. Air drops marked
 
 ## Strategy
 
@@ -35,21 +34,19 @@ categories:
 11. Nailgun, Crucible/Steel, Blade Trap (Adv. Eng 5)
 12. Ammo, Medkits (physician 3, for T5s)
 13. Other options:
-    1. Steel Club/Sexy TRex 4-5/Pummel Pete 4-5
-    2. Pump/Boomstick 4
-    3. Steel Armor/Heavy Armor 4
-    4. Auger/Lode 5/Miner 5
-    5. Daring Adventurer 4/Better Barter 4
-    6. Flurry of Blows 3
-    7. Physician 4 (antibiotics)
+    1. Lode 5/Miner 5
+    2. Steel Club/Sexy TRex 4-5/Pummel Pete 4-5
+    3. Pump/Boomstick 4
+    4. Steel Armor/Heavy Armor 4
+    5. Daring Adventurer 4
+    6. Physician 4 (antibiotics)
+    7. Flurry of Blows 3/Parkour 2
     8. Run and Gun 3
     9. .44 Gun/Gunslinger 4
-    10. Parkour 2
-14. Much later options:
-    1. Demolitions Expert 5
-    2. Dead Eye 5
-    3. Penetrator 4
-    4. Pain Tolerance 5
-    5. Iron Gut 5/Healing Factor 5
+    10. Demolitions Expert 5
+    11. Dead Eye 5
+    12. Penetrator 4
+    13. Pain Tolerance 5
+    14. Iron Gut 5/Healing Factor 5
 
 [base diagram](https://ibb.co/2hVvgsq)

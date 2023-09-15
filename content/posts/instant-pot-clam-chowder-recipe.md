@@ -14,24 +14,25 @@ draft: false
 * 2 celery ribs (diced)
 * 1/2 package bacon
 * 3 tbsp flour
-* 1/2 cup chicken broth
+* 1 cup chicken broth
 * old bay
 * corn starch
 * garlic
 
 ## Process
 
-1. Dice potatoes
-1. Saute on more, add butter, strain clams, make broth
-1. Dice bacon, cook to translucent
-1. Dice onion, celery, cook to translucent
-1. Add 3 tbsp flour, cook 1 min
-1. Add clam juice & chicken broth, stir
-2. Add potatoes, garlic, salt/pepper, stir
-3. Cook manual high 5 minutes, vent
-4. Saute, add clams, heavy whipping cream, old bay, salt/pepper
-5. Add 2 tbsp corn starch slurry
+1. Peel & dice potatoes
+2. IP Saute on more, add butter
+3. Strain clams, make 1 cup chicken broth
+4. Dice bacon, cook to translucent
+5. Dice onion, celery, cook to translucent
+6. Add 3 tbsp flour, cook 1 min
+7. Add clam juice & chicken broth, stir
+8. Add potatoes, garlic, salt/pepper (20), stir
+9. Cook manual high 5 minutes, vent
+10. IP Saute, add clams, heavy whipping cream, old bay
+11. Add 2 tbsp corn starch slurry, cook until thicken
 
 ## Reference
 
-https://www.youtube.com/watch?v=hXsGhq82CAI
+[YouTube](https://www.youtube.com/watch?v=hXsGhq82CAI)

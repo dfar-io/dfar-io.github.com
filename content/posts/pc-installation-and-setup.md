@@ -116,10 +116,11 @@ menuentry "Windows 11" {
    4. `cd..`
    5. `rm -rf yay`
 8. Install Dropbox
-   1. `wget https://linux.dropbox.com/fedora/rpm-public-key.asc`
-   2. `gpg --import rpm-public-key.asc`
-   3. `rm rpm-public-key.asc`
-   4. `yay -S dropbox`
+   1. `git clone https://aur.archlinux.com/dropbox.git`
+   2. `cd dropbox`
+   3. `makepkg -si`
+   4. `cd..`
+   5. `rm -rf dropbox`
 9. Configure Dropbox
    1.  Sign-in
    2.  `mkdir ~/.config/awesome`

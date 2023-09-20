@@ -9,9 +9,9 @@ draft: false
 * 3x 6.5oz canned clams
 * 1 cup heavy whipping cream
 * 1 tbsp butter
-* 1 onion (diced)
+* 1 onion (pre-diced)
 * 2 potatoes
-* 2 celery ribs (diced)
+* 2 celery ribs
 * 1/2 package bacon
 * 3 tbsp flour
 * 1 cup chicken broth
@@ -23,8 +23,8 @@ draft: false
 
 1. Peel & dice potatoes
 2. IP Saute on more, add butter
-3. Strain clams, make 1 cup chicken broth
-4. Dice bacon, cook to translucent
+3. Dice bacon, cook to translucent
+4. Make 1 cup chicken broth, strain clams
 5. Dice onion, celery, cook to translucent
 6. Add 3 tbsp flour, cook 1 min
 7. Add clam juice & chicken broth, stir

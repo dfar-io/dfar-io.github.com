@@ -10,16 +10,15 @@ draft: false
 * 1lb spaghetti
 * 8 eggs
 * 1 cup grated parmesan, pecorino
-* Frozen peas
 
 ## Process
 
-1. Start boiling water, heating cast iron
-2. Dice bacon, cook until crisp, place on paper towel plate
+1. Start boiling water, heating saute pan.
+2. Dice bacon, cook on low until crisp, place on paper towel plate.
 3. Grate cheese, add to bowl with eggs (4 whole, 4 yokes) and mix. Add pepper.
-4. Add salt, cook pasta to al dente.
-5. Cook frozen peas
-6. Remove pasta from pot into cast iron.
-7. Add separate 3/4 cup water to cheese mixture.
+4. Add salt to water, cook pasta ~11 minutes.
+5. Remove pasta from pot into saute pan.
+6. Add separate 3/4 cup water to cheese mixture.
+7. Add sauce, mix.
 8. Add bacon, mix.
-9. Add sauce, mix.
+

@@ -28,3 +28,7 @@ draft: false
 9. Delete .bacpac with Azure Storage Explorer
 10. (Linux) Create SAS via Portal
 11. Create and run STS job to copy file.
+
+## Troubleshooting
+
+* Low Disk Space - use WinDirStat, [clear out WInSxS folder](https://helpdeskgeek.com/windows-11/what-is-the-winsxs-folder-why-is-it-huge-and-how-to-cleanup/)

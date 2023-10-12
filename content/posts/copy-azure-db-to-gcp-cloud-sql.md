@@ -1,4 +1,4 @@
----
+z---
 title: "Copy Azure SQL Database to GCP Cloud SQL"
 date: 2023-10-11T18:43:08Z
 draft: false
@@ -28,6 +28,7 @@ draft: false
 9. Delete .bacpac with Azure Storage Explorer
 10. (Linux) Create SAS via Portal
 11. Create and run STS job to copy file.
+12. Import .bak from GCS bucket to GCP Cloud SQL.
 
 ## Troubleshooting
 

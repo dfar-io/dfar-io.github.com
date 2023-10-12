@@ -24,7 +24,7 @@ draft: false
 5. Connect to local SQL via SSMS.
 6. Import Data-tier Application
 7. Create .bak (Database -> Tasks -> Backup)
-8. Upload .bak to storage account. (Program Files/Microsoft SQL Server/**)
+8. Upload .bak to storage account with either Azure Storage Explorer or AzCopy. (Program Files/Microsoft SQL Server/**)
 9. Delete .bacpac with Azure Storage Explorer
 10. (Linux) Create SAS via Portal
 11. Create and run STS job to copy file.

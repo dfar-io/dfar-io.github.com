@@ -60,7 +60,7 @@ Via Windows:
    5. `mkdir /mnt/boot`
    6. `mount <EFI> /mnt/boot`
 6. Install base linux
-   1. `pacstrap /mnt base linux linux-firemware nano grun efibootmgr networkmanager git firefox sudo wget cron xorg xterm xorg-xinit xorg-xclock xorg-twm base-devel awesome lightdm lightdm-gtk-greeter nvidia nvidia-settings pkg-config mesa arandr nautilus flameshot evince gnome-calculator numlockx vlc pulseaudio pasystray pavucontrol openvpn network-manager-applet networkmanager-openvpn remmina freerdp sane imagescan gnome-keyring`
+   1. `pacstrap /mnt base linux linux-firemware nano grun efibootmgr networkmanager git firefox sudo wget cron xorg xterm xorg-xinit xorg-xclock xorg-twm base-devel awesome lightdm lightdm-gtk-greeter nvidia nvidia-settings pkg-config mesa arandr nautilus flameshot evince gnome-calculator numlockx vlc pulseaudio pasystray pavucontrol openvpn network-manager-applet networkmanager-openvpn remmina freerdp sane imagescan gnome-keyring gimp avidemux-qt`
 7. Configure base linux
    1. `genfstab -U /mnt >> /mnt/etc/fstab`
    2. `arch-chroot /mnt`
